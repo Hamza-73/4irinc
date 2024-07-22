@@ -264,7 +264,7 @@ li {
     2.2 Breadcrumb Scss start
 ==========================*/
 .breadcrumb-section {
-  background-image: url("../images/breadcrumb-bg.png");
+  background-image: url("../images/home/home-bg.png");
   background-position: bottom;
   background-size: cover;
   padding-top: 180px;

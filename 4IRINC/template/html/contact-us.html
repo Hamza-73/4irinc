@@ -35,13 +35,18 @@
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-
+    <style>
+        .info-btn:hover{
+            color: #20c997;
+        }
+    </style>
 
 </head>
 
 <body class="inner-bg">
 
 
+  
     <!-- header start -->
     <header>
         <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
@@ -72,21 +77,20 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    data-bs-toggle="dropdown">Services</a>
-
-                                <ul class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
-                                            Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai_talk_assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
                                     </li>
-                                    <li>
                                 </ul>
                             </li>
 
@@ -111,23 +115,23 @@
     <!-- breadcrumb section start -->
     <section class="breadcrumb-section">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <div class="col-lg-6">
                     <div class="breadcrumb-content">
                         <div>
-                            <h2><img src="../assets/images/breadcrumb-title.png" class="img-fluid"
+                            <h2 class="center"><img src="../assets/images/breadcrumb-title.png" class="img-fluid"
                                     alt="title-effect">Contact us
                             </h2>
-                            <p><i class="ri-subtract-line"></i>Email us with any questions, we would be happy to answer
+                            <p class="center"><i class="ri-subtract-line"></i>Email us with any questions, we would be happy to answer
                                 your question. </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 d-lg-inline-block d-none">
+                <!-- <div class="col-lg-6 d-lg-inline-block d-none">
                     <div class="breadcrumb-img">
                         <img src="../assets/svg/contact-vector.svg" class="img-fluid" alt="service">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -231,9 +235,10 @@
                     <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Quick advisor to help you</li>
                     <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">15+ category to explore</li>
                 </ul>
-                <a data-cursor="pointer" class="btn-arrow" href="">
+                <!-- <a data-cursor="pointer" class="btn-arrow" href="">
                     <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Contact us now
-                </a>
+                </a> -->
+                <button class="info-btn btn btn-theme d-sm-inline-block">Contact Us</button>
             </div>
         </div>
     </section>
@@ -272,10 +277,10 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="index.html">Home</a></li>
-                            <li><a data-cursor="pointer" href="service.html">Service</a></li>
-                            <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li>
-                            <li><a data-cursor="pointer" href="contact-us.html">Contact us</a></li>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
+                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -286,16 +291,15 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="chat.html">Generate</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Find Image</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Email writer</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Social media</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a></li>
+                            <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training & Education</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="link-section">
+                <!-- <div class="link-section">
                     <div class="footer-title">
-                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
                         Our company
                     </div>
                     <div class="footer-content">
@@ -306,7 +310,7 @@
                             <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2023 All the Copyright Reserved.</h4>
@@ -320,6 +324,7 @@
     <!-- footer section end-->
 
 
+
     <!-- Tap To Top Button Start -->
     <div class="tap-to-top-box hide">
         <button class="tap-to-top-button"><i class="iconsax" data-icon="chevron-up"></i></button>
@@ -331,6 +336,15 @@
     <div id="cursor"></div>
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
+
+    
+    <script>
+        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
+            if (!this.parentNode.classList.contains('show')) {
+                window.location.href = './services.html';
+            }
+        });
+    </script>
 
 
     <!-- Bootstrap js-->

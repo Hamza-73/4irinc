@@ -155,6 +155,10 @@
     .ai_box i {
         font-size: 2.5rem;
     }
+
+    .info-btn:hover{
+        color: #20c997;
+    }
 </style>
 
 <body>
@@ -196,22 +200,20 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    data-bs-toggle="dropdown">Services</a>
-
-                                <ul class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
-                                            Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai_talk_assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
-                                            Education</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
                                     </li>
-                                    <li>
                                 </ul>
                             </li>
 
@@ -236,10 +238,11 @@
     <!-- home section start -->
     <section id="home" class="section-b-space home-section">
         <div class="container-fluid">
-            <div class="home-sec">
-                <div class="home-content">
+            <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                <div class="home-content" style="margin-top: 5rem;">
                     <div>
-                        <h2 style="font-size: 18px;">FOURTH INDUSTRIAL REVOLUTION INC</h2>
+                        <h2 style="font-size: 18px;font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC</h2>
                         <h1 style="font-size: 30px;">Simplify Your Life With AI-Powered Calls</h1>
                         <p>Experience the convenience of AI-driven calls. Let technology handle your communication needs
                             effortlessly, saving you time and hassle.</p>
@@ -254,10 +257,10 @@
                     </div>
                 </div>
                 <div class="home-img d-lg-flex d-none">
-                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
-                    <div class="round-effect">
+                    <!-- <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot"> -->
+                    <!-- <div class="round-effect">
                         <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
-                    </div>
+                    </div> -->
                     <ul class="home-effect">
                         <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
                                 src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt=""> SEO
@@ -617,15 +620,17 @@
                     <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Quick advisor to help you</li>
                     <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">15+ category to explore</li>
                 </ul>
-                <a data-cursor="pointer" class="btn-arrow" href="">
+                <!-- <a data-cursor="pointer" class="btn-arrow" href="">
                     <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Contact us now
-                </a>
+                </a> -->
+                <button class="info-btn btn btn-theme d-sm-inline-block">Contact Us</button>
             </div>
         </div>
     </section>
     <!-- contact us end -->
 
 
+    
     <!-- footer section start-->
     <footer>
         <div class="container">
@@ -658,10 +663,10 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="index.html">Home</a></li>
-                            <li><a data-cursor="pointer" href="service.html">Service</a></li>
-                            <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li>
-                            <li><a data-cursor="pointer" href="contact-us.html">Contact us</a></li>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
+                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -672,16 +677,15 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="chat.html">Generate</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Find Image</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Email writer</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Social media</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a></li>
+                            <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training & Education</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="link-section">
+                <!-- <div class="link-section">
                     <div class="footer-title">
-                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
                         Our company
                     </div>
                     <div class="footer-content">
@@ -692,7 +696,7 @@
                             <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2023 All the Copyright Reserved.</h4>
@@ -706,6 +710,14 @@
     <!-- footer section end-->
 
 
+    <script>
+        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
+            if (!this.parentNode.classList.contains('show')) {
+                window.location.href = './services.html';
+            }
+        });
+    </script>
+    
 
     <!-- Bootstrap js-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>

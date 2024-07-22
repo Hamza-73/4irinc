@@ -55,7 +55,7 @@
             /* background: radial-gradient(#494848, #20c997 ); */
             color: #fff;
             font-size: 33px;
-            padding: 4.3rem;
+            padding: 5rem;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -135,14 +135,8 @@
             }
         }
 
-        .feature_container {
-            margin-left: -7rem;
-        }
-
-        @media screen and (max-width:900px) {
-            .feature_container {
-                margin-left: -20px;
-            }
+        .info-btn:hover {
+            color: #20c997;
         }
     </style>
 
@@ -183,20 +177,22 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    data-bs-toggle="dropdown">Services</a>
-
-                                <ul class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./html/strategic_counselling.html">Strategic Counseling</a>
+                                        <a class="dropdown-item" href="./html/strategic_counselling.html">Strategic
+                                            Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./html/ai_talk_assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./html/landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
+                                            Education</a>
                                     </li>
-                                    <li>
                                 </ul>
                             </li>
 
@@ -266,56 +262,57 @@
     <!-- home section end -->
 
 
-
     <!-- service section start -->
     <div class="service-section section-b-space">
-        <div class="container">
-            <p style="font-size: 30px; position: relative; bottom: 1rem;" class="text-white">About Us</p>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="row g-4 service-row">
-                        <div class="col-sm-6">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <img src="./assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
-                                    <img src="./assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3><img src="./assets/svg/service-title.svg" alt="effect" class="img-fluid">Expert
-                                        Guidance:</h3>
-                                    <p>Unlock unparalleled insights and guidance for AI consulting and product
-                                        solutions.</p>
-                                </div>
-                            </div>
+        <div class="col-lg-6">
+            <div
+                style="position: relative; left: 16%; margin-top: -24%; width: 100%; display: flex; gap:3rem; justify-content: space-evenly;">
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="./assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
+                            <img src="./assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
                         </div>
-                        <div class="col-sm-6">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <img src="./assets/svg/service/graph.svg" class="img-fluid outline-icon" alt="">
-                                    <img src="./assets/svg/service/graph-bold.svg" class="img-fluid bold-icon" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3><img src="./assets/svg/service-title.svg" alt="effect"
-                                            class="img-fluid">Cutting-Edge Technology</h3>
-                                    <p>Access tailored AI products for staying ahead in today's landscape.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <img src="./assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
-                                    <img src="./assets/svg/service/search-bold.svg" class="img-fluid bold-icon" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3><img src="./assets/svg/service-title.svg" alt="effect"
-                                            class="img-fluid">Streamlined Training</h3>
-                                    <p> Equip your team with AI expertise for confident navigation.</p>
-                                </div>
-                            </div>
+                        <div class="service-content">
+                            <h3><img src="./assets/svg/service-title.svg" alt="effect" class="img-fluid">Expert
+                                Guidance:</h3>
+                            <p>Unlock unparalleled insights and guidance for AI consulting and product
+                                solutions.</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="./assets/svg/service/graph.svg" class="img-fluid outline-icon" alt="">
+                            <img src="./assets/svg/service/graph-bold.svg" class="img-fluid bold-icon" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3><img src="./assets/svg/service-title.svg" alt="effect" class="img-fluid">Cutting-Edge
+                                Technology</h3>
+                            <p>Access tailored AI products for staying ahead in today's landscape.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="./assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
+                            <img src="./assets/svg/service/search-bold.svg" class="img-fluid bold-icon" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3><img src="./assets/svg/service-title.svg" alt="effect" class="img-fluid">Streamlined
+                                Training</h3>
+                            <p> Equip your team with AI expertise for confident navigation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 4rem;">
+            <p style="font-size: 40px; position: relative; bottom: 1rem;" class="text-white">About Us</p>
+            <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="service-info">
                         <div>
@@ -335,6 +332,23 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-6">
+
+                    <div class="mic-sec" style="margin-left: 15rem; margin-top: 17%;">
+                        <div class="mic-div">
+                            <button type="button" class="mic listening ">
+                                <i class="fa fa-microphone" style="color: #68e7ac;"></i>
+                                <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
+
+                                <canvas class="visualizer" width="80" height="40"></canvas>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -367,6 +381,9 @@
                                     your users!</li>
                             </ul>
                         </div>
+                        <a data-cursor="pointer" class="btn-arrow mt-5" href="/html/strategic_counselling.html">
+                            <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -408,6 +425,9 @@
                                     content. </li>
                             </ul>
                         </div>
+                        <a data-cursor="pointer" class="btn-arrow mt-5" href="/html/ai_talk_assist.html">
+                            <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -440,6 +460,10 @@
                                     unlimited content ideas that keep your followers hooked.</li>
                             </ul>
                         </div>
+                        <a data-cursor="pointer" class="btn-arrow mt-5" target="_blank"
+                            href="https://4ireducation.com/">
+                            <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -454,11 +478,11 @@
 
     <div class="service-section section-b-space mt-2">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-5" style="margin-top: -6rem;">
                 <div class="col-lg-6">
                     <div class="service-info">
                         <div>
-                            <p style="font-size: 30px; position: relative; bottom: 1rem;" class="text-white">Our
+                            <p style="font-size: 38px; position: relative; bottom: 1rem;" class="text-white">Our
                                 Expertise</p>
                             <div class="title">
                                 <h2>Driving Innovation Forward</h2>
@@ -479,10 +503,10 @@
                 </div>
 
 
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <img style="width: 90%; height: 70%; border:none; border-radius: 2rem;"
                         src="./assets/images/home/expertise.png" alt="">
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -565,7 +589,22 @@
             <div class="col-lg-4 col-md-6">
                 <div class="news_box">
                     <div class="news_img">
-                        <img src="/assets/images/blog/1.jpg" alt="">
+                        <img src="/assets/images/home/blog1.png" alt="">
+                    </div>
+                    <div class="news_content">
+                        <h3><a href="blog-details.html">Smashing: A New Content Curation App From Goodreads
+                                Co-Founder</a></h3>
+                        <p>Image Credits: Smashing Goodreads’ co-founder Otis Chandler has launched a new AI</p>
+                        <div data-cursor="pointer" class="link-overflow"><a href="service.html">Read more <i
+                                    class="iconsax" data-icon="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="news_box">
+                    <div class="news_img">
+                        <img src="/assets/images/home/blog2.jpg" alt="">
                     </div>
                     <div class="news_content">
                         <h3><a href="blog-details.html">Revolutionize Project Management With AI: Skyrocket ROI And
@@ -580,27 +619,12 @@
             <div class="col-lg-4 col-md-6">
                 <div class="news_box">
                     <div class="news_img">
-                        <img src="/assets/images/blog/1.jpg" alt="">
+                        <img src="/assets/images/home/blog3.png" alt="">
                     </div>
                     <div class="news_content">
-                        <h3><a href="blog-details.html">Revolutionize Project Management With AI: Skyrocket ROI And
-                                Boost Productivity</a></h3>
-                        <p>Image by creativeart on Freepik Artificial Intelligence (AI) is revolutionizing the field</p>
-                        <div data-cursor="pointer" class="link-overflow"><a href="service.html">Read more <i
-                                    class="iconsax" data-icon="arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="news_box">
-                    <div class="news_img">
-                        <img src="/assets/images/blog/1.jpg" alt="">
-                    </div>
-                    <div class="news_content">
-                        <h3><a href="blog-details.html">Revolutionize Project Management With AI: Skyrocket ROI And
-                                Boost Productivity</a></h3>
-                        <p>Image by creativeart on Freepik Artificial Intelligence (AI) is revolutionizing the field</p>
+                        <h3><a href="blog-details.html">Elon Musk’s AI Breakthrough: ‘Open-Sourcing’ Grok Unveils
+                                Power</a></h3>
+                        <p>Elon Musk's xAI recently made waves by releasing its Grok large language</p>
                         <div data-cursor="pointer" class="link-overflow"><a href="service.html">Read more <i
                                     class="iconsax" data-icon="arrow-right"></i></a>
                         </div>
@@ -711,7 +735,7 @@
     <!-- testimonial section end -->
 
     <!-- faq section start -->
-    <section class="faq-section">
+    <!-- <section class="faq-section">
         <div class="container">
             <div class="title-basic">
                 <h2 class="text-white">Have inquiries? In our FAQ, you'll find all the solutions you need.</h2>
@@ -816,7 +840,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- faq section end -->
 
 
@@ -840,9 +864,13 @@
                     <li><img src="./assets/svg/tick.svg" class="img-fluid" alt="tick">Quick advisor to help you</li>
                     <li><img src="./assets/svg/tick.svg" class="img-fluid" alt="tick">15+ category to explore</li>
                 </ul>
-                <a data-cursor="pointer" class="btn-arrow" href="">
+                <!-- <a data-cursor="pointer" class="btn-arrow" href="">
                     <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Contact us now
-                </a>
+                </a> -->
+                <center>
+
+                    <button class="info-btn btn btn-theme center">Contact Us</button>
+                </center>
             </div>
         </div>
     </section>
@@ -880,10 +908,10 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="index.html">Home</a></li>
-                            <li><a data-cursor="pointer" href="service.html">Service</a></li>
-                            <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li>
-                            <li><a data-cursor="pointer" href="contact-us.html">Contact us</a></li>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
+                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="./html/contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -894,14 +922,15 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="chat.html">Generate</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Find Image</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Email writer</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Social media</a></li>
+                            <li><a data-cursor="pointer" href="/html/strategic_counselling.html">Strategic
+                                    Counselling</a></li>
+                            <li><a data-cursor="pointer" href="/html/ai_talk_assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training &
+                                    Education</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="link-section">
+                <!-- <div class="link-section">
                     <div class="footer-title">
                         <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
                         Our company
@@ -914,7 +943,7 @@
                             <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2023 All the Copyright Reserved.</h4>
@@ -941,6 +970,14 @@
     <!--custom cursor start  -->
 
     <script>
+
+
+        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
+            if (!this.parentNode.classList.contains('show')) {
+                window.location.href = './html/services.html';
+            }
+        });
+
         let mic = document.querySelector(".mic");
         let visualizer = document.querySelector(".visualizer");
         let micIcon = document.querySelector(".mic i");

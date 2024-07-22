@@ -10,7 +10,7 @@
     <meta name="author" content="megabot">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Megabot</title>
+    <title>FOURTH INDUSTRIAL REVOLUTION INC</title>
 
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,18 +34,95 @@
 
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    
+
+    <link rel="stylesheet" href="../assets/css/landing.css">
+
     <style>
-        .info-btn:hover{
+        .feature_container {
+            margin-left: -7rem;
+        }
+
+        @media screen and (max-width:900px) {
+            .feature_container {
+                margin-left: -20px;
+            }
+        }
+
+        .info-btn:hover {
             color: #20c997;
+        }
+
+        .basic_service {
+            margin-top: 10rem;
+            position: relative;
+        }
+
+        .boxs_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .boxs_container .box {
+            border: 1px solid #20c997;
+            box-shadow: 0 0 10px 0 #20c997;
+            padding: 2rem;
+            width: 350px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            align-items: center;
+            border-radius: 0.4rem;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .boxs_container .box img {
+            width: 20%;
+        }
+
+        .boxs_container .box .box_text {
+            font-size: 1.4rem;
+        }
+
+        .boxs_container .box .box_text::before {
+            content: "";
+            width: 2px;
+            height: 80%;
+            position: absolute;
+            background-color: #20c997;
+            top: 10%;
+            left: 35%;
+        }
+
+        @media screen and (max-width:600px) {
+
+            .serive_container {
+                flex-direction: column;
+                top: 5rem;
+                margin-left: -4rem;
+            }
+
+            .boxs_container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
+
 </head>
 
-<body class="inner-bg">
+<body>
 
 
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+
+
+  
     <!-- header start -->
     <header>
         <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
@@ -111,191 +188,107 @@
     <!-- header end -->
 
 
-    <!-- breadcrumb section start -->
-    <section class="breadcrumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="breadcrumb-content">
-                        <div>
-                            <h2><img src="../assets/images/breadcrumb-title.png" class="img-fluid"
-                                    alt="title-effect">Latest Blog
-                            </h2>
-                            <p><i class="ri-subtract-line"></i>Discover the most recent blogs about artificial
-                                intelligence here.</p>
-                        </div>
+    <!-- home section start -->
+    <section id="home" class="section-b-space home-section">
+        <div class="container-fluid">
+            <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                <div class="home-content" style="margin-top: 5rem;">
+                    <div>
+                        <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2>
+                        <h1>Services</h1>
+                        <p>AI Products and Solutions by Fourth Industrial Revolution Inc.</p>
+                        <!-- <div class="d-flex flex-row gap-3 mx-5">
+
+                            <a href="html/index.html" class="btn-solid">Get started <i class="iconsax"
+                                    data-icon="arrow-right"></i></a>
+
+                            <a href="html/index.html" class="btn-solid">Learn More <i class="iconsax"
+                                    data-icon="arrow-right"></i></a>
+                        </div> -->
                     </div>
                 </div>
-                <!-- <div class="col-lg-6 d-lg-inline-block d-none">
-                    <div class="breadcrumb-img">
-                        <img src="../assets/svg/contact-vector.svg" class="img-fluid" alt="service">
-                    </div>
-                </div> -->
+                <div class="home-img d-lg-flex d-none">
+                    <!-- <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot"> -->
+                    <!-- <div class="round-effect">
+                        <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
+                    </div> -->
+                    <ul class="home-effect">
+                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
+                                src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt=""> SEO
+                            Specialist
+                        </li>
+                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
+                                src="../assets/svg/service/graph.svg" class="img-fluid outline-icon" alt=""> Digital
+                            marketers
+                        </li>
+                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
+                                src="../assets/svg/service/copy.svg" class="img-fluid outline-icon" alt=""> Copy writer
+                        </li>
+                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
+                                src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt=""> Content
+                            writer
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <!-- breadcrumb section end -->
+    <!-- home section end -->
 
 
-    <!-- blog section start -->
-    <section class="ratio2_3">
-        <div class="container">
-            <div class="row g-lg-5 g-4">
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/home/blog1.png" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
+    <!-- service section start -->
+    <div class="service-section section-b-space">
+        <div class="col-lg-6">
+            <div class="serive_container"
+                style="position: relative; left: 16%; margin-top: -20%; width: 100%; display: flex; gap:3rem; justify-content: space-evenly;">
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="../assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
+                            <img src="../assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
                         </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html">Smashing: A New Content Curation App From Goodreads Co-Founder
-                            </a>
-                            <ul>
-                                <li>14 march 2023</li>
-                                <li>5 min to read</li>
-                            </ul>
+                        <div class="service-content">
+                            <h3><img src="../assets/svg/service-title.svg" alt="effect" class="img-fluid">Expert
+                                Guidance:</h3>
+                            <p>Unlock unparalleled insights and guidance for AI consulting and product
+                                solutions.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/home/blog2.jpg" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="../assets/svg/service/graph.svg" class="img-fluid outline-icon" alt="">
+                            <img src="../assets/svg/service/graph-bold.svg" class="img-fluid bold-icon" alt="">
                         </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html"> Revolutionize Project Management With AI: Skyrocket ROI And Boost Productivity
-
-                            </a>
-                            <ul>
-                                <li>14 march 2023</li>
-                                <li>5 min to read</li>
-                            </ul>
+                        <div class="service-content">
+                            <h3><img src="../assets/svg/service-title.svg" alt="effect" class="img-fluid">Cutting-Edge
+                                Technology</h3>
+                            <p>Access tailored AI products for staying ahead in today's landscape.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/home/blog3.png" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
+                <div class="col-sm-6">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
+                            <img src="../assets/svg/service/search-bold.svg" class="img-fluid bold-icon" alt="">
                         </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html"> Elon Musk’s AI Breakthrough: ‘Open-Sourcing’ Grok Unveils Power </a>
-                            <ul>
-                                <li>20 march 2023</li>
-                                <li>4 min to read</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/blog/4.jpg" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html">Unleashing the Potential of Conversational
-                                AI</a>
-                            <ul>
-                                <li>21 march 2023</li>
-                                <li>2 min to read</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/blog/5.jpg" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html">Unlocking the Power of Conversational AI
-                                for Enhanced User Experiences </a>
-                            <ul>
-                                <li>26 march 2023</li>
-                                <li>10 min to read</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="../assets/images/blog/6.jpg" class="img-fluid"
-                                    alt="blog"></a>
-                            <label>Design</label>
-                            <div class="hover-content">
-                                <a data-cursor="pointer" href="blog-details.html"><i class="iconsax"
-                                        data-icon="arrow-right"></i></a>
-                                <h5>- Smith warner</h5>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <a data-cursor="pointer" href="blog-details.html"> Unlocking the Potential of Intelligent
-                                Conversations</a>
-                            <ul>
-                                <li>27 march 2023</li>
-                                <li>12 min to read</li>
-                            </ul>
+                        <div class="service-content">
+                            <h3><img src="../assets/svg/service-title.svg" alt="effect" class="img-fluid">Streamlined
+                                Training</h3>
+                            <p> Equip your team with AI expertise for confident navigation.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav aria-label="Page navigation" class="theme-pagination">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">
-                                <i class="iconsax" data-icon="chevron-left"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true"> <i class="iconsax" data-icon="chevron-right"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
-    </section>
-    <!-- blog section end -->
+
+    </div>
+    <!-- service section end -->
+
 
 
     <!-- contact us start -->
@@ -327,8 +320,73 @@
     </section>
     <!-- contact us end -->
 
+    <!-- servce section start -->
 
-    
+    <div class="section-b-space basic_service">
+        <div class="container">
+            <div class="boxs_container">
+                <article class="box">
+                    <img src="/assets/images/services icon/house.png" alt="">
+                    <h4 class="box_text">Real Estate</h4>
+                </article>
+                <article class="box">
+                    <img src="/assets/images/services icon/globe.png" alt="">
+                    <h4 class="box_text">Finance & Insurance Market</h4>
+                </article>
+                <article class="box">
+                    <img src="/assets/images/services icon/credit card.png" alt="">
+                    <h4 class="box_text">Mortgage</h4>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- service section ends -->
+
+
+    <div class="service-section section-b-space mt-2">
+        <div class="container">
+            <div class="row g-5" style="margin-top: -8rem;">
+
+
+                <div class="col-lg-6">
+                    <img style="width: 90%; height: 70%; border:none; border-radius: 2rem;"
+                        src="../assets/images/home/expertise.png" alt="">
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <p style="position: relative; bottom: 2rem;">AI Products And Solutions By Fourth Industrial
+                                Revolution Inc.</p>
+                            <div class="title">
+                                <h2>Different Industries We Served</h2>
+                            </div>
+                            <p>At Industrial Revolution Inc., we are committed to building long-term partnerships with
+                                our clients, based on trust, transparency, and a shared vision for success. We believe
+                                that digital transformation is not just about technology, but about people, processes,
+                                and culture. That's why we take a holistic approach to our engagements, working closely
+                                with stakeholders at all levels of the organization to drive change and foster a culture
+                                of innovation and continuous improvement.
+                                <br><br>
+                                Whether you are just starting your digital transformation journey or looking to take
+                                your efforts to the next level, Industrial Revolution Inc. is here to help. Contact us
+                                today to learn more about how we can help your business harness the power of technology
+                                and thrive in the Fourth Industrial Revolution.
+                            </p>
+                            <a data-cursor="pointer" class="btn-arrow" href="">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- footer section start-->
     <footer>
         <div class="container">
@@ -375,9 +433,11 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
                             <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
-                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training & Education</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training &
+                                    Education</a></li>
                         </ul>
                     </div>
                 </div>
@@ -407,27 +467,14 @@
     </footer>
     <!-- footer section end-->
 
-
-
-    <!-- Tap To Top Button Start -->
-    <div class="tap-to-top-box hide">
-        <button class="tap-to-top-button"><i class="iconsax" data-icon="chevron-up"></i></button>
-    </div>
-    <!-- Tap To Top Button End -->
-
-
-    <!--custom cursor start  -->
-    <div id="cursor"></div>
-    <div id="cursor-border"></div>
-    <!--custom cursor start  -->
-
-    
     <script>
+        
         document.getElementById('servicesDropdown').addEventListener('click', function (event) {
             if (!this.parentNode.classList.contains('show')) {
                 window.location.href = './services.html';
             }
         });
+        
     </script>
 
     <!-- Bootstrap js-->
@@ -444,14 +491,22 @@
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/custom-aos.js"></script>
 
-    <!-- header sticky js -->
-    <script src="../assets/js/header_sticky.js"></script>
-
     <!-- iconsax js -->
     <script src="../assets/js/iconsax.js"></script>
 
+    <!-- laptop animation js -->
+    <script src="../assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="../assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="../assets/js/pricing-table.js"></script>
+
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
 
 </body>
 

@@ -45,18 +45,20 @@
         .offers_container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
             margin-top: 2rem;
+            gap: 2rem;
         }
 
         .offer_box {
             border: 2px solid grey;
             transition: .5s all ease;
             cursor: pointer;
+            box-shadow: 0 0 10px 0px #20c997;
         }
 
         .offer_box:hover {
             border-color: #20c997;
+            box-shadow: 0 0 10px 4px #20c997;
         }
 
         .offer_box .offer_img {
@@ -74,7 +76,24 @@
             padding: 1rem;
             z-index: 100;
             color: #fff;
+            /* position: relative; */
         }
+
+        /* .offer_box .offer_content::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #20c997;
+            transition: .5s all ease;
+            z-index: -1;
+        } */
+
+        /* .offer_box .offer_content:hover::after {
+            width: 100%;
+        } */
 
         .offer_box .offer_content h3 {
             font-size: 1.8rem;
@@ -85,10 +104,13 @@
             list-style-position: outside;
             color: #fff;
             line-height: 2;
+            padding: 0 .5rem;
         }
 
         .offer_box .offer_content ul li {
-            list-style: disc !important ;
+            list-style: disc !important;
+            list-style-type: disc !important;
+            display: list-item !important;
         }
 
 
@@ -109,6 +131,7 @@
     <div id="cursor"></div>
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
+
 
 
     <!-- header start -->
@@ -141,21 +164,20 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    data-bs-toggle="dropdown">Services</a>
-
-                                <ul class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
-                                            Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai_talk_assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
                                     </li>
-                                    <li>
                                 </ul>
                             </li>
 
@@ -180,10 +202,12 @@
     <!-- home section start -->
     <section id="home" class="section-b-space home-section">
         <div class="container-fluid">
-            <div class="home-sec">
-                <div class="home-content">
+            <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                <div class="home-content" style="margin-top: 5rem;">
                     <div>
-                        <h2 style="font-size: 18px;">FOURTH INDUSTRIAL REVOLUTION INC</h2>
+                        <h2 style="font-size: 18px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2>
                         <h1 style="font-size: 30px;">Strategic Counseling Services</h1>
                         <p>Business Automation with Technology and AI on it</p>
                         <!-- <div class="d-flex flex-row gap-3 mx-5">
@@ -197,10 +221,10 @@
                     </div>
                 </div>
                 <div class="home-img d-lg-flex d-none">
-                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
-                    <div class="round-effect">
+                    <!-- <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot"> -->
+                    <!-- <div class="round-effect">
                         <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
-                    </div>
+                    </div> -->
                     <ul class="home-effect">
                         <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
                                 src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt=""> SEO
@@ -410,10 +434,10 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="index.html">Home</a></li>
-                            <li><a data-cursor="pointer" href="service.html">Service</a></li>
-                            <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li>
-                            <li><a data-cursor="pointer" href="contact-us.html">Contact us</a></li>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
+                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -424,16 +448,17 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="chat.html">Generate</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Find Image</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Email writer</a></li>
-                            <li><a data-cursor="pointer" href="chat.html">Social media</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
+                            <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training &
+                                    Education</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="link-section">
+                <!-- <div class="link-section">
                     <div class="footer-title">
-                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
                         Our company
                     </div>
                     <div class="footer-content">
@@ -444,7 +469,7 @@
                             <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2023 All the Copyright Reserved.</h4>
@@ -456,6 +481,17 @@
         </div>
     </footer>
     <!-- footer section end-->
+
+
+    <script>
+
+        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
+            if (!this.parentNode.classList.contains('show')) {
+                window.location.href = './services.html';
+            }
+        });
+
+    </script>
 
     <!-- Bootstrap js-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
