@@ -138,6 +138,90 @@
         .info-btn:hover {
             color: #20c997;
         }
+
+        .mic-sec {
+            margin-left: 15rem;
+            margin-top: 17%;
+        }
+        
+        .service_boxes_div{
+            position: relative; left: 16%; margin-top: -20%; width: 100%; display: flex; gap:3rem; justify-content: space-evenly;
+        }
+
+        .expertise_div{
+            margin-top: -6rem;
+        }
+
+        @media screen and (max-width:600px) {
+            .mic-sec {
+                margin-left: 0;
+            }
+            .service_boxes_div{
+                left: 0;
+                margin-top: 0;
+                margin: auto;
+                flex-direction: column;
+                width: 90%;
+            }
+            .expertise_div{
+                margin-top: 0;
+            }
+        }
+
+        .mic-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .mic_text {
+            font-size: 1rem;
+            color: white;
+            border: 1px solid #272424;
+            background-color: #272424;
+            display: inline;
+            border-radius: 1rem;
+            padding: 3px 12px;
+            width: max-content;
+        }
+
+        .btn-hover {
+            border: 1px solid #20c997;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 0 10px 0 #198754;
+            font-size: 1.4rem;
+            position: relative;
+            overflow: hidden;
+            /* Ensure content doesn't overflow */
+            z-index: 1;
+            /* Ensure button content is above the background */
+        }
+
+        .btn-hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #20c997;
+            transition: .4s all ease;
+            z-index: -1;
+            /* Place the background below the button content */
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn-hover:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 3px #198754;
+        }
+        
     </style>
 
 
@@ -221,7 +305,8 @@
             <div class="home-sec">
                 <div class="home-content">
                     <div>
-                        <h2 style="font-size: 20px;">FOURTH INDUSTRIAL REVOLUTION INC</h2>
+                        <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2>
                         <h1>AI CONSULTING AND PRODUCT SOLUTIONS</h1>
                         <div class="d-flex flex-row gap-3">
 
@@ -265,8 +350,7 @@
     <!-- service section start -->
     <div class="service-section section-b-space">
         <div class="col-lg-6">
-            <div
-                style="position: relative; left: 16%; margin-top: -24%; width: 100%; display: flex; gap:3rem; justify-content: space-evenly;">
+            <div class="service_boxes_div">
                 <div class="col-sm-6">
                     <div class="service-box">
                         <div class="service-icon">
@@ -335,14 +419,14 @@
 
                 <div class="col-lg-6">
 
-                    <div class="mic-sec" style="margin-left: 15rem; margin-top: 17%;">
-                        <div class="mic-div">
+                    <div class="mic-sec">
+                        <div class="mic-div ">
                             <button type="button" class="mic listening ">
                                 <i class="fa fa-microphone" style="color: #68e7ac;"></i>
                                 <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
-
                                 <canvas class="visualizer" width="80" height="40"></canvas>
                             </button>
+                            <div class="mic_text">Give it a try!</div>
                         </div>
                     </div>
 
@@ -381,7 +465,8 @@
                                     your users!</li>
                             </ul>
                         </div>
-                        <a data-cursor="pointer" class="btn-arrow mt-5" href="/html/strategic_counselling.html">
+                        <a data-cursor="pointer" class="btn-arrow mt-5 btn-hover"
+                            href="/html/strategic_counselling.html">
                             <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
                         </a>
                     </div>
@@ -425,7 +510,7 @@
                                     content. </li>
                             </ul>
                         </div>
-                        <a data-cursor="pointer" class="btn-arrow mt-5" href="/html/ai_talk_assist.html">
+                        <a data-cursor="pointer" class="btn-arrow mt-5 btn-hover" href="/html/ai_talk_assist.html">
                             <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
                         </a>
                     </div>
@@ -460,7 +545,7 @@
                                     unlimited content ideas that keep your followers hooked.</li>
                             </ul>
                         </div>
-                        <a data-cursor="pointer" class="btn-arrow mt-5" target="_blank"
+                        <a data-cursor="pointer" class="btn-arrow mt-5 btn-hover" target="_blank"
                             href="https://4ireducation.com/">
                             <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
                         </a>
@@ -478,7 +563,7 @@
 
     <div class="service-section section-b-space mt-2">
         <div class="container">
-            <div class="row g-5" style="margin-top: -6rem;">
+            <div class="row g-5 expertise_div" >
                 <div class="col-lg-6">
                     <div class="service-info">
                         <div>
@@ -981,6 +1066,7 @@
         let mic = document.querySelector(".mic");
         let visualizer = document.querySelector(".visualizer");
         let micIcon = document.querySelector(".mic i");
+        const micText = document.querySelector('.mic_text')
 
         let audioContext, analyser, dataArray, source;
         let isRecording = false;
@@ -994,6 +1080,7 @@
         });
 
         function startRecording() {
+            micText.textContent = 'Listening!'
             navigator.mediaDevices.getUserMedia({ audio: true })
                 .then(function (stream) {
                     audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -1017,6 +1104,7 @@
         function stopRecording() {
             if (audioContext) {
                 audioContext.close();
+                micText.textContent = 'Give it a try!'
             }
             visualizer.style.display = 'none';
             micIcon.style.display = 'block';

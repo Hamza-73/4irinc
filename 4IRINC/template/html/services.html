@@ -96,16 +96,52 @@
             left: 35%;
         }
 
+        .service_container {
+            position: relative;
+            left: 16%;
+            margin-top: -20%;
+            width: 100%;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-evenly;
+        }
+
+        .service_img {
+            width: 90%;
+            height: 70%;
+            border: none;
+            border-radius: 2rem;
+        }
+        .service_row{
+            margin-top: -8rem;
+        }
+
         @media screen and (max-width:600px) {
 
-            .serive_container {
+            .service_container {
+                left: 0;
+                margin-top: 0;
+                margin: auto;
                 flex-direction: column;
-                top: 5rem;
-                margin-left: -4rem;
+                width: 90%;
             }
 
             .boxs_container {
                 grid-template-columns: 1fr;
+            }
+
+            .basic_service {
+                margin: 7rem auto;
+                left: 5%;
+            }
+
+            .service_row{
+                margin-top: 0;
+            }
+
+            .service_img{
+                width: 100%;
+                height: 100%;
             }
         }
     </style>
@@ -122,7 +158,7 @@
     <!--custom cursor start  -->
 
 
-  
+
     <!-- header start -->
     <header>
         <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
@@ -153,19 +189,21 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"
-                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Services
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
+                                            Education</a>
                                     </li>
                                 </ul>
                             </li>
@@ -214,23 +252,6 @@
                     <!-- <div class="round-effect">
                         <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
                     </div> -->
-                    <ul class="home-effect">
-                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt=""> SEO
-                            Specialist
-                        </li>
-                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                src="../assets/svg/service/graph.svg" class="img-fluid outline-icon" alt=""> Digital
-                            marketers
-                        </li>
-                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                src="../assets/svg/service/copy.svg" class="img-fluid outline-icon" alt=""> Copy writer
-                        </li>
-                        <li><img src="../assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt=""> Content
-                            writer
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -241,8 +262,7 @@
     <!-- service section start -->
     <div class="service-section section-b-space">
         <div class="col-lg-6">
-            <div class="serive_container"
-                style="position: relative; left: 16%; margin-top: -20%; width: 100%; display: flex; gap:3rem; justify-content: space-evenly;">
+            <div class="service_container">
                 <div class="col-sm-6">
                     <div class="service-box">
                         <div class="service-icon">
@@ -346,12 +366,11 @@
 
     <div class="service-section section-b-space mt-2">
         <div class="container">
-            <div class="row g-5" style="margin-top: -8rem;">
+            <div class="row g-5 service_row">
 
 
                 <div class="col-lg-6">
-                    <img style="width: 90%; height: 70%; border:none; border-radius: 2rem;"
-                        src="../assets/images/home/expertise.png" alt="">
+                    <img class="service_img" src="../assets/images/home/expertise.png" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -468,13 +487,13 @@
     <!-- footer section end-->
 
     <script>
-        
+
         document.getElementById('servicesDropdown').addEventListener('click', function (event) {
             if (!this.parentNode.classList.contains('show')) {
                 window.location.href = './services.html';
             }
         });
-        
+
     </script>
 
     <!-- Bootstrap js-->
