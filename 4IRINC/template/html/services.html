@@ -53,7 +53,7 @@
         }
 
         .basic_service {
-            margin-top: 10rem;
+            margin-top: 3rem;
             position: relative;
         }
 
@@ -68,32 +68,71 @@
             box-shadow: 0 0 10px 0 #20c997;
             padding: 2rem;
             width: 350px;
+            height: max-content;
             color: #fff;
-            display: flex;
-            justify-content: space-between;
             gap: 3rem;
             align-items: center;
             border-radius: 0.4rem;
             position: relative;
             cursor: pointer;
+            transition: .5s all ease;
         }
 
-        .boxs_container .box img {
-            width: 20%;
+
+        .boxs_container:has(:hover)> :not(:hover) {
+            opacity: 0.6;
+            scale: .8;
+        }
+
+
+
+        .boxs_container .box:hover {
+            box-shadow: 0 0 10px 5px #20c997;
+        }
+
+        .box .box_img img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .boxs_container .box_content {
+            margin-top: 2rem;
+        }
+
+        .boxs_container .box_content h4 {
+            font-weight: 600;
+        }
+
+        .boxs_container .box_content ul {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .boxs_container .box_content ul li {
+            list-style: disc !important;
+            list-style-type: disc !important;
+            display: list-item !important;
+            margin: 1rem 0;
+        }
+
+        .boxs_container .box_content img {
+            width: 15%;
         }
 
         .boxs_container .box .box_text {
             font-size: 1.4rem;
+            position: relative;
+            margin-left: 1rem;
         }
 
         .boxs_container .box .box_text::before {
             content: "";
             width: 2px;
-            height: 80%;
+            height: 100%;
             position: absolute;
             background-color: #20c997;
-            top: 10%;
-            left: 35%;
+            top: 0%;
+            left: -6%;
         }
 
         .service_container {
@@ -112,7 +151,8 @@
             border: none;
             border-radius: 2rem;
         }
-        .service_row{
+
+        .service_row {
             margin-top: -8rem;
         }
 
@@ -131,17 +171,24 @@
             }
 
             .basic_service {
-                margin: 7rem auto;
-                left: 5%;
+                margin: 2rem auto;
+                left: 0%;
             }
 
-            .service_row{
+            .service_row {
                 margin-top: 0;
             }
 
-            .service_img{
+            .service_img {
                 width: 100%;
                 height: 100%;
+            }
+        }
+
+
+        @media screen and (min-width:1500px) {
+            .service_container {
+                margin-top: -15%;
             }
         }
     </style>
@@ -180,7 +227,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="../home.html">Home</a>
                             </li>
 
@@ -188,7 +235,7 @@
                                 <a class="nav-link" href="./about.html">About Us</a>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown active">
                                 <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Services
@@ -259,8 +306,65 @@
     <!-- home section end -->
 
 
+    <!-- servce section start -->
+
+    <section class="section-b-space basic_service">
+        <div class="container">
+            <div class="boxs_container">
+                <article class="box">
+                    <div class="box_img">
+                        <img src="/assets/images/services/realestate.webp" alt="">
+                    </div>
+                    <div class="box_content">
+                        <!-- <img src="/assets/images/services icon/house.png" alt=""> -->
+                        <h4 class="box_text">Real Estate</h4>
+                        <ul>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="box">
+                    <div class="box_img">
+                        <img src="/assets/images/services/finance.jpeg" alt="">
+                    </div>
+                    <!-- <img src="/assets/images/services icon/globe.png" alt=""> -->
+                    <div class="box_content">
+                        <h4 class="box_text">Finance & Insurance Market</h4>
+                        <ul>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="box">
+                    <div class="box_img">
+                        <img src="/assets/images/services/mortage.jpeg" alt="">
+                    </div>
+                    <!-- <img src="/assets/images/services icon/credit card.png" alt=""> -->
+                    <div class="box_content">
+                        <h4 class="box_text">Mortgage</h4>
+                        <ul>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section ends -->
+
+
     <!-- service section start -->
-    <div class="service-section section-b-space">
+    <!-- <div class="service-section section-b-space">
         <div class="col-lg-6">
             <div class="service_container">
                 <div class="col-sm-6">
@@ -306,7 +410,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- service section end -->
 
 
@@ -340,28 +444,6 @@
     </section>
     <!-- contact us end -->
 
-    <!-- servce section start -->
-
-    <div class="section-b-space basic_service">
-        <div class="container">
-            <div class="boxs_container">
-                <article class="box">
-                    <img src="/assets/images/services icon/house.png" alt="">
-                    <h4 class="box_text">Real Estate</h4>
-                </article>
-                <article class="box">
-                    <img src="/assets/images/services icon/globe.png" alt="">
-                    <h4 class="box_text">Finance & Insurance Market</h4>
-                </article>
-                <article class="box">
-                    <img src="/assets/images/services icon/credit card.png" alt="">
-                    <h4 class="box_text">Mortgage</h4>
-                </article>
-            </div>
-        </div>
-    </div>
-
-    <!-- service section ends -->
 
 
     <div class="service-section section-b-space mt-2">
