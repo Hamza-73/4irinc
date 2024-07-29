@@ -37,6 +37,8 @@
 
     <link rel="stylesheet" href="../assets/css/landing.css">
 
+    <link rel="stylesheet" href="/assets/scss/components/">
+
     <style>
         .feature_container {
             margin-left: -7rem;
@@ -52,7 +54,7 @@
             color: #20c997;
         }
 
-        .basic_service {
+        .services_section {
             margin-top: 3rem;
             position: relative;
         }
@@ -61,6 +63,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 3rem;
+            transition: .5s all ease;
         }
 
         .boxs_container .box {
@@ -68,39 +71,53 @@
             box-shadow: 0 0 10px 0 #20c997;
             padding: 2rem;
             width: 350px;
-            height: max-content;
+            height: 100%;
             color: #fff;
-            gap: 3rem;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            /* Stack items vertically */
             border-radius: 0.4rem;
             position: relative;
             cursor: pointer;
-            transition: .5s all ease;
+            transition: .4s all ease;
         }
-
-
-        .boxs_container:has(:hover)> :not(:hover) {
-            opacity: 0.6;
-            scale: .8;
-        }
-
-
 
         .boxs_container .box:hover {
             box-shadow: 0 0 10px 5px #20c997;
         }
 
+        .box .box_img {
+            flex: 0 0 auto;
+            /* Prevent the image from shrinking */
+        }
+
         .box .box_img img {
             width: 100%;
             height: 200px;
+            object-fit: cover;
+            /* Ensure the image covers the box without distortion */
+            transition: .5s all ease;
+        }
+
+        .box .box_img img:hover {
+            transform: scale(1.09);
         }
 
         .boxs_container .box_content {
+            flex: 1 0 auto;
+            /* Allow content to expand and take up remaining space */
             margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* Stack content vertically */
         }
+
 
         .boxs_container .box_content h4 {
             font-weight: 600;
+            margin-bottom: 1rem;
+            /* Ensure space between heading and other content */
         }
 
         .boxs_container .box_content ul {
@@ -135,6 +152,45 @@
             left: -6%;
         }
 
+        .btn-hover {
+            border: 1px solid #20c997;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 0 10px 0 #198754;
+            font-size: 1.4rem;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            /* Ensure content doesn't overflow */
+            z-index: 1;
+            /* Ensure button content is above the background */
+        }
+
+        .btn-hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #20c997;
+            transition: .4s all ease;
+            z-index: -1;
+            /* Place the background below the button content */
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn-hover:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 3px #198754;
+        }
+
         .service_container {
             position: relative;
             left: 16%;
@@ -156,6 +212,166 @@
             margin-top: -8rem;
         }
 
+        /* General Styles */
+        .feature-section {
+            position: relative;
+        }
+
+        .swiper-slide .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .swiper-slide .col-xl-3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .expertise_box {
+            border: 1px solid #20c997;
+            box-shadow: 0 0 10px 0 #20c997;
+            padding: 2rem 4rem;
+            width: 500px;
+            gap: 3rem;
+            /* Ensure consistent width */
+            height: 150px;
+            /* Ensure consistent height */
+            color: #fff;
+            display: flex;
+            /* Ensure vertical stacking */
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            border-radius: 0.4rem;
+            position: relative;
+            cursor: pointer;
+            transition: .5s all ease;
+        }
+
+        .expertise_box:hover {
+            box-shadow: 0 0 10px 5px #20c997;
+        }
+
+        .expertise_box img {
+            width: 30%;
+            margin-bottom: 1rem;
+            /* Add spacing between image and text */
+        }
+
+        .expertise_box .expertise_text {
+            font-size: 1.4rem;
+            text-align: center;
+            /* Center text */
+            position: relative;
+        }
+
+        .expertise_box .expertise_text::before {
+            content: "";
+            position: absolute;
+            background-color: #20c997;
+            width: 2px;
+            height: 110%;
+            top: 0;
+            left: -30%;
+        }
+
+        /* Swiper Navigation Buttons */
+        .feature-button-next,
+        .feature-button-prev {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+        }
+
+        .feature-button-next {
+            right: 10px;
+        }
+
+        .feature-button-prev {
+            left: 10px;
+        }
+
+        /* Swiper Pagination */
+        .feature-pagination .swiper-pagination-bullet {
+            background: #000;
+        }
+
+        /* Pagination Container */
+        .pagination-container {
+            position: relative;
+            text-align: center;
+            margin-top: 3rem;
+            /* Adjust as needed */
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: relative;
+            background: grey;
+            /* Background color of the progress bar */
+            height: 10px;
+            /* Height of the progress bar */
+            width: 10%;
+            /* Width of the progress bar */
+            margin: 0 auto;
+            /* Center the progress bar */
+            border-radius: 5px;
+            /* Rounded corners for the progress bar */
+        }
+        .progress-bar::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #20c997;
+            height: 100%;
+            width: 0%;
+        }
+
+        .progress-bar-fill {
+            position: absolute;
+            background: grey;
+            /* Fill color of the progress bar */
+            height: 100%;
+            width: 0;
+            /* Start with 0 width and adjust dynamically */
+            border-radius: 5px;
+            /* Rounded corners for the fill */
+            transition: width 0.3s ease;
+            /* Smooth transition for fill */
+        }
+
+        /* Pagination Effect (Robot Image) */
+        .pagination-effect {
+            position: absolute;
+            top: -30px;
+            /* Position the robot on top of the progress bar */
+            left: 45%;
+            transform: translateX(-50%);
+            z-index: 10;
+            /* Ensure the robot is on top of the progress bar */
+        }
+
+        .pagination-effect .img-fluid {
+            position: relative;
+            z-index: 2;
+            /* Ensure the robot is above the progress bar */
+        }
+
+        /* Swiper Pagination */
+        .feature-pagination {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+
         @media screen and (max-width:600px) {
 
             .service_container {
@@ -168,9 +384,10 @@
 
             .boxs_container {
                 grid-template-columns: 1fr;
+                margin-left: 4.5%;
             }
 
-            .basic_service {
+            .services_section {
                 margin: 2rem auto;
                 left: 0%;
             }
@@ -183,6 +400,15 @@
                 width: 100%;
                 height: 100%;
             }
+
+            .expertise_container {
+                grid-template-columns: 1fr;
+                margin-left: 4.5%;
+            }
+
+            .expertise_box {
+                width: 80vw;
+            }
         }
 
 
@@ -190,6 +416,53 @@
             .service_container {
                 margin-top: -15%;
             }
+        }
+
+        /* Ensure the nav items are aligned horizontally and centered vertically */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #servicesLink {
+            margin-right: 0.5rem;
+            /* Adjust spacing as needed */
+        }
+
+        #dropdownToggle {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            /* Set the text color to white */
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        #dropdownToggle:focus {
+            outline: none;
+        }
+
+        @media (min-width: 992px) {
+            #dropdownToggle {
+                display: none;
+            }
+        }
+
+        /* Hide the default Bootstrap dropdown icon */
+        .nav-item.dropdown .nav-link::after {
+            display: none;
+        }
+
+        /* Additional style to adjust the layout in offcanvas mode */
+        .offcanvas-body .nav-item {
+            display: block;
+            /* Make sure the items are stacked in offcanvas mode */
         }
     </style>
 
@@ -235,12 +508,13 @@
                                 <a class="nav-link" href="./about.html">About Us</a>
                             </li>
 
-                            <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="./services.html" id="servicesLink">Services</a>
+                                <button class="nav-link dropdown-toggle custom-dropdown-toggle" id="dropdownToggle"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownToggle">
                                     <li>
                                         <a class="dropdown-item" href="./strategic_counselling.html">Strategic
                                             Counseling</a>
@@ -305,57 +579,61 @@
     </section>
     <!-- home section end -->
 
-
     <!-- servce section start -->
 
-    <section class="section-b-space basic_service">
+    <section class="section-b-space services_section">
         <div class="container">
             <div class="boxs_container">
-                <article class="box">
-                    <div class="box_img">
-                        <img src="/assets/images/services/realestate.webp" alt="">
-                    </div>
-                    <div class="box_content">
-                        <!-- <img src="/assets/images/services icon/house.png" alt=""> -->
-                        <h4 class="box_text">Real Estate</h4>
-                        <ul>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="box">
-                    <div class="box_img">
-                        <img src="/assets/images/services/finance.jpeg" alt="">
-                    </div>
-                    <!-- <img src="/assets/images/services icon/globe.png" alt=""> -->
-                    <div class="box_content">
-                        <h4 class="box_text">Finance & Insurance Market</h4>
-                        <ul>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="box">
-                    <div class="box_img">
-                        <img src="/assets/images/services/mortage.jpeg" alt="">
-                    </div>
-                    <!-- <img src="/assets/images/services icon/credit card.png" alt=""> -->
-                    <div class="box_content">
-                        <h4 class="box_text">Mortgage</h4>
-                        <ul>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, soluta.</li>
-                        </ul>
-                    </div>
-                </article>
+                <a href="/html/strategic_counselling.html">
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/services/realestate.webp" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>DRIVE GROWTH</p>
+                            <h4 class="box_text">Strategic Counseling</h4>
+                            <p>Tailored strategies for business growth.</p>
+                            <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button>
+                        </div>
+                    </article>
+                </a>
+
+
+                <a href="/html/ai_talk_assist.html">
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/services/realestate.webp" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>ENHANCE OPERATIONS</p>
+                            <h4 class="box_text">AI Solutions</h4>
+                            <p>Cutting-edge solutions tailored for you.</p>
+                            <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button>
+                        </div>
+                    </article>
+                </a>
+
+
+                <a href="https://4ireducation.com/">
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/services/realestate.webp" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>EMPOWER YOUR TEAM</p>
+                            <h4 class="box_text">Training & Education</h4>
+                            <p>Customized programs for expertise.</p>
+                            <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button>
+                        </div>
+                    </article>
+                </a>
+
             </div>
         </div>
     </section>
@@ -444,6 +722,186 @@
     </section>
     <!-- contact us end -->
 
+    <!-- feature section start -->
+    <section class="feature-section section-b-space">
+        <div class="container">
+            <div class="swiper featureSlider">
+                <div id="featureSlider" class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/globe.png" alt="">
+                                    <h4 class="expertise_text">Finance & Insurance Market</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/credit card.png" alt="">
+                                    <h4 class="expertise_text">Mortgage</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <article class="expertise_box">
+                                    <img src="/assets/images/services icon/house.png" alt="">
+                                    <h4 class="expertise_text">Real Estate</h4>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-container">
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <div class="pagination-effect">
+                <img src="../assets/svg/pagination-robot.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+        
+        <!-- <div class="swiper-pagination feature-pagination"></div> -->
+        <!-- <div class="swiper-button-next feature-button-next"></div>
+        <div class="swiper-button-prev feature-button-prev"></div> -->
+    </section>
+
+    <!-- feature section end -->
+
+    <!-- <section class="section-b-space expertise_section">
+        <div class="container">
+            <h2 class="text-center text-white" style="margin-bottom: 5rem;">Our Expertise - Industries</h2>
+            <div class="expertise_container">
+                <article class="expertise_box">
+                    <img src="/assets/images/services icon/house.png" alt="">
+                    <h4 class="expertise_text">Real Estate</h4>
+                </article>
+                <article class="expertise_box">
+                    <img src="/assets/images/services icon/globe.png" alt="">
+                    <h4 class="expertise_text">Finance & Insurance Market</h4>
+                </article>
+                <article class="expertise_box">
+                    <img src="/assets/images/services icon/credit card.png" alt="">
+                    <h4 class="expertise_text">Mortgage</h4>
+                </article>
+            </div>
+        </div>
+    </section> -->
+
 
 
     <div class="service-section section-b-space mt-2">
@@ -451,9 +909,9 @@
             <div class="row g-5 service_row">
 
 
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <img class="service_img" src="../assets/images/home/expertise.png" alt="">
-                </div>
+                </div> -->
 
                 <div class="col-lg-6">
                     <div class="service-info">
@@ -521,8 +979,8 @@
                     <div class="footer-content">
                         <ul>
                             <li><a data-cursor="pointer" href="/home.html">Home</a></li>
-                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
-                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
                             <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
@@ -568,6 +1026,7 @@
     </footer>
     <!-- footer section end-->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
         document.getElementById('servicesDropdown').addEventListener('click', function (event) {
@@ -576,6 +1035,29 @@
             }
         });
 
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.featureSlider', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.feature-pagination',
+                },
+                navigation: {
+                    nextEl: '.feature-button-next',
+                    prevEl: '.feature-button-prev',
+                },
+                on: {
+                    slideChange: function () {
+                        const progressBarFill = document.querySelector('.progress-bar');
+                        const totalSlides = swiper.slides.length;
+                        const currentIndex = swiper.activeIndex;
+                        const progress = ((currentIndex + 1) / totalSlides) * 100;
+                        progressBarFill.style.width = progress + '%';
+                    },
+                },
+            });
+
+        });
     </script>
 
     <!-- Bootstrap js-->

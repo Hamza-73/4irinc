@@ -447,22 +447,49 @@ nav.navbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 0;
+  justify-content: space-between;
+  gap: 7rem;
+  width: 100%;
 }
 @media (max-width: 991px) {
   .home-section .home-sec {
     height: 100%;
     padding: calc(132px + 26 * (100vw - 320px) / 1600) 0 calc(80px + 20 * (100vw - 320px) / 1600) 0;
   }
+}.home-section .home-content {
+  position: relative;
+}
+.home-section .home-img {
+  position: relative;
+  left: 8%;
+}
+@media screen and (max-width:1700px) {
+  .home-section .home-content {
+    position: relative;
+    left: -3%;
+  }
+  .home-section .home-img {
+    position: relative;
+    left: 4%;
+  }  
 }
 @media (max-width: 1500px) {
   .home-section .home-sec .home-effect {
     display: none;
+  }.home-section .home-content {
+    position: relative;
+    left: 0%;
   }
+  .home-section .home-img {
+    position: relative;
+    left: 0%;
+  }  
 }
 .home-section .home-sec .home-effect li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -483,39 +510,48 @@ nav.navbar {
   }
 }
 .home-section .home-sec .home-effect li:first-child {
-  left: -180px;
+  left: -280px;
   top: 8%;
 }
 @media (max-width: 1700px) {
   .home-section .home-sec .home-effect li:first-child {
-    left: -120px;
+    left: -150px;
   }
 }
 .home-section .home-sec .home-effect li:nth-child(2) {
-  left: -300px;
-  top: 32%;
+  left: -400px;
+  top: 29%;
 }
 @media (max-width: 1700px) {
   .home-section .home-sec .home-effect li:nth-child(2) {
-    left: -220px;
+    left: -280px;
   }
 }
 .home-section .home-sec .home-effect li:nth-child(3) {
-  left: -260px;
-  top: 56%;
+  left: -380px;
+  top: 50%;
 }
 @media (max-width: 1700px) {
   .home-section .home-sec .home-effect li:nth-child(3) {
-    left: -190px;
+    left: -300px;
   }
 }
 .home-section .home-sec .home-effect li:nth-child(4) {
-  left: -180px;
-  top: 80%;
+  left: -340px;
+  top: 70%;
 }
 @media (max-width: 1700px) {
   .home-section .home-sec .home-effect li:nth-child(4) {
-    left: -120px;
+    left: -270px;
+  }
+}
+.home-section .home-sec .home-effect li:nth-child(5) {
+  top: 87%;
+  left: -220px;
+}
+@media (max-width: 1700px) {
+  .home-section .home-sec .home-effect li:nth-child(5) {
+    left: -200px;
   }
 }
 .home-section .home-sec .home-effect li .effect-img {

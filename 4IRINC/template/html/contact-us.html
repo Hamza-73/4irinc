@@ -36,8 +36,55 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
     <style>
-        .info-btn:hover{
+        .info-btn:hover {
             color: #20c997;
+        }
+
+        /* Ensure the nav items are aligned horizontally and centered vertically */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #servicesLink {
+            margin-right: 0.5rem;
+            /* Adjust spacing as needed */
+        }
+
+        #dropdownToggle {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            /* Set the text color to white */
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        #dropdownToggle:focus {
+            outline: none;
+        }
+
+        @media (min-width: 992px) {
+            #dropdownToggle {
+                display: none;
+            }
+        }
+
+        /* Hide the default Bootstrap dropdown icon */
+        .nav-item.dropdown .nav-link::after {
+            display: none;
+        }
+
+        /* Additional style to adjust the layout in offcanvas mode */
+        .offcanvas-body .nav-item {
+            display: block;
+            /* Make sure the items are stacked in offcanvas mode */
         }
     </style>
 
@@ -46,7 +93,7 @@
 <body class="inner-bg">
 
 
-  
+
     <!-- header start -->
     <header>
         <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
@@ -77,22 +124,26 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"
-                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="nav-link" href="./services.html" id="servicesLink">Services</a>
+                                <button class="nav-link dropdown-toggle custom-dropdown-toggle" id="dropdownToggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownToggle">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
+                                            Education</a>
                                     </li>
                                 </ul>
                             </li>
+
 
                             <li class="nav-item">
                                 <a class="nav-link" href="./blog-grid.html">Blog</a>
@@ -122,7 +173,8 @@
                             <h2 class="center"><img src="../assets/images/breadcrumb-title.png" class="img-fluid"
                                     alt="title-effect">Contact us
                             </h2>
-                            <p class="center"><i class="ri-subtract-line"></i>Email us with any questions, we would be happy to answer
+                            <p class="center"><i class="ri-subtract-line"></i>Email us with any questions, we would be
+                                happy to answer
                                 your question. </p>
                         </div>
                     </div>
@@ -278,8 +330,8 @@
                     <div class="footer-content">
                         <ul>
                             <li><a data-cursor="pointer" href="/home.html">Home</a></li>
-                            <!-- <li><a data-cursor="pointer" href="service.html">Service</a></li> -->
-                            <!-- <li><a data-cursor="pointer" href="pricing.html">Pricing</a></li> -->
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
                             <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
                         </ul>
                     </div>
@@ -291,9 +343,11 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
                             <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
-                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training & Education</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training &
+                                    Education</a></li>
                         </ul>
                     </div>
                 </div>
@@ -337,7 +391,7 @@
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
 
-    
+
     <script>
         document.getElementById('servicesDropdown').addEventListener('click', function (event) {
             if (!this.parentNode.classList.contains('show')) {

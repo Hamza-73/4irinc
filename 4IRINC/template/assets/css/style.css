@@ -1337,6 +1337,11 @@ li {
 /**=====================
    3.1 footer section scss
 ==========================**/
+footer{
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+}
 footer .footer-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5880,12 +5885,29 @@ header .offcanvas-backdrop {
   padding: 34px;
   border-radius: 4px;
   position: relative;
-  height: 100%;
+  height: 520px;
   width: 400px;
   text-align: center;
+
+}
+.team-section .team-box img{
+  width: 100%;
+  position: relative;
+  left: 8%;
+  margin-bottom: 2rem;
 }
 [dir=rtl] .team-section .team-box {
   direction: rtl;
+}
+@media screen and (max-width:600px) {
+  .feature_container{
+    margin-top: 3rem;
+  }
+  .team-section .team-box{
+    width: 90vw;
+    margin: auto;
+    left: 4.3%;
+  }  
 }
 @media (max-width: 1400px) {
   .team-section .team-box {
