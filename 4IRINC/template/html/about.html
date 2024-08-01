@@ -48,23 +48,27 @@
             }
         }
 
-        .nav-tabs{
+        .nav-tabs {
             display: flex;
             justify-content: space-around;
             padding: 1rem;
         }
-        .card{
+
+        .card {
             padding: 2rem 4rem;
             border: 2px solid #20c997;
             box-shadow: 0 0 10px 0px #20c997;
             transition: .5s all ease;
         }
-        .card:hover{
+
+        .card:hover {
             box-shadow: 0 0 10px 3px #20c997;
         }
-        .service_paragraph{
+
+        .service_paragraph {
             font-size: 1.1rem;
         }
+
         .card .card-header .nav-items p {
             font-size: 1.6rem;
             background: transparent;
@@ -72,7 +76,8 @@
             cursor: pointer;
             padding: 0.4rem;
         }
-        .card .card-body{
+
+        .card .card-body {
             line-height: 2;
         }
 
@@ -97,24 +102,121 @@
         .card-text {
             text-align: start;
         }
-        .info-btn:hover{
+
+        .info-btn:hover {
             color: #20c997;
         }
 
         @media screen and (max-width:600px) {
 
-            
-        .card{
-            padding: 2rem ;
-            position: relative;
-            left: 3%;
-        }
+            body{
+                overflow-x: hidden;
+            }
 
-            .service-info{
-                width: 90%;
+            .team_box_container{
+                margin-left: -5%;
+                overflow-x: hidden;
+            }
+            .card {
+                padding: 2rem;
+                position: relative;
+                left: 3%;
+            }
+            .service-section{
+                width: 100vw;
+            }
+
+            .service-info {
+                width: 90vw;
                 position: relative;
                 margin: 3rem auto;
-            }            
+            }
+        }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #12a35f;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+
+        header #logo-img {
+            position: relative;
+            margin-top: -1.4rem;
+
+        }
+        @media screen and (max-width:600px) {
+            header #logo-img {
+                margin-top: 0;
+        }
+            
         }
     </style>
 
@@ -138,7 +240,7 @@
                 <i class="iconsax" data-icon="text-align-justify"></i>
             </span>
         </button>
-        <a href="../home.html">
+        <a href="../home.html" id="logo-img">
             <img src="../assets/images/logo.svg" class="img-fluid" alt="logo">
         </a>
         <nav class="header-nav-middle">
@@ -160,22 +262,27 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"
-                                    id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link" href="./services.html" id="servicesLink">
                                     Services
                                 </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
                                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai_talk_assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="https://4ireducation.com/">Training & Education</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
+                                            Education</a>
                                     </li>
                                 </ul>
-                            </li>                            
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="./blog-grid.html">Blog</a>
@@ -189,7 +296,8 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="../home.html" class="btn btn-theme d-sm-inline-block d-none"><span>Get
+        <a data-cursor="pointer" href="../home.html" style="position: relative; margin-top: -1.4rem;"
+            class="btn btn-theme d-sm-inline-block d-none"><span>Get
                 Started</span></a>
     </header>
     <!-- header end -->
@@ -202,7 +310,8 @@
             justify-content: center; display: flex;">
                 <div class="home-content" style="margin-top: 5rem;">
                     <div>
-                        <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC</h2>
+                        <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2>
                         <h1>ABOUT US</h1>
                         <p>AI Solutions Experts: Our Story and Mission</p>
                         <!-- <div class="d-flex flex-row gap-3 mx-5">
@@ -215,18 +324,18 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="home-img d-lg-flex d-none">
-                    <!-- <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot"> -->
-                    <!-- <div class="round-effect">
+                <!-- <div class="home-img d-lg-flex d-none">
+                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
+                    <div class="round-effect">
                         <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
     <!-- home section end -->
 
-    
+
     <!-- servce section start -->
     <div class="service-section section-b-space mt-2">
         <div class="container">
@@ -238,47 +347,48 @@
                 </div> -->
 
                 <!-- <div class="col-lg-6"> -->
-                    <div class="service-info">
-                        <div>
-                            <div class="title">
-                                <h2>Empowering Your Business In The Fourth Industrial Revolution</h2>
-                            </div>
-                            <p class="service_paragraph">Fourth Industrial Revolution Inc., we're driven to support small to midsize businesses
-                                and solopreneurs through the complexities of the Fourth Industrial Revolution. Our
-                                mission is straightforward: to help them grasp how technology is transforming business.
-                                With this knowledge, they can remain competitive, reduce costs, and increase profits by
-                                wisely adopting transformative technologies.</p>
-
-                            <div class="card text-center"
-                                style="background-color: transparent; margin-top: 1.5rem; border-color: #20c997;">
-                                <div class="card-header">
-                                    <ul class="nav nav-tabs card-header-tabs">
-                                        <li class="nav-items">
-                                            <p class="nav-links active" data-tab="mission">Our Mission</p>
-                                        </li>
-                                        <li class="nav-items">
-                                            <p class="nav-links" data-tab="vision">Our Vision</p>
-                                        </li>
-                                        <li class="nav-items">
-                                            <p class="nav-links" data-tab="value">Our Value</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Empowering businesses and solopreneurs to think big and embrace
-                                        the Fourth Industrial Revolution. We offer cutting-edge solutions and expert
-                                        support for digital transformation. Our commitment is to help clients navigate
-                                        technological changes and achieve sustainable growth.</p>
-                                </div>
-                            </div>
-
-
-
-                            <a data-cursor="pointer" class="btn-arrow" href="">
-                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
-                            </a>
+                <div class="service-info">
+                    <div>
+                        <div class="title">
+                            <h2>Empowering Your Business In The Fourth Industrial Revolution</h2>
                         </div>
+                        <p class="service_paragraph">Fourth Industrial Revolution Inc., we're driven to support small to
+                            midsize businesses
+                            and solopreneurs through the complexities of the Fourth Industrial Revolution. Our
+                            mission is straightforward: to help them grasp how technology is transforming business.
+                            With this knowledge, they can remain competitive, reduce costs, and increase profits by
+                            wisely adopting transformative technologies.</p>
+
+                        <div class="card text-center"
+                            style="background-color: transparent; margin-top: 1.5rem; border-color: #20c997;">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-items">
+                                        <p class="nav-links active" data-tab="mission">Our Mission</p>
+                                    </li>
+                                    <li class="nav-items">
+                                        <p class="nav-links" data-tab="vision">Our Vision</p>
+                                    </li>
+                                    <li class="nav-items">
+                                        <p class="nav-links" data-tab="value">Our Value</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Empowering businesses and solopreneurs to think big and embrace
+                                    the Fourth Industrial Revolution. We offer cutting-edge solutions and expert
+                                    support for digital transformation. Our commitment is to help clients navigate
+                                    technological changes and achieve sustainable growth.</p>
+                            </div>
+                        </div>
+
+
+
+                        <a data-cursor="pointer" class="btn-arrow" href="">
+                            <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
+                        </a>
                     </div>
+                </div>
                 <!-- </div> -->
 
             </div>
@@ -304,7 +414,7 @@
                 <div id="featureSlider" class="swiper-wrapper">
                     <div class="swiper-slide"> -->
             <div class="row d-flex justify-content-evenly align-items-center gap-3 feature_container">
-                <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="col-xl-3 col-lg-4 col-sm-6 team_box_container">
                     <div class="team-box">
                         <img src="/assets/images/team/Shane Krevoy.png " alt="shane krevoy">
                         <div class="feature-top mt-4">
@@ -316,14 +426,15 @@
                                         </div> -->
                             <h3>Shane Krevoy</h3>
                         </div>
-                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">4IR Transformative Leadership Advisor/Consultant
+                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">4IR Transformative
+                            Leadership Advisor/Consultant
                         </h4>
                         <div data-cursor="pointer" class="link-overflow"><a href="https://linkedin.com"
                                 target="_blank">Read more <i class="iconsax" data-icon="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="col-xl-3 col-lg-4 col-sm-6 team_box_container">
                     <div class="team-box">
                         <img src="/assets/images/team/Barry Krevoy.png " alt="barry krevoy">
                         <div class="feature-top mt-4">
@@ -335,7 +446,8 @@
                                         </div> -->
                             <h3>Barry Krevoy</h3>
                         </div>
-                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">CEO | 4IR Transformative Leadership Consultant/Advisor/Speaker | Executive Education Instructor
+                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">CEO | 4IR Transformative
+                            Leadership Consultant/Advisor/Speaker | Executive Education Instructor
                         </h4>
                         <div data-cursor="pointer" class="link-overflow"><a href="https://linkedin.com"
                                 target="_blank">Read more <i class="iconsax" data-icon="arrow-right"></i></a>
@@ -432,9 +544,11 @@
                     </div>
                     <div class="footer-content">
                         <ul>
-                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a></li>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
                             <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
-                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training & Education</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="https://4ireducation.com/">Training &
+                                    Education</a></li>
                         </ul>
                     </div>
                 </div>
@@ -466,11 +580,42 @@
 
 
     <script>
-         document.getElementById('servicesDropdown').addEventListener('click', function (event) {
-            if (!this.parentNode.classList.contains('show')) {
-                window.location.href = './services.html';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
             }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
         });
+
+
 
         document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-links');

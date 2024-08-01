@@ -219,63 +219,89 @@
 
         .swiper-slide .row {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
         }
 
-        .swiper-slide .col-xl-3 {
+        .col-xl-3,
+        .col-lg-4,
+        .col-sm-6 {
+            flex: 1 1 calc(30% - 2rem);
+            /* Adjust for the gap between items */
+            box-sizing: border-box;
+        }
+
+        .expertise_container {
             display: flex;
             justify-content: center;
         }
 
         .expertise_box {
-            border: 1px solid #20c997;
+            border: 2px solid #20c997;
             box-shadow: 0 0 10px 0 #20c997;
-            padding: 2rem 4rem;
-            width: 500px;
-            gap: 3rem;
-            /* Ensure consistent width */
-            height: 150px;
-            /* Ensure consistent height */
+            padding: 2rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
             color: #fff;
             display: flex;
-            /* Ensure vertical stacking */
-            justify-content: center;
-            /* Center content vertically */
-            align-items: center;
-            /* Center content horizontally */
+            flex-direction: column;
+            justify-content: space-between;
             border-radius: 0.4rem;
-            position: relative;
             cursor: pointer;
             transition: .5s all ease;
+            margin-bottom: 2rem;
+            user-select: none;
+        }
+
+        .expertise_box .expertise_box_heading {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .expertise_box .expertise_box_heading h4 {
+            font-size: 2rem;
+        }
+
+        .expertise_box img {
+            width: 10%;
+        }
+
+        .expertise_box .expertise_text {
+            font-size: 1.4rem;
+            position: relative;
+            top: 3%;
+        }
+
+        .expertise_box .expertise_text::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #20c997;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 110%;
         }
 
         .expertise_box:hover {
             box-shadow: 0 0 10px 5px #20c997;
         }
 
-        .expertise_box img {
-            width: 30%;
-            margin-bottom: 1rem;
-            /* Add spacing between image and text */
+        /* Ensure the boxes have a consistent height */
+        .expertise_box ul {
+            margin-top: 1rem;
+            flex-grow: 1;
+            margin-left: 4%;
         }
 
-        .expertise_box .expertise_text {
-            font-size: 1.4rem;
-            text-align: center;
-            /* Center text */
-            position: relative;
-        }
-
-        .expertise_box .expertise_text::before {
-            content: "";
-            position: absolute;
-            background-color: #20c997;
-            width: 2px;
-            height: 110%;
-            top: 0;
-            left: -30%;
+        .expertise_box li {
+            list-style-type: none;
+            margin-bottom: 0.5rem;
+            list-style: disc !important;
+            list-style-type: disc !important;
+            display: list-item !important;
         }
 
         /* Swiper Navigation Buttons */
@@ -323,7 +349,8 @@
             border-radius: 5px;
             /* Rounded corners for the progress bar */
         }
-        .progress-bar::before{
+
+        .progress-bar::before {
             content: "";
             position: absolute;
             top: 0;
@@ -384,7 +411,7 @@
 
             .boxs_container {
                 grid-template-columns: 1fr;
-                margin-left: 4.5%;
+                margin: auto;
             }
 
             .services_section {
@@ -464,6 +491,92 @@
             display: block;
             /* Make sure the items are stacked in offcanvas mode */
         }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #12a35f;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+         
+        header #logo-img {
+            position: relative;
+            margin-top: -1.4rem;
+
+        }
+        @media screen and (max-width:600px) {
+            header #logo-img {
+                margin-top: 0;
+        }
+            
+        }
     </style>
 
 
@@ -488,7 +601,7 @@
             </span>
         </button>
         <a href="../home.html">
-            <img src="../assets/images/logo.svg" class="img-fluid" alt="logo">
+            <img src="../assets/images/logo.svg" id="logo-img" class="img-fluid" alt="logo">
         </a>
         <nav class="header-nav-middle">
             <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
@@ -509,12 +622,14 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="./services.html" id="servicesLink">Services</a>
-                                <button class="nav-link dropdown-toggle custom-dropdown-toggle" id="dropdownToggle"
+                                <a class="nav-link" href="./service.html" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownToggle">
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
                                         <a class="dropdown-item" href="./strategic_counselling.html">Strategic
                                             Counseling</a>
@@ -541,7 +656,7 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="../home.html" class="btn btn-theme d-sm-inline-block d-none"><span>Get
+        <a data-cursor="pointer" href="../home.html" style="position: relative; margin-top: -1.4rem;" class="btn btn-theme d-sm-inline-block d-none"><span>Get
                 Started</span></a>
     </header>
     <!-- header end -->
@@ -552,7 +667,7 @@
         <div class="container-fluid">
             <div class="home-sec" style="text-align: center;
             justify-content: center; display: flex;">
-                <div class="home-content" style="margin-top: 5rem;">
+                <div class="home-content" style="margin-top: 5rem; text-align: center;">
                     <div>
                         <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
                         </h2>
@@ -568,12 +683,12 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="home-img d-lg-flex d-none">
-                    <!-- <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot"> -->
-                    <!-- <div class="round-effect">
+                <!-- <div class="home-img d-lg-flex d-none">
+                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
+                    <div class="round-effect">
                         <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -728,141 +843,186 @@
             <div class="swiper featureSlider">
                 <div id="featureSlider" class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                        <div class="row g-xxl-5 g-4">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/house.png" alt="">
+                                            <h4 class="expertise_text">Real Estate</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/globe.png" alt="">
-                                    <h4 class="expertise_text">Finance & Insurance Market</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/globe.png" alt="">
+                                            <h4 class="expertise_text">Finance & Insurance Market</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/credit card.png" alt="">
-                                    <h4 class="expertise_text">Mortgage</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
+                            <!-- Add more expertise boxes as needed -->
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                        <div class="row g-xxl-5 g-4">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/house.png" alt="">
+                                            <h4 class="expertise_text">Real Estate</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/globe.png" alt="">
+                                            <h4 class="expertise_text">Finance & Insurance Market</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
+                            <!-- Add more expertise boxes as needed -->
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                        <div class="row g-xxl-5 g-4">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/house.png" alt="">
+                                            <h4 class="expertise_text">Real Estate</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/globe.png" alt="">
+                                            <h4 class="expertise_text">Finance & Insurance Market</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
+                            <!-- Add more expertise boxes as needed -->
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="row g-xxl-5 g-4" style="display: flex; gap: 2rem;">
+                        <div class="row g-xxl-5 g-4">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/house.png" alt="">
+                                            <h4 class="expertise_text">Real Estate</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
+                                <div class="expertise_container">
+                                    <article class="expertise_box">
+                                        <div class="expertise_box_heading">
+                                            <img src="/assets/images/services icon/globe.png" alt="">
+                                            <h4 class="expertise_text">Finance & Insurance Market</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nostrum?
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <article class="expertise_box">
-                                    <img src="/assets/images/services icon/house.png" alt="">
-                                    <h4 class="expertise_text">Real Estate</h4>
-                                </article>
-                            </div>
+                            <!-- Add more expertise boxes as needed -->
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -874,7 +1034,7 @@
                 <img src="../assets/svg/pagination-robot.svg" class="img-fluid" alt="">
             </div>
         </div>
-        
+
         <!-- <div class="swiper-pagination feature-pagination"></div> -->
         <!-- <div class="swiper-button-next feature-button-next"></div>
         <div class="swiper-button-prev feature-button-prev"></div> -->
@@ -1029,11 +1189,41 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
-        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
-            if (!this.parentNode.classList.contains('show')) {
-                window.location.href = './services.html';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
             }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
         });
+
 
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.featureSlider', {

@@ -147,11 +147,32 @@ section,
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a5b75;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #20c997;
+  background: linear-gradient(#20c997, #16a085);
+  background: linear-gradient(#08725d, #20c997);
+  background: linear-gradient(#20c997, #08725d);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16a085;
+}
+
 
 body {
   position: relative;
   font-family: "Outfit", sans-serif;
   background: linear-gradient(0deg, #0a0e17, #0a0e17), linear-gradient(179.9deg, #0a5b75 -47.93%, #02111a 98.07%);
+  max-width: 100vw;
 }
 body:after {
   content: "";
@@ -1977,7 +1998,7 @@ header .navbar-nav .nav-item:before {
   border-radius: 100%;
   position: absolute;
   left: -7px;
-  top: 50%;
+  top: 36%;
   -webkit-transform: translateY(-50%) scale(0);
           transform: translateY(-50%) scale(0);
   -webkit-transition: all 0.5s ease;
@@ -5113,6 +5134,7 @@ header .offcanvas-backdrop {
   background-image: url(../images/home/home-bg.png);
   background-size: cover;
   z-index: 1;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   .home-section {
@@ -5885,16 +5907,21 @@ header .offcanvas-backdrop {
   padding: 34px;
   border-radius: 4px;
   position: relative;
-  height: 520px;
+  height: 600px;
   width: 400px;
   text-align: center;
 
 }
 .team-section .team-box img{
-  width: 100%;
+  width: 120%;
   position: relative;
-  left: 8%;
+  /* left: 8%; */
   margin-bottom: 2rem;
+}
+.team-section .team-box .link-overflow{
+  position: absolute;
+  bottom: 2rem;
+  left: 2.2rem;
 }
 [dir=rtl] .team-section .team-box {
   direction: rtl;

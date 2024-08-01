@@ -142,7 +142,6 @@
 
         .mic-sec {
             margin-left: 15rem;
-            margin-top: 17%;
         }
 
         .service_boxes_div {
@@ -160,20 +159,25 @@
         }
 
         @media screen and (max-width:600px) {
+            section{
+                width: 100vw;
+                overflow-x: hidden;
+            }
             .mic-sec {
                 margin-left: 0;
             }
-            .mic{
+
+            .mic {
                 padding: 5rem;
             }
-            .service-section{
+
+            .service-section {
                 width: 100vw;
             }
 
             .service_boxes_div {
-                left: 0;
                 position: relative;
-                margin: 10rem auto;
+                padding-left: 1.5rem;
                 flex-direction: column;
                 width: 90%;
             }
@@ -181,13 +185,19 @@
             .expertise_div {
                 margin-top: 0;
             }
+
+            .home_links a{
+                font-size: 1rem;
+                padding: .4rem 1rem;
+            }
         }
+
         @media screen and (max-width:900px) {
 
-            .mic-sec{
+            .mic-sec {
                 margin-left: 3%;
             }
-            
+
             .service_boxes_div {
                 left: -3%;
                 position: relative;
@@ -197,10 +207,10 @@
         }
 
         @media screen and (min-width:1500px) {
-            .mic{
+            .mic {
                 padding: 10rem;
                 font-size: 4rem;
-            }            
+            }
         }
 
         .mic-div {
@@ -263,6 +273,92 @@
                 margin-top: 15%;
             }
         }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #12a35f;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+         
+        header #logo-img {
+            position: relative;
+            margin-top: -1.4rem;
+
+        }
+        @media screen and (max-width:600px) {
+            header #logo-img {
+                margin-top: 0;
+        }
+            
+        }
     </style>
 
 
@@ -281,7 +377,7 @@
             </span>
         </button>
         <a href="index.html">
-            <img src="./assets/images/logo.svg" class="img-fluid" alt="logo">
+            <img src="./assets/images/logo.svg" class="img-fluid" id="logo-img" alt="logo">
         </a>
         <nav class="header-nav-middle">
             <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
@@ -302,10 +398,13 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link" href="./html/services.html" id="servicesLink">
                                     Services
                                 </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
                                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
                                         <a class="dropdown-item" href="./html/strategic_counselling.html">Strategic
@@ -333,9 +432,10 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="./home.html" class="btn btn-theme d-sm-inline-block d-none"><span>Get
+        <a data-cursor="pointer" href="./home.html" style="position: relative; margin-top: -1.4rem;" class="btn btn-theme d-sm-inline-block d-none"><span>Get
                 Started</span></a>
     </header>
+
     <!-- header end -->
 
 
@@ -349,7 +449,7 @@
                         <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
                         </h2>
                         <h1>AI CONSULTING AND PRODUCT SOLUTIONS</h1>
-                        <div class="d-flex flex-row gap-3">
+                        <div class="d-flex flex-row gap-3 home_links" >
 
                             <a href="./home.html" class="btn-solid">Get started <i class="iconsax"
                                     data-icon="arrow-right"></i></a>
@@ -419,7 +519,6 @@
                 </div>
 
                 <div class="col-lg-6">
-
                     <div class="mic-sec">
                         <div class="mic-div ">
                             <button type="button" class="mic listening ">
@@ -659,10 +758,11 @@
             <!-- <div class="swiper featureSlider">
                 <div id="featureSlider" class="swiper-wrapper">
                     <div class="swiper-slide"> -->
-            <div class="row d-flex justify-content-evenly align-items-center gap-3 feature_container" style="margin-left: -12%;">
+            <div class="row d-flex justify-content-evenly align-items-center gap-3 feature_container"
+                style="margin-left: -12%;">
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="team-box">
-                        <img src="/assets/images/team/Shane Krevoy.png" alt="">
+                        <img style="left: -4%;" src="/assets/images/team/Shane Krevoy.png" alt="">
                         <div class="feature-top mt-4">
                             <!-- <div class="feature-icon">
                                             <img src="./assets/svg/feature/mail.svg" class="img-fluid outline-icon"
@@ -672,10 +772,12 @@
                                         </div> -->
                             <h3>Shane Krevoy</h3>
                         </div>
-                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">4IR Transformative Leadership Advisor/Consultant
+                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">4IR Transformative
+                            Leadership Advisor/Consultant
                         </h4>
-                        <div data-cursor="pointer" class="link-overflow"><a href="https://www.linkedin.com/in/shane-krevoy-48a5b3b5/"
-                                target="_blank">Read more <i class="iconsax" data-icon="arrow-right"></i></a>
+                        <div data-cursor="pointer" class="link-overflow"><a
+                                href="https://www.linkedin.com/in/shane-krevoy-48a5b3b5/" target="_blank">Read more <i
+                                    class="iconsax" data-icon="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -691,10 +793,12 @@
                                         </div> -->
                             <h3>Barry Krevoy</h3>
                         </div>
-                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">CEO | 4IR Transformative Leadership Consultant/Advisor/Speaker | Executive Education Instructor
+                        <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">CEO | 4IR Transformative
+                            Leadership Consultant/Advisor/Speaker | Executive Education Instructor
                         </h4>
-                        <div data-cursor="pointer" class="link-overflow"><a href="https://4irconsultants.com/barry-krevoy/"
-                                target="_blank">Read more <i class="iconsax" data-icon="arrow-right"></i></a>
+                        <div data-cursor="pointer" class="link-overflow"><a
+                                href="https://4irconsultants.com/barry-krevoy/" target="_blank">Read more <i
+                                    class="iconsax" data-icon="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1040,7 +1144,7 @@
                     <div class="footer-content">
                         <ul>
                             <li><a data-cursor="pointer" href="/home.html">Home</a></li>
-                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li> 
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
                             <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
                             <li><a data-cursor="pointer" href="/html/contact-us.html">Contact us</a></li>
                         </ul>
@@ -1102,12 +1206,44 @@
 
     <script>
 
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
 
-        document.getElementById('servicesDropdown').addEventListener('click', function (event) {
-            if (!this.parentNode.classList.contains('show')) {
-                window.location.href = './html/services.html';
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
             }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
         });
+        // document.getElementById('servicesDropdown').addEventListener('click', function (event) {
+        //     if (!this.parentNode.classList.contains('show')) {
+        //         window.location.href = './html/services.html';
+        //     }
+        // });
 
         let mic = document.querySelector(".mic");
         let visualizer = document.querySelector(".visualizer");

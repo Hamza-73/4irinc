@@ -35,6 +35,82 @@
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
+    <style>
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #12a35f;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+    </style>
+
 
 
 </head>
@@ -67,51 +143,38 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="chat.html">Chat</a>
+                                <a class="nav-link" href="./about.html">About</a>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    data-bs-toggle="dropdown">Pages</a>
-
-                                <ul class="dropdown-menu">
+                                <a class="nav-link" href="./services.html" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="404.html">404</a>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="reset-password.html">Reset Password</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="otp.html">OTP</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="blog-grid.html">Blog Grid</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="blog-listing.html">Blog Listing</a>
-                                    </li>
-                                    <li class="active">
-                                        <a class="dropdown-item" href="blog-details.html">Blog Details</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="terms.html">Terms & Condition</a>
+                                        <a class="dropdown-item" href="https://4ireducation.com/">Training &
+                                            Education</a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="service.html">service</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./blog-grid.html">Blog</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="pricing.html">pricing</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">contact</a>
+                                <a class="nav-link" href="contact-us.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -154,12 +217,14 @@
     <!-- blog details start -->
     <section class="ratio_40">
         <div class="container">
-            <div class="blog-details">
+            <div class="blog-details" id="blog_detail_container">
                 <div class="blog-img">
-                    <img src="../assets/images/blog/7.jpg" class="img-fluid w-100 bg-img" alt="blog">
+                    <img src="../assets/images/blog/7.jpg" id="current_blog_image" class="img-fluid w-100 bg-img"
+                        alt="blog">
                 </div>
                 <div class="blog-title-box">
-                    <a data-cursor="pointer" class="main-title" href="blog-details.html">Leading 6 Modern
+                    <a data-cursor="pointer" class="main-title" href="blog-details.html" id="current_blog_title">Leading
+                        6 Modern
                         Content Marketing Trends
                         for 2023</a>
                     <ul>
@@ -497,6 +562,49 @@
     <div id="cursor"></div>
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
+
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+    </script>
+
+    <script src="/assets/js/blogjs/blog.js"></script>
 
 
     <!-- Bootstrap js-->
