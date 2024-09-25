@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="4irinc">
+    <meta name="keywords" content="4irinc">
+    <meta name="author" content="4irinc">
+    <link rel="icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <title>Fourth Industrial Revolution Inc</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/remixicon.css">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/iconsax.css" />
+
+    <!-- animation css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/aos.css">
+
+    <!-- swiper slider css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="/assets/css/landing.css">
+
+    <link rel="stylesheet" href="/assets/css/landing_mic.css.css">
+
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+
+
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        .mic {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(#198754, #00BDFF);
+            background: radial-gradient(#198754, #00BDFF);
+            background: radial-gradient(#00BDFF, #12a35f);
+            background: radial-gradient(#00BDFF, #198754);
+            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #0000);
+            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #044929);
+            background: radial-gradient(#075f80, #00BDFF);
+            /* background: radial-gradient(#494848, #00BDFF ); */
+            color: #fff;
+            font-size: 37px;
+            font-size: 37px;
+            padding: 6rem;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.25s, box-shadow .25s, filter .3s;
+            animation: move 3s linear infinite alternate;
+            backdrop-filter: blur(10px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            overflow: visible;
+            box-shadow: 0 0 50px 10px;
+            box-shadow: #075c7a 0px 20px 50px 40px;
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 40px 0px; */
+            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 80px; */
+            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 0px; */
+            /* background: linear-gradient(#00BDFF, #198754);  */
+        }
+
+
+        .mic:hover {
+            /* filter: brightness(1.5); */
+            /* opacity: .5; */
+            /* box-shadow: 0 0 10px #00BDFF; */
+            /* background: linear-gradient(#00BDFF, #198754); */
+            filter: brightness(1.1);
+        }
+
+        .mic::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            animation: listening 1.8s infinite;
+            z-index: -1;
+        }
+
+        .visualizer {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(-10px);
+            }
+
+            to {
+                transform: translateY(11.2435px);
+                box-shadow: 0 0 50px 10px #075c7a;
+            }
+        }
+
+        @keyframes listening {
+
+            /* 0% {
+                transform: scale(1);
+                opacity: 0.35;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            } */
+            0% {
+                -webkit-transform: scale(1, 1);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(1.5, 1.5);
+                opacity: 0;
+            }
+        }
+
+
+        .mic-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .mic_text {
+            font-size: 1rem;
+            color: white !important;
+            border: 1px solid #8800ff;
+            background-color: #8800ff;
+            display: inline;
+            border-radius: 1rem;
+            padding: 3px 12px;
+            width: max-content;
+        }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #00BDFF;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50% !important;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+
+        header .navbar-nav .nav-item:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: rgba(var(--theme-color), 1);
+            border-radius: 100%;
+            position: absolute;
+            left: -7px;
+            top: 36%;
+            -webkit-transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .service-content {
+            position: relative;
+        }
+
+        .service-content h3 {
+            position: relative;
+            left: -8px;
+        }
+
+        .service-content img {
+            width: 10%;
+            height: 25px;
+        }
+
+        .ai_talk_services .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        @media screen and (min-width:1400px) {
+            .ai_talk_services .row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .ai_talk_services .service-box ul {
+            line-height: 1;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .ai_talk_services .service-box {
+            text-align: center;
+            line-height: 2;
+            padding: 4.7rem 3rem;
+            color: #fff;
+            background-color: #0a0e17;
+            position: relative;
+            transition: 0.5s all ease;
+            cursor: pointer;
+        }
+
+        .ai_talk_services .service-box img {
+            display: inline-block;
+            cursor: pointer;
+            border: 2px solid #00BDFF;
+            background-color: #00BDFF;
+            border-radius: 50%;
+            padding: 1rem;
+            transition: .3s all ease;
+            color: white;
+            width: 40%;
+            margin-bottom: 2rem;
+        }
+
+
+        .btn-hover {
+            border: 1px solid #00BDFF;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 0 10px 0 #00BDFF;
+            font-size: 1.4rem;
+            position: relative;
+            overflow: hidden;
+            /* Ensure content doesn't overflow */
+            z-index: 1;
+            /* Ensure button content is above the background */
+        }
+
+        .btn-hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #00BDFF;
+            transition: .4s all ease;
+            z-index: -1;
+            /* Place the background below the button content */
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn-hover:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 3px #00BDFF;
+        }
+
+        .faq-section .container .row {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .col-lg-6,
+        .col-g-6 {
+            flex: 1;
+        }
+
+
+        .circle {
+            width: 100%;
+            height: 70px;
+            padding: 4.6rem 3rem;
+            border: 2px solid #00BDFF;
+            border-radius: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .circle span {
+            position: relative;
+            top: -1rem;
+        }
+
+        .circles .circle-active {
+            background-color: #00BDFF;
+            color: #fff;
+        }
+
+        .circle:nth-child(2) {
+            position: relative;
+            top: -2rem;
+        }
+
+        .circle:nth-child(3) {
+            position: relative;
+            top: -4rem;
+        }
+
+        .circle:nth-child(4) {
+            position: relative;
+            top: -6rem;
+        }
+
+        .circle:nth-child(5) {
+            position: relative;
+            top: -8rem;
+        }
+
+
+        header {
+            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
+            background-position: inherit;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 100;
+        }
+
+        .home-section {
+            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .ai-features-section {
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .ai-features-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .ai-vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #00BDFF;
+            z-index: 1;
+        }
+
+        .ai-horizontal-line-right,
+        .ai-horizontal-line-left {
+            width: 100px;
+            height: 2px;
+            background-color: #00BDFF;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .ai-horizontal-line-right {
+            margin-right: 20px;
+        }
+
+        .ai-horizontal-line-left {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .line-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #00BDFF;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+        }
+
+        .ai-horizontal-line-right .line-dot {
+            right: -5px;
+        }
+
+        .ai-horizontal-line-left .line-dot {
+            left: -5px;
+        }
+
+        .ai-feature-box-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .ai-feature-box {
+            /* background-color: #0a0e17; */
+            border: 2px solid #00BDFF;
+            padding: 2rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .ai-feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .ai-feature-box p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .animated-in .ai-feature-box {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animated-in .ai-horizontal-line-right,
+        .animated-in .ai-horizontal-line-left {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .ai-left-box {
+            grid-column: 1 / span 1;
+        }
+
+        .ai-right-box {
+            grid-column: 2 / span 1;
+        }
+
+        .ai-features-heading {
+            margin-bottom: 6rem !important;
+        }
+
+        @media (max-width: 1024px) {
+            .ai-features-container {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-vertical-line {
+                left: 20px;
+                display: none;
+            }
+
+            .ai-feature-box-wrapper {
+                grid-column: 1 / span 1;
+                margin-left: 40px;
+            }
+
+            .ai-horizontal-line-right,
+            .ai-horizontal-line-left {
+                width: 60px;
+            }
+
+
+            .ai-feature-box {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ai-feature-box-wrapper {
+                margin-left: 20px;
+            }
+
+            .ai-horizontal-line-right,
+            .ai-horizontal-line-left {
+                width: 20px;
+            }
+
+            .ai-feature-box {
+                margin-left: 10px;
+            }
+        }
+
+        .services_section {
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .boxs_container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            transition: .5s all ease;
+        }
+
+        .boxs_container .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Ensure content is spaced evenly */
+            border: 1px solid #00BDFF;
+            /* box-shadow: 0 0 10px 0 #00BDFF; */
+            padding: 2rem;
+            width: 350px;
+            height: 100%;
+            color: #fff;
+            border-radius: 0.4rem;
+            position: relative;
+            cursor: pointer;
+            transition: .4s all ease;
+            margin: auto !important;
+        }
+
+        .boxs_container .box_content {
+            flex: 1 0 auto;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .btn-hover {
+            margin-top: auto;
+            /* Push the button to the bottom */
+            border: 1px solid #00BDFF;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 0 10px 0 #087faa;
+            font-size: 1.4rem;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .btn-hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #00BDFF;
+            transition: .4s all ease;
+            z-index: -1;
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn-hover:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 3px #068ec0;
+        }
+
+
+        .boxs_container .box:hover {
+            box-shadow: 0 0 10px 5px #00BDFF;
+        }
+
+        .box .box_img {
+            flex: 0 0 auto;
+        }
+
+        .box .box_img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: .5s all ease;
+        }
+
+        .box .box_img img:hover {
+            transform: scale(1.09);
+        }
+
+        .boxs_container .box_content h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .boxs_container .box_content ul {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .boxs_container .box_content ul li {
+            list-style: disc !important;
+            list-style-type: disc !important;
+            display: list-item !important;
+            margin: 1rem 0;
+        }
+
+        .boxs_container .box_content img {
+            width: 15%;
+        }
+
+        .boxs_container .box .box_text {
+            font-size: 1.4rem;
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .boxs_container .box .box_text::before {
+            content: "";
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            background-color: #00BDFF;
+            top: 0%;
+            left: -6%;
+        }
+
+
+
+        @media screen and (max-width:600px) {
+            .service_container {
+                left: 0;
+                margin-top: 0;
+                margin: auto;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .boxs_container {
+                grid-template-columns: 1fr;
+                margin: auto;
+            }
+
+            .box {
+                display: block;
+                margin: auto;
+            }
+
+            .services_section {
+                margin: 2rem auto;
+                left: 0%;
+            }
+
+            .service_row {
+                margin-top: 0;
+            }
+
+            .service_img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .expertise_container {
+                grid-template-columns: 1fr;
+                margin-left: 4.5%;
+            }
+
+            .expertise_box {
+                width: 80vw;
+            }
+
+        }
+
+        @media screen and (max-width:1000px) {
+            .boxs_container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media screen and (min-width:1500px) {
+            .service_container {
+                margin-top: -15%;
+            }
+        }
+
+        .info-section .info-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(rgba(136, 0, 255, .7), rgba(136, 0, 255, .9)), url('/assets/images/home/home-bg.gif');
+            background-size: cover;
+            /* Ensures the image covers the entire container */
+            background-position: center;
+            /* Centers the image */
+        }
+
+        .info-section .info-btn {
+            background-color: #0a0e17;
+            transition: .5s all ease;
+        }
+
+
+        .info-section .info-box h2 {
+            width: 60%;
+            color: #ffff;
+        }
+
+        .modal-content {
+            height: 90vh; 
+            max-height: 90vh; 
+            background-color: #0a0e17;
+            animation: shadow 2s infinite ease-in-out;
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 10px #00BDFF;
+            }
+
+            100% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+        }
+
+        .modal-dialog{
+            width: 80vw;
+            max-width: 90vw;
+        }
+
+        @media screen and (max-width:580px) {
+            .modal-content{
+                position: relative !important;
+                left: 10% !important;
+                overflow: scroll;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Modal -->
+    <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- header start -->
+    <header>
+        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu">
+            <span class="navbar-toggler-icon">
+                <i class="iconsax" data-icon="text-align-justify"></i>
+            </span>
+        </button>
+            <img src="../assets/images/main-logo.png" id="logo-img" style="position: relative; margin-top: -0.6rem;"
+                class="img-fluid" alt="logo">
+        <nav class="header-nav-middle">
+            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                    <div class="offcanvas-header navbar-shadow">
+                        <h5 class="mb-0">Back</h5>
+                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#feature-section">Features</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#how-it-work">How It Works</a>
+                            </li>
+
+                            <!-- <li class="nav-item dropdown active">
+                                <a class="nav-link" href="#" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/html/4ir Education/4ir.html">Training &
+                                            Education</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#faq-section">FAQ</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonial-section">Testimonials</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a data-cursor="pointer" style="position: relative; margin-top: -.8rem;" href="#"
+            class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal"
+            data-bs-target="#demo-modal"><span>Book a Demo</span></a>
+    </header>
+    <!-- header end -->
+
+
+    <!-- home section start -->
+    <section class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="home-content">
+                        <div class="bg-effect">
+                            <img src="../assets/images/home/home-bg.gif" class="img-fluid bg-gif" alt="">
+                            <img src="../assets/svg/home/1.png" class="img-fluid effect1 rotate-effect" alt="">
+                            <img src="../assets/svg/home/2.svg" class="img-fluid effect2 rotate-effect" alt="">
+                        </div>
+                        <div>
+                            <!-- <h1>USE 4irinc TO <div class="title-effect">
+                                    <img src="../assets/images/title-effect.png" alt=""><span
+                                        style="color: #00BDFF;">SIMPLIFY</span>
+                                </div> YOUR LIFE</h1> -->
+                            <h1>Transform Your Customer
+                                Experience with <br>
+                                <div class="title-effect"><img src="../assets/images/title-effect.png" alt=""><span
+                                        style="color: #ffce00;">AI TALK ASSIST</span>
+                                </div>
+                            </h1>
+                            <p>
+                                Experience the convenience of AI-driven calls. Let technology handle your communication
+                                needs effortlessly, saving you time and hassle.
+
+                            </p>
+                            <a data-cursor="pointer" class="start-link mic_text">Give it a try!</a>
+                        </div>
+                    </div>
+                    <div class="home-laptop px-md-0 px-3">
+                        <div class="laptop-sec position-relative">
+                            <div class="mic-sec">
+                                <div class="mic-div">
+                                    <button type="button" class="mic listening ">
+                                        <i class="fa fa-microphone" style="color: #00BDFF;"></i>
+                                        <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
+
+                                        <canvas class="visualizer" width="80" height="40"></canvas>
+                                    </button>
+                                    <a style=" 
+                                    font-size: 1rem;
+                                    color: white;
+                                    border: 1px solid #8800ff ;
+                                    background-color: #8800ff ;
+                                    display: inline;
+                                    border-radius: 1rem;
+                                    padding: 3px 12px;" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#demo-modal">Book a
+                                        Demo</a>
+                                </div>
+                            </div>
+                            <div class="hand-sec" style="position: relative; margin-top: 16rem; top: 15rem;">
+                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid left-hand"
+                                    style="margin-left: 5rem;" alt="hand">
+                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid right-hand"
+                                    style="margin-right: 5rem;" alt="hand">
+                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid left-finger" style="position: absolute; top: 1rem; left: 15rem;" alt="hand"> -->
+                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid right-finger" style="position: absolute; top: -4rem;" alt="hand"> -->
+                            </div>
+                        </div>
+                        <!-- <div class="home-info">
+                            <ul class="info-list">
+                                <li>Ask anything </li>
+                                <li>Generate image</li>
+                                <li>Translate anything</li>
+                            </ul>
+                            <ul class="star-rating">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                            </ul>
+                            <h4>A technique to write
+                                all of your material 10 times more quickly.</h4>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- servce section start -->
+
+    <section class="section-b-space services_section" id="feature-section">
+        <div class="container">
+            <div class="text-white text-center" style="margin-bottom: 6rem;">
+                <h1>Unlock the <span style="color: #ffce00;">Power of AI</span> to Supercharge Your
+                    Business Communications</h1>
+                <p>AI Talk Assist automates routine calls, handles appointment setting, and manages customer queries,
+                    allowing you to focus on
+                    strategic initiatives. Save time, reduce operational costs, and provide a seamless customer
+                    experience—day or night.
+                </p>
+            </div>
+            <div class="boxs_container">
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Live Transfers.png" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Live Transfers</p>
+                            <h4 class="box_text">Seamlessly connect your customers with the right team members in
+                                real-time.</h4>
+                            <p>Our AI-powered system transfers calls directly to your staff, ensuring high-priority
+                                calls are handled by the appropriate agents.
+                                Enhances customer experience and operational efficiency.</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Appointment Scheduling.png"
+                                alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Appointment Scheduling</p>
+                            <h4 class="box_text">Automate your appointment setting with precision and ease.</h4>
+                            <p>AI Talk Assist helps avoid scheduling conflicts by synchronizing with your existing
+                                calendar system. Your team remains organized and efficient.</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Lead Qualification.png" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Lead Qualification</p>
+                            <h4 class="box_text">Identify and prioritize your most valuable prospects effortlessly.</h4>
+                            <p>AI evaluates qualified leads based on their needs, saving your team time and helping
+                                close more deals.
+                                Increases conversions with less effort.</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Customer Support (Q_A).png"
+                                alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Customer Support (AI)</p>
+                            <h4 class="box_text">Provide 24/7 customer support without the need for additional staff.
+                            </h4>
+                            <p>AI Talk Assist answers frequently asked questions, resolving simple inquiries instantly
+                                while freeing up human resources to handle more complex issues.</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Off-Hours Communication Handling.png"
+                                alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Off-Hours Communication Handling</p>
+                            <h4 class="box_text">Never miss a customer interaction, even after business hours.</h4>
+                            <p>AI Talk Assist takes messages during non-business hours, ensuring no missed
+                                opportunities.
+                                Ensures timely follow-ups without compromising service quality.</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+
+                    <article class="box">
+                        <div class="box_img">
+                            <img src="/assets/images/landing/ai_talk_assist/Feature Pics/Staff Training.png" alt="">
+                        </div>
+                        <div class="box_content">
+                            <p>Staff Training</p>
+                            <h4 class="box_text">Train your team to leverage AI for enhanced productivity.</h4>
+                            <p>Specialized AI modules train your staff on how to utilize AI tools to their maximum
+                                potential.
+                                Ensures teams stay ahead in the age of automation</p>
+                            <!-- <button data-cursor="pointer" class="btn-arrow mt-5 btn-hover">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Learn More
+                            </button> -->
+                        </div>
+                    </article>
+
+            </div>
+
+            <a href="#"><button class="btn btn-theme text-center"
+                    style="margin: auto !important; margin-top: 3rem !important; margin-bottom: 3rem !important;"
+                    data-bs-toggle="modal" data-bs-target="#demo-modal">Book a
+                    Demo</button></a>
+        </div>
+    </section>
+
+    <!-- service section ends -->
+
+
+    <section class="ai-features-section section-b-space service-section" id="how-it-work">
+        <div class="container">
+            <div class="ai-features-heading text-center text-white" style="line-height: 1.3;">
+                <h2> <span style="color: #ffce00;">AI Talk Assist:</span> Automated Calls, <br> Human-Like Conversations
+                </h2>
+                <h3>Effortless Communication, Maximum Efficiency</h3>
+                <p>Transform your customer interactions with AI Talk Assist. Our intelligent, conversational AI makes
+                    and receives calls with a natural flow, just
+                    like talking to a real person. Pre-qualify leads, set appointments, and follow up automatically—all
+                    while increasing conversion rates and freeing
+                    up your team’s valuable time. Fully customizable and seamlessly integrated with your CRM, AI Talk
+                    Assist is available 24/7, reducing costs and
+                    ensuring your business is always ready to grow. Plus, it’s built with security and scalability in
+                    mind, adapting as your business evolves.</p>
+            </div>
+
+            <div class="ai-features-container">
+                <!-- Vertical line -->
+                <div class="ai-vertical-line"></div>
+
+                <!-- Alternating boxes -->
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box  service-box">
+                        <h3>Automated Calls, Human Results</h3>
+                        <p>AI Talk Assist ensures your business is always available, making and receiving calls with
+                            natural, conversational AI that feels like talking to a real person.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Increase Conversion Rates</h3>
+                        <p>Pre-qualify leads, set up appointments, and follow up with customers—automatically. Watch
+                            your
+                            conversion rates soar while freeing up your team's time.</p>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box   service-box">
+                        <h3>Fully Customizable</h3>
+                        <p>Tailor AI Talk Assist to your specific business needs. It integrates smoothly with your CRM
+                            and
+                            marketing tools, so you can focus on growing your business.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Save Time, Cut Costs</h3>
+                        <p>No more missed calls or time wasted on repetitive tasks. AI Talk Assist operates 24/7,
+                            reducing
+                            the need for additional staff.</p>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box  service-box">
+                        <h3>Secure and Scalable</h3>
+                        <p>Built with cutting-edge technology, AI Talk Assist is secure, scalable, and adaptable as your
+                            business grows.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- pricing section start -->
+    <!-- <section class="pricing-section section-b-space">
+        <div class="container">
+            <div class="title-horizontal">
+                <h2>Unleash limitless potential & versatile features for every need</h2>
+                <p>From robust tools that inspire creativity to innovative ideas that simplify your everyday tasks, our
+                    tool knows no bounds. Utilise the potential and elevate your user experience to new heights with our
+                    cutting-edge technology, adapted just for you.</p>
+            </div>
+            <div class="row pricing-row g-xl-5 g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/weekly.svg" class="img-fluid" alt="">
+                            <h3>Weekly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging-green.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-center.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/monthly.svg" class="img-fluid" alt="">
+                            <h3>Monthly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>15+ new category</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/yearly.svg" class="img-fluid" alt="">
+                            <h3>Lifetime Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- pricing section end -->
+
+    <!-- testimonial section start -->
+    <section class="testimonial-section section-b-space" id="testimonial-section">
+        <div class="container">
+            <div class="title-basic">
+                <h1 class="text-white">What <span style="color: #ffce00;">Our Clients</span> Are Saying</h1>
+                <p style="margin-bottom: 6rem; color: #fff; font-size: 1.3rem; font-weight: lighter;">See how AI Talk
+                    Assist has helped businesses save time, boost conversions, and enhance
+                    customer experiences. Real results, real impact!
+                </p>
+            </div>
+            <div class="swiper testimonialSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>Best of the best that about sums up my experience.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Jim Thiel .png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Jim Thiel</h4>
+                            <h5>Mortage Advisor</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>There commitment to helping clients incorporate AI and stay updated with the latest
+                                    technologies is evident. Working with them has been both fun and rewarding, saving
+                                    me time and money. I highly recommend Fourth Industrial Revolution to any buisness
+                                    looking to enhance its digital presence and operational efficiency.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Toby Woods.png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Toby Woods</h4>
+                            <h5>NorthStar Systems, LLC</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>While many people are intimidated by AI, Barry has a way of making it practical and
+                                    approachable. He's taen the mystery -- and the fear--out of it, showing us how AI
+                                    can be a powerful tool in our arsenal. Thanks to Barry, we now see AI as a
+                                    game-changer that frees up our time so we can focus on what truly matters--our
+                                    clients.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Carol Huston.png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Carol Huston</h4>
+                            <h5>True Story Realty</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <!-- faq section start -->
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+
+            <div class="title-basic text-center" style="margin-bottom: 6rem;">
+                <h1 style="color: #ffce00;">FAQ</h1>
+                <h1 class="text-white">Frequently Asked Questions</h1>
+                <br>
+            </div>
+            <div class="row ">
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button data-cursor="pointer" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    How does AI Talk Assist handle customer interactions without feeling impersonal?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <p>AI Talk Assist mimics natural human conversations, ensuring that customer
+                                        interactions feel warm and personalized, enhancing user experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    Is AI Talk Assist difficult to set up?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    No, it’s simple to integrate into your existing systems, with a smooth onboarding
+                                    process to get your team up and running quickly.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    Can AI Talk Assist grow with my business?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    Absolutely! AI Talk Assist is built to be secure, scalable, and adaptable as your
+                                    business expands.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                    How does AI Talk Assist qualify leads?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFour">
+                                <div class="accordion-body">
+                                    It automatically evaluates and prioritizes leads based on predefined criteria,
+                                    ensuring your sales team focuses on high-potential customers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                    What happens to calls after business hours?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFive">
+                                <div class="accordion-body">
+                                    AI Talk Assist operates 24/7, handling inquiries and scheduling appointments even
+                                    after business hours, ensuring constant accessibility for your customers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-g-6 circles">
+                    <div class="circle circle-active" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne"> <span>Personalized</span></div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"> <span>Easy</span> </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree">
+                        <span>Scalable</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour">
+                        <span>Efficient</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive">
+                        <span>Continous</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- faq section end -->
+
+
+    <div class="section-b-space">
+        <div class="container">
+            <div class="heading">
+                <div class="title-basic">
+                    <h1 class="text-white">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <p style="margin-bottom: 6rem; color: #fff; font-size: 1.3rem; font-weight: lighter;">Ready to see
+                        AI Talk Assist in action? Schedule your FREE demo now and discover how it can transform your
+                        customer interactions and boost
+                        productivity! Pick a time that works best for you below.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                style="min-width:320px;height:700px;"></div>
+
+        </div>
+    </div>
+
+
+    <!-- contact us start -->
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <h2>Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <a href="#">
+                    <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#demo-modal">Book a
+                        Demo</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- contact us end -->
+
+    <!-- footer section start-->
+    <footer style="background-image: none;">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo"><img src="../assets/images/main-logo.png" id="logo-img"
+                            class="img-fluid" alt=""></a>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form style="border: 1px solid #00BDFF; border-radius: 8px;">
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your mail">
+                            <a href="" data-cursor="pointer" class="btn-basic">Subscribe</a>
+                        </div>
+                    </form>
+                    <ul class="social-links">
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
+                                    src="../assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
+                        <li><a data-cursor="pointer" target="_blank"
+                                href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                                    src="../assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
+                                    src="../assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        Quick Link
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="#feature-section">Features</a></li>
+                            <li><a data-cursor="pointer" href="#how-it-work">How It Works</a></li>
+                            <li><a data-cursor="pointer" href="#faq-section">FAQ</a></li>
+                            <li><a data-cursor="pointer" href="#testimonial-section">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="link-section">
+                    <div class="footer-title">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our company
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="login.html">Login</a></li>
+                            <li><a data-cursor="pointer" href="blog-listing.html">Blog listing</a></li>
+                            <li><a data-cursor="pointer" href="blog-grid.html">Blog Grid</a></li>
+                            <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            <div class="footer-copyright">
+                <h4>@2024 All the Copyright Reserved.</h4>
+                <ul class="footer-links">
+                    <li><a href="/html/privacy.html">Privacy Policy </a></li>
+                    <li><a href="/html/terms.html">Terms & Condition </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+
+    <!-- Tap To Top Button Start -->
+    <div class="tap-to-top-box hide">
+        <button class="tap-to-top-button"><i class="iconsax" data-icon="chevron-up"></i></button>
+    </div>
+    <!-- Tap To Top Button End -->
+
+
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script>
+            window.onload = function() {
+                setTimeout(function () {
+                    let demoModal = new bootstrap.Modal(document.getElementById('demo-modal'));
+                    demoModal.show();
+                }, 20000); // 20000 milliseconds = 20 seconds
+    };
+
+    const featureBoxWrappers = document.querySelectorAll('.ai-feature-box-wrapper');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+    entry.target.classList.add('animated-in');
+    }
+    });
+    }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -10% 0px'
+    });
+
+    featureBoxWrappers.forEach(wrapper => {
+    observer.observe(wrapper);
+    });
+    </script>
+
+    <script>
+    // Get all circles and accordion buttons
+    const circles = document.querySelectorAll('.circle');
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    let activeCircle = document.querySelector('.circle-active'); // Track the currently active circle
+    let activePanel = document.querySelector('.accordion-collapse.show'); // Track the currently open panel
+
+    // Function to close the currently open accordion panel and remove the active circle
+    function closeActivePanel() {
+            if (activePanel) {
+                const collapseInstance = bootstrap.Collapse.getInstance(activePanel) || new bootstrap.Collapse(activePanel, {toggle: false });
+    collapseInstance.hide();
+    activePanel = null;
+            }
+    if (activeCircle) {
+        activeCircle.classList.remove('circle-active');
+    activeCircle = null;
+            }
+        }
+
+    // Function to open a panel and assign the active class to the relevant circle
+    function openPanel(panel, circle) {
+            const collapseInstance = bootstrap.Collapse.getInstance(panel) || new bootstrap.Collapse(panel, {toggle: false });
+    collapseInstance.show();
+    circle.classList.add('circle-active');
+    activePanel = panel;
+    activeCircle = circle;
+        }
+
+        // Add click event listeners to the circles
+        circles.forEach(circle => {
+        circle.addEventListener('click', function () {
+            const target = circle.getAttribute('data-bs-target');
+            const panel = document.querySelector(target);
+
+            // If the clicked circle is already active, close it and remove the active class
+            if (circle === activeCircle) {
+                closeActivePanel();
+            } else {
+                // Close the active panel, then open the new one
+                closeActivePanel();
+                openPanel(panel, circle);
+            }
+        });
+        });
+
+        // Add click event listeners to the accordion buttons
+        accordionButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const target = button.getAttribute('data-bs-target');
+            const panel = document.querySelector(target);
+
+            // If the clicked accordion is already active, close it and remove the active class
+            if (panel === activePanel) {
+                closeActivePanel();
+            } else {
+                // Close the active panel, then open the new one
+                closeActivePanel();
+
+                // Find the corresponding circle and activate it
+                const correspondingCircle = document.querySelector(`.circle[data-bs-target="${target}"]`);
+                if (correspondingCircle) {
+                    openPanel(panel, correspondingCircle);
+                }
+            }
+        });
+        });
+
+    </script>
+
+
+
+    <script type="text/javascript">
+    (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+            publicKey: "F0BJDnf51VvvepoOz",
+        });
+        })();
+    </script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+    var servicesDropdown = document.getElementById('servicesDropdown');
+    var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+    function toggleDropdown(event) {
+        event.preventDefault();
+    event.stopPropagation();
+    if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+                } else {
+        dropdownMenu.style.display = 'block';
+                }
+            }
+
+    servicesDropdown.addEventListener('click', toggleDropdown);
+
+    // For mobile view, prevent the link from navigating when the dropdown is open
+    servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+        event.preventDefault();
+                }
+            });
+
+    // Update isXlScreen on window resize
+    window.addEventListener('resize', function () {
+        isXlScreen = window.innerWidth >= 1200;
+    if (isXlScreen) {
+        dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+    // Get the send button
+    var sendButton = document.getElementById("send-email");
+
+    // Change button text and disable it
+    sendButton.textContent = "Sending...";
+    sendButton.disabled = true;
+    // Collect form data
+    var formData = {
+        name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    number: document.getElementById('number').value,
+    message: document.getElementById('message').value
+            };
+    console.log("formdata is ", formData)
+
+    // Send email using EmailJS
+    emailjs.send("service_wbtwbed", "template_titopjh", formData)
+    .then(function (response) {
+        alert("Message sent successfully!");
+    // Reset button text and re-enable it
+    sendButton.textContent = "Send message";
+    sendButton.disabled = false;
+                }, function (error) {
+        alert("Failed to send message. Please try again.");
+    // Reset button text and re-enable it
+    sendButton.textContent = "Send message";
+    sendButton.disabled = false;
+    console.log("Error in sending email", error)
+                });
+        });
+
+
+
+    </script>
+
+    <script>
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+    var servicesDropdown = document.getElementById('servicesDropdown');
+    var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+    function toggleDropdown(event) {
+        event.preventDefault();
+    event.stopPropagation();
+    if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+                } else {
+        dropdownMenu.style.display = 'block';
+                }
+            }
+
+    servicesDropdown.addEventListener('click', toggleDropdown);
+
+    // For mobile view, prevent the link from navigating when the dropdown is open
+    servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+        event.preventDefault();
+                }
+            });
+
+    // Update isXlScreen on window resize
+    window.addEventListener('resize', function () {
+        isXlScreen = window.innerWidth >= 1200;
+    if (isXlScreen) {
+        dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+
+    let mic = document.querySelector(".mic");
+    let visualizer = document.querySelector(".visualizer");
+    let micIcon = document.querySelector(".mic i");
+    const micText = document.querySelector('.mic_text')
+
+    let audioContext, analyser, dataArray, source;
+    let isRecording = false;
+
+    mic.addEventListener("click", function () {
+            if (!isRecording) {
+        startRecording();
+            } else {
+        stopRecording();
+            }
+        });
+
+    function startRecording() {
+        micText.textContent = 'Listening!'
+            navigator.mediaDevices.getUserMedia({audio: true })
+    .then(function (stream) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioContext.createAnalyser();
+    source = audioContext.createMediaStreamSource(stream);
+    source.connect(analyser);
+    analyser.fftSize = 256;
+    dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+    visualizer.style.display = 'block';
+    micIcon.style.display = 'none';
+    isRecording = true;
+
+    draw();
+                })
+    .catch(function (err) {
+        console.error('Error accessing microphone:', err);
+                });
+        }
+
+    function stopRecording() {
+            if (audioContext) {
+        audioContext.close();
+    micText.textContent = 'Give it a try!'
+            }
+    visualizer.style.display = 'none';
+    micIcon.style.display = 'block';
+    isRecording = false;
+        }
+    function draw() {
+            if (!isRecording) return;
+
+    requestAnimationFrame(draw);
+
+    analyser.getByteFrequencyData(dataArray);
+
+    let ctx = visualizer.getContext('2d');
+    ctx.clearRect(0, 0, visualizer.width, visualizer.height);
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+
+    let barWidth = visualizer.width / dataArray.length;
+    let x = 0;
+
+    for (let i = 0; i < dataArray.length; i++) {
+        let barHeight = (dataArray[i] / 255) * (visualizer.height / 2);
+
+    ctx.beginPath();
+    ctx.moveTo(x, visualizer.height / 2 - barHeight);
+    ctx.lineTo(x, visualizer.height / 2 + barHeight);
+    ctx.stroke();
+
+    x += barWidth;
+            }
+        }
+
+    </script>
+
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
+    <!-- slider js-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/custom-slider.js"></script>
+
+    <!-- custom cursor -->
+    <script src="../assets/js/custom-cursor.js"></script>
+
+    <!-- aos animation -->
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/custom-aos.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../assets/js/iconsax.js"></script>
+
+    <!-- laptop animation js -->
+    <script src="../assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="../assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="../assets/js/pricing-table.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

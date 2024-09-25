@@ -1,0 +1,1163 @@
+{
+    "manifest_version": "1.0.21",
+    "title": "Firetroops - Template Kit for Firefighter & Fire Department",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/tebewebe.online",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Form",
+            "screenshot": "screenshots\/contact-form.jpg",
+            "source": "templates\/contact-form.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/contact-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-contact",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Appointment Form",
+            "screenshot": "screenshots\/appointment-form.jpg",
+            "source": "templates\/appointment-form.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/appointment-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Simple Subscription Form",
+            "screenshot": "screenshots\/simple-subscription-form.jpg",
+            "source": "templates\/simple-subscription-form.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/simple-subscription-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-other",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Service Detail",
+            "screenshot": "screenshots\/service-detail.jpg",
+            "source": "templates\/service-detail.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/service-detail\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Services",
+            "screenshot": "screenshots\/services.jpg",
+            "source": "templates\/services.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/services\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Join Volunteer",
+            "screenshot": "screenshots\/join-volunteer.jpg",
+            "source": "templates\/join-volunteer.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/join-volunteer\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Team",
+            "screenshot": "screenshots\/team.jpg",
+            "source": "templates\/team.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Us",
+            "screenshot": "screenshots\/contact-us.jpg",
+            "source": "templates\/contact-us.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/contact-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "404 Page",
+            "screenshot": "screenshots\/404-page.jpg",
+            "source": "templates\/404-page.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/404-page\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Single Post",
+            "screenshot": "screenshots\/single-post.jpg",
+            "source": "templates\/single-post.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/single-post\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-post",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Blog",
+            "screenshot": "screenshots\/blog.jpg",
+            "source": "templates\/blog.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/blog\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "archive-blog",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Homepage",
+            "screenshot": "screenshots\/homepage.jpg",
+            "source": "templates\/homepage.json",
+            "preview_url": "https:\/\/tebewebe.online\/firetroops\/template-kit\/homepage\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "ElementsKit Lite",
+            "version": "3.1.3",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "Envato Elements",
+            "version": "2.0.13",
+            "file": "envato-elements\/envato-elements.php",
+            "author": "Envato"
+        },
+        {
+            "name": "MetForm",
+            "version": "3.8.7",
+            "file": "metform\/metform.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "Skyboot Custom Icons for Elementor - Elementor Icons library",
+            "version": "1.0.8",
+            "file": "skyboot-custom-icons-for-elementor\/skyboot-custom-icons-for-elementor.php",
+            "author": "Skybootstrap"
+        },
+        {
+            "name": "Elementor",
+            "version": "3.21.4",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": [
+        {
+            "filename": "Logo_Firetroops_3.png",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Logo_Firetroops_3-800x199.png",
+            "templates": [
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 42081,
+            "dimensions": [
+                1047,
+                261
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.freepik.com\/free-vector\/vintage-firefighting-logos-set_10156051.htm"
+        },
+        {
+            "filename": "grunge_concrete_texture_vintage_background.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/grunge_concrete_texture_vintage_background-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                }
+            ],
+            "filesize": 194661,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.freepik.com\/free-vector\/grunge-concrete-texture-vintage-background_37416460.htm"
+        },
+        {
+            "filename": "Icon-Logo.png",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Icon-Logo.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                }
+            ],
+            "filesize": 18075,
+            "dimensions": [
+                249,
+                261
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.freepik.com\/free-vector\/vintage-firefighting-logos-set_10156051.htm"
+        },
+        {
+            "filename": "Logo_Firetroops_4.png",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Logo_Firetroops_4-800x199.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                }
+            ],
+            "filesize": 28170,
+            "dimensions": [
+                1047,
+                261
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.freepik.com\/free-vector\/vintage-firefighting-logos-set_10156051.htm"
+        },
+        {
+            "filename": "professional-medical-rescuer-bending-over-a-car-accident-victim-lying-on-a-stretcher-e1714846559846.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/professional-medical-rescuer-bending-over-a-car-accident-victim-lying-on-a-stretcher-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/service-detail.json",
+                    "name": "Service Detail"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 126892,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-H9EUGF3"
+        },
+        {
+            "filename": "firefighting-operations-truck-e1714846583838.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/firefighting-operations-truck-800x544.jpg",
+            "templates": [
+                {
+                    "source": "templates\/service-detail.json",
+                    "name": "Service Detail"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 140291,
+            "dimensions": [
+                1080,
+                734
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-P83QJ59"
+        },
+        {
+            "filename": "fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-e1714846610914.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-800x563.jpg",
+            "templates": [
+                {
+                    "source": "templates\/service-detail.json",
+                    "name": "Service Detail"
+                }
+            ],
+            "filesize": 106443,
+            "dimensions": [
+                1080,
+                760
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-6M77QVT"
+        },
+        {
+            "filename": "fireman-on-the-fire-e1714846634815.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/fireman-on-the-fire-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/service-detail.json",
+                    "name": "Service Detail"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 193313,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-WX8LQDG"
+        },
+        {
+            "filename": "firemen-working-at-fire-station--e1714846657762.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/firemen-working-at-fire-station--e1714492602249-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/service-detail.json",
+                    "name": "Service Detail"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 121493,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-L4R6KB7"
+        },
+        {
+            "filename": "out-into-the-road-burning-car-just-the-fire-place-has-arrived-the-police-and-suspended-traffic--e1714846676493.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/out-into-the-road-burning-car-just-the-fire-place-has-arrived-the-police-and-suspended-traffic--800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 115730,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-DA3QKEM"
+        },
+        {
+            "filename": "firefighter-help-little-girl-out-from-room-with-fire-and-smoke-and-he-bring-child-pass-window-e1714846699646.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/firefighter-help-little-girl-out-from-room-with-fire-and-smoke-and-he-bring-child-pass-window-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 102618,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-UTKCRSX"
+        },
+        {
+            "filename": "five-strong-man-wearing-uniform-while-standing-at-the-outdoors-e1714846720992.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/five-strong-man-wearing-uniform-while-standing-at-the-outdoors-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 123389,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-N6T59JA"
+        },
+        {
+            "filename": "firemen-at-work-near-their-truck-on-the-street--e1714846742589.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/firemen-at-work-near-their-truck-on-the-street--e1714234930401-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 129771,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-7T4SF5G"
+        },
+        {
+            "filename": "high-speed-ambulance-on-a-new-york-city-street-e1714846763580.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/high-speed-ambulance-on-a-new-york-city-street-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 107970,
+            "dimensions": [
+                1080,
+                719
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-3WEWK3N"
+        },
+        {
+            "filename": "a-firefighter-dressed-in-a-uniform-in-a-studio-1-1-e1714846787740.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/a-firefighter-dressed-in-a-uniform-in-a-studio-1-1-800x574.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 110255,
+            "dimensions": [
+                1080,
+                774
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-9D5PPYT"
+        },
+        {
+            "filename": "in-industry-safety-fire-fighter-team-department-on-training-fight-with-gas-and-oil-fire-e1714846808456.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/in-industry-safety-fire-fighter-team-department-on-training-fight-with-gas-and-oil-fire-800x502.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                },
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/blog.json",
+                    "name": "Blog"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 134937,
+            "dimensions": [
+                1080,
+                678
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-Q8VLHBZ"
+        },
+        {
+            "filename": "Team-1-1.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-1-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 106687,
+            "dimensions": [
+                700,
+                700
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/charming-shop-assistant-ready-to-offer-his-help-po-6X7D6EG"
+        },
+        {
+            "filename": "Team-3-1.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-3-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 68176,
+            "dimensions": [
+                700,
+                700
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/positive-attractive-african-american-female-wears--DL596BE"
+        },
+        {
+            "filename": "firefighter-putting-out-the-fire-of-the-house-and-car-e1714846851365.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/firefighter-putting-out-the-fire-of-the-house-and-car-800x466.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/404-page.json",
+                    "name": "404 Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 93394,
+            "dimensions": [
+                1280,
+                746
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-EFR9F8U"
+        },
+        {
+            "filename": "two-firemen-standing-near-the-fire-truck-at-night-in-a-fire-depot-e1714846873774.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/two-firemen-standing-near-the-fire-truck-at-night-in-a-fire-depot-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 127621,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-X9N4Q4V"
+        },
+        {
+            "filename": "fire-on-wall-and-ceiling-in-the-kitchen-behind-firefighter-man-with-protective-and-safety-e1714846899596.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/fire-on-wall-and-ceiling-in-the-kitchen-behind-firefighter-man-with-protective-and-safety-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 79870,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-HKQFCQU"
+        },
+        {
+            "filename": "portrait-of-a-firefighter-in-safety-helmet-and-oxygen-mask-holding-a-chainsaw-e1714846926555.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/portrait-of-a-firefighter-in-safety-helmet-and-oxygen-mask-holding-a-chainsaw-800x632.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 116854,
+            "dimensions": [
+                1080,
+                853
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-MARHSWA"
+        },
+        {
+            "filename": "portrait-of-a-firefighter-in-safety-helmet-and-oxygen-mask-holding-a-chainsaw-1-e1714846944458.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/portrait-of-a-firefighter-in-safety-helmet-and-oxygen-mask-holding-a-chainsaw-1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 106685,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-Y2YU8VU"
+        },
+        {
+            "filename": "fireman-e1714846978306.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/fireman-e1714233110498-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 141405,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-62F2ELA"
+        },
+        {
+            "filename": "firefighter-to-save-girl-in-fire-and-smoke--e1714847003612.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/firefighter-to-save-girl-in-fire-and-smoke--800x317.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 85653,
+            "dimensions": [
+                1280,
+                508
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-SPEG2SW"
+        },
+        {
+            "filename": "Team-4.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-4.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 80363,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/two-firemen-standing-near-the-fire-truck-at-night--QFBENPY"
+        },
+        {
+            "filename": "Team-5.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-5.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 61682,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/holds-red-hat-in-hands-female-firefighter-in-prote-3YP7UQ3"
+        },
+        {
+            "filename": "Team-2.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 66424,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/female-firefighter-in-protective-uniform-standing--H9XJSJB"
+        },
+        {
+            "filename": "Team-6.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-6.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 45034,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/firefighters-man-in-a-protective-suit-near-fire-tr-MR7S4A5"
+        },
+        {
+            "filename": "fireman-or-firefighter-hold-safety-helmet-and-stand-in-room-of-equipment-and-tools-for-firehouse-e1714847031952.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/fireman-or-firefighter-hold-safety-helmet-and-stand-in-room-of-equipment-and-tools-for-firehouse-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                }
+            ],
+            "filesize": 102105,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-Y5RKH4K"
+        },
+        {
+            "filename": "cage-1.png",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/cage-1.png",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 552,
+            "dimensions": [
+                32,
+                26
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/heropatterns.com\/"
+        },
+        {
+            "filename": "with-notepad-group-of-firefighters-in-protective-uniform-that-is-on-station-e1714847098574.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/with-notepad-group-of-firefighters-in-protective-uniform-that-is-on-station-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                }
+            ],
+            "filesize": 125448,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-PACBT92"
+        },
+        {
+            "filename": "usa-new-york-portrait-of-firefighter-putting-on-helmet-in-front-of-fire-engine-e1714847120321.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/usa-new-york-portrait-of-firefighter-putting-on-helmet-in-front-of-fire-engine-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                }
+            ],
+            "filesize": 144210,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-KFUTD4S"
+        },
+        {
+            "filename": "three-handsome-professional-firefighters-in-helmets-standing-in-the-outdoors-e1714847144116.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/three-handsome-professional-firefighters-in-helmets-standing-in-the-outdoors-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 119294,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-4BFD2LW"
+        },
+        {
+            "filename": "group-of-firefighters-at-the-emergency-vehicle-in-the-fire-station-e1714847169269.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/group-of-firefighters-at-the-emergency-vehicle-in-the-fire-station-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/join-volunteer.json",
+                    "name": "Join Volunteer"
+                }
+            ],
+            "filesize": 132313,
+            "dimensions": [
+                1080,
+                719
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-ZEATDYS"
+        },
+        {
+            "filename": "Team-3.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 62759,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/portrait-of-female-firefighter-in-helmet-with-arms-9WXG263"
+        },
+        {
+            "filename": "Team-7.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-7.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 39703,
+            "dimensions": [
+                500,
+                666
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/photo-of-fireman-with-gas-mask-and-helmet-near-fir-M4M9YTG"
+        },
+        {
+            "filename": "Team-8.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-8.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 79037,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/beautiful-emergency-doctor-woman-stand-and-lean-fi-577X7M6"
+        },
+        {
+            "filename": "Team-1.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/Team-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 70670,
+            "dimensions": [
+                500,
+                668
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/two-firemen-standing-near-the-fire-truck-at-night--QFBENPY"
+        },
+        {
+            "filename": "fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-1-e1714847226335.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/04\/fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-1-e1714154137341-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 175389,
+            "dimensions": [
+                1500,
+                1001
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-96ZKVXJ"
+        },
+        {
+            "filename": "fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-e1714847192944.jpg",
+            "thumbnail_url": "https:\/\/tebewebe.online\/firetroops\/wp-content\/uploads\/sites\/106\/2024\/05\/fireman-wearing-protective-uniform-standing-next-to-a-fire-engine-in-a-garage-of-a-fire-department-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 102506,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-5YBF2NQ"
+        }
+    ]
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/images/main logo.png" type="image/x-icon">
+  <title>About - North Star</title>
+  <style>
+    .skewed-divider {
+      transform: skewX(-12deg);
+      /* Skew effect */
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+  <header style="background: linear-gradient(to right,#2f587b, rgb(170,0,0));">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Left Section (Email and Social Media Icons) -->
+      <div class="flex items-center space-x-4">
+        <!-- Email Icon -->
+        <div class="flex items-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 12H8m-4 4h16M8 16H4v4m12-8h4v4M8 8h8m-6 6h6" />
+          </svg>
+          <a href="mailto:TW@nssystemsco.com" class="ml-2">TW@nssystemsco.com</a>
+        </div>
+      </div>
+
+      <!-- Right Section (Hamburger for Mobile/Tablet) -->
+      <div class="flex items-center space-x-4 text-white">
+        <button id="menu-btn" class="block lg:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navbar Links with Logo (Desktop) -->
+    <nav class="hidden lg:flex bg-white ">
+      <div class="container mx-auto px-10 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex justify-center">
+          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 140px;">
+          <!-- <h1 class="text-3xl text-slate-700 font-semibold">North Star</h1> -->
+        </div>
+
+        <!-- Nav Links -->
+        <div class="flex space-x-6">
+          <a href="/home.html" class="nav-item  font-semibold text-xl">Home</a>
+          <a href="/html/about.html" class="nav-item active font-semibold text-xl">About Us</a>
+          <a href="/html/services.html" class="nav-item font-semibold text-xl">Services</a>
+          <a href="/html/projects.html" class="nav-item font-semibold text-xl">Our Projects</a>
+          <a href="/html/resources.html" class="nav-item font-semibold text-xl">Resources</a>
+          <a href="/html/contact.html" class="nav-item font-semibold text-xl">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar (Mobile/Tablet) -->
+    <div id="mobile-menu"
+      class="fixed left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
+      <div class="flex items-center justify-between p-4">
+        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 100px;">
+        <button id="close-menu-btn" class="text-black focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-4 px-4">
+        <a href="/home.html" class="nav-item font-semibold">Home</a>
+        <a href="/html/about.html" class="nav-item active">About Us</a>
+        <a href="/html/services.html" class="nav-item">Services</a>
+        <a href="/html/projects.html" class="nav-item">Our Projects</a>
+        <a href="/html/resources.html" class="nav-item">Resources</a>
+        <a href="/html/contact.html" class="nav-item">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home section start -->
+  <section class="relative bg-cover bg-center text-white common-home-section">
+    <div class="flex flex-col justify-center items-start gap-4 h-64 ml-12">
+      <p class="text-xl font-bold home-breadcrumb">
+        <a href="#" class="text-white">Home</a>
+        <span class="yellow-color"> >> </span>
+        <a href="#" class="text-white">About Us</a>
+      </p>
+      <h1 class="text-4xl font-bold home-title">About NorthStar</h1>
+    </div>
+    <!-- Fully positioned slanted red bar at the bottom -->
+    
+    <div class="red-white-bar w-full absolute bottom-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,100 100,0 100,100" fill="rgb(170,0,0)"/>
+        <polygon points="0,100 0,0 100,0" fill="white"/>
+      </svg>
+    </div> 
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- expertise section start -->
+
+  <section class="container mx-auto px-4 py-8 who-we-are-section">
+    <!-- Flex Container for Responsive Design -->
+    <div class="flex flex-col gap-8 lg:space-x-8 md:flex-row" style="padding: 6rem .9rem;">
+      <!-- Image Container with Overlapping Images -->
+      <div class="w-full md:w-1/2 relative mb-8 md:mb-0 image-container">
+        <!-- First (Background) Image -->
+        <img src="/assets/images/home/NorthStar  Home.png" alt="First Image" class="w-full h-full object-cover">
+
+        <!-- Second (Overlapping) Image -->
+        <img src="/assets/images/home/FIRE 4.JPG" alt="Second Image"
+          class="absolute -bottom-4 -right-6 w-6/12 h-auto object-cover border-white border-8 shadow-lg">
+      </div>
+
+      <!-- Text Content Container -->
+      <div class="w-full md:w-1/2 px-4 md:px-8 flex flex-col justify-center text-container">
+        <div>
+          <!-- Section Heading -->
+          <h4 class="text-xl blue-heading font-bold">
+            WHO WE ARE
+          </h4>
+          <h2 class="text-3xl font-bold  font-bold mb-4">
+            Transforming Fire Alarm Solutions with Unmatched Expertise
+          </h2>
+          <p class="text-base font-semibold text-justify md:text-lg mb-6">
+            At NorthStar Systems, we transform complex fire alarm and low-voltage challenges into seamless,
+            code-compliant solutions. With over 25 years of industry expertise, we empower fire alarm contractors with
+            precision-crafted permit drawings and expert guidance, ensuring your projects are executed with the highest
+            standards of safety and reliability.
+          </p>
+
+          <!-- Icons and Text -->
+          <div class="flex flex-col lg:flex-row gap-4 icon-text">
+            <div class="flex gap-3">
+              <div class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">
+                &#10003;
+              </div>
+              <div>
+                <h4 class="font-bold">25+ Years of Expertise</h4>
+                <p class="text-sm text-justify">Toby Woods brings precision and attention to detail from his submarine
+                  service to NorthStar Systems.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">
+                &#10003;
+              </div>
+              <div>
+                <h4 class="font-bold">Trusted and Reliable</h4>
+                <p class="text-sm text-justify">NorthStar Systems delivers tailored, code-compliant solutions for fire
+                  alarm and low-voltage projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- expertise section end -->
+
+
+  <!-- experience section start -->
+
+  <section class="expertise-section relative w-full bg-cover bg-center bg-no-repeat py-20">
+    <!-- Content of the section -->
+    <div class="relative container mx-auto gap-8 flex flex-col lg:flex-row items-start z-10 text-white p-6 py-20"
+      x-data="{ openAccordion: null }">
+
+      <!-- Right Section (Text Content) -->
+      <div class="lg:w-7/12 lg:pl-10 mt-10 lg:mt-0 text-container">
+
+        <h4 class="yellow-color text-lg font-semibold uppercase mb-2">Our Expertise</h4>
+        <h2 class="text-3xl font-bold mb-6">Fire Alarm Solutions with Over 25 Years of Experience</h2>
+        <p class="text-lg mb-6">NorthStar Systems was founded by Toby Woods, a seasoned expert with over 25 years of experience in the fire alarm industry. Toby's career began in the submarine service, where he learned the critical importance of attention to detail and precision. These values have carried over into every aspect of his work in the fire alarm industry. Having worked across various roles, including installation, system planning, and project management, Toby has developed a deep understanding of the industry's complexities and the importance of creating safe environments.</p>
+
+        <!-- Our Vision Accordion -->
+        <div class="our-vision mb-6">
+          <div class="flex justify-between items-center cursor-pointer border-b-2 border-white py-4"
+            @click="openAccordion = (openAccordion === 1 ? null : 1)">
+            <h4 :class="openAccordion === 1 ? 'text-yellow-400' : 'text-white'" class="text-lg font-semibold uppercase">
+              Our Vision</h4>
+            <!-- Arrow icon -->
+            <span class="text-2xl transition-transform duration-500"
+              :class="openAccordion === 1 ? 'rotate-180 yellow-color' : ''">↓</span>
+          </div>
+
+          <div x-show="openAccordion === 1" x-transition:enter="transition-all ease-linear duration-500"
+            x-transition:enter-start="opacity-0 max-h-0" x-transition:enter-end="opacity-100 max-h-screen"
+            x-transition:leave="transition-all ease-linear duration-500"
+            x-transition:leave-start="opacity-100 max-h-screen" x-transition:leave-end="opacity-0 max-h-0"
+            class="overflow-hidden text-lg mt-4 pb-6 border-b-2">
+            <p>At NorthStar Systems, we aim to be a trusted partner for fire alarm & low voltage contractors. Our goal is to provide expert guidance and support, helping our clients navigate technical challenges with confidence. We strive to deliver precision-crafted permit drawings and comprehensive submittal packages that ensure successful project approvals. Our vision is to set new standards in safety and reliability, making every building a safer place for its occupants.</p>
+          </div>
+        </div>
+
+        <!-- Our Values Accordion -->
+        <div class="our-values">
+          <div class="flex justify-between items-center cursor-pointer border-b-2 border-white py-4"
+            @click="openAccordion = (openAccordion === 2 ? null : 2)">
+            <h4 :class="openAccordion === 2 ? 'text-yellow-400' : 'text-white'" class="text-lg font-semibold uppercase">
+              OUR VALUES</h4>
+            <!-- Arrow icon -->
+            <span class="text-2xl transition-transform duration-500"
+              :class="openAccordion === 2 ? 'rotate-180 yellow-color' : ''">↓</span>
+          </div>
+
+          <ul x-show="openAccordion === 2" x-transition:enter="transition-all ease-linear duration-500"
+            x-transition:enter-start="opacity-0 max-h-0" x-transition:enter-end="opacity-100 max-h-screen"
+            x-transition:leave="transition-all ease-linear duration-500"
+            x-transition:leave-start="opacity-100 max-h-screen" x-transition:leave-end="opacity-0 max-h-0"
+            class="overflow-hidden list-disc pl-5 mt-2 text-lg  pb-6 border-b-2">
+            <li class="mb-2">Attention to Detail: We pride ourselves on meticulous planning and execution, ensuring every project is code-compliant and optimized for performance.</li>
+            <li class="mb-2">Reliability: Our clients depend on us for timely delivery and solutions that exceed expectations.</li>
+            <li class="mb-2">Innovation: We continuously adapt to industry trends, providing cutting-edge solutions tailored to meet the unique needs of our clients.</li>
+            <li class="mb-2">Collaboration: We prioritize building strong relationships with our clients, listening to their needs and delivering tailored solutions.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Left Section (Image with overlay text) -->
+      <div class="lg:w-5/12 relative image-container">
+        <div class="relative">
+          <img class="w-full h-full lg:h-[500px] rounded-lg img-animate" src="/assets/images/home/FIRE 2.jpg"
+            alt="Building a Safer Future Together">
+          <!-- Overlay text on image -->
+          <div class="absolute bottom-0 left-0 p-4">
+            <div class="border-l-4 border-[#aa0000]">
+              <div class="blue-bg text-white p-4 text-right-container p-9">
+                <h4 class="text-2xl uppercase">Building a Safer <br> Future Together</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container min-w-full common-why-us-sec" style="background: url('/assets/images/paper.avif'); background-position: center; background-size: cover;">
+    <div class="flex flex-col lg:flex-row gap-3 lg:space-x-20 lg:gap-10 items-center lg:items-start p-10 lg:py-20">
+
+      
+      <!-- Right Section (Image and Badge) -->
+      <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image">
+        <!-- Image -->
+        <img class="w-full shadow-lg rounded-lg" src="/assets/images/map.JPG" alt="Fire Alarm System Image">
+      </div>
+
+      <!-- Left Section (Text Content) -->
+      <div class="w-10/12 lg:w-7/12 space-y-6 section-content">
+        <h4 class="blue-heading text-xl font-bold uppercase mb-4">MEET TOBY WOODS
+        </h4>
+        <h2 class="font-bold text-4xl text-gray-700">Leadership You Can Trust
+        </h2>
+        <p class="text-lg  lg:w-10/12 font-semibold">Toby's extensive technical expertise and dedication to excellence
+          make him an invaluable leader at NorthStar Systems. His insider
+          knowledge of installation practices and ability to navigate
+          complex building codes position him as a trusted resource for
+          clients seeking to enhance safety and compliance in their projects.
+          Toby is passionate about helping companies succeed, and his
+          commitment to quality drives NorthStar's mission to be a leader in
+          the fire alarm industry.</p>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- experience section end -->
+
+  <div class="common-red-blue-sec relative h-auto bg-[#aa0000] overflow-hidden">
+
+    <!-- Content container -->
+    <div class="relative h-full flex flex-col lg:gap-8 lg:flex-row items-center lg:items-start text-white lg:p-8">
+      <!-- Left section -->
+      <div class="section-left w-full lg:pr-8 lg:w-[40%] h-full p-8 lg:mb-8 lg:mb-0 text-center lg:text-left">
+        <h2 class="text-3xl leading-tight">Join Us in Building a <br>
+          Safer Future</h2>
+      </div>
+  
+      <!-- Right section -->
+      <div class="section-right w-full lg:w-[60%] h-full">
+        <div class="p-8 lg:pl-16">
+          <p class="text-xl">Discover how NorthStar Systems can transform your fire alarm and low-voltage projects into success stories. Contact us today to learn more about our services and how we can support your vision.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----- -->
+
+
+  <!-- why us section start -->
+
+  <section class="container min-w-full common-why-us-sec" style="background: url('/assets/images/paper.avif'); background-position: center; background-size: cover;">
+    <div class="flex flex-col lg:flex-row gap-3 lg:gap-8 items-center lg:items-start p-10 lg:py-20">
+
+      <!-- Left Section (Text Content) -->
+      <div class="w-10/12 lg:w-7/12 space-y-6 section-content">
+        <h4 class="blue-heading text-xl font-bold uppercase">our commitment to excellence</h4>
+        <h2 class="font-bold text-4xl text-gray-700">What Makes Us Unique</h2>
+        <p class="text-lg  lg:w-10/12 font-semibold">NorthStar Systems distinguishes itself through its personalized
+          approach and unparalleled technical expertise. We provide solutions that comply with regulatory standards,
+          ensuring that your projects recieve the approvals they deserve. Our commitment to quality and accuracy makes
+          us a valuable partner in your journey to building safer spaces.</p>
+      </div>
+
+      <!-- Right Section (Image and Badge) -->
+      <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image">
+        <!-- Image -->
+        <img class="w-full shadow-lg" src="/assets/images/map.JPG" alt="Fire Alarm System Image">
+
+        <!-- Badge -->
+        <div class="absolute top-0 right-0 bg-[#aa0000] text-white px-6 py-3  shadow-lg badge">
+          <h3 class="text-3xl font-bold"><span id="counter">0</span>+</h3>
+          <p class="text-sm">Years experience</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- why us section end -->
+
+
+  <!-- Footer Section with Background Image -->
+  <footer class="footer-section relative py-6">
+
+    <!-- Content Container -->
+    <div class="relative max-w-7xl mx-auto px-4 flex  items-center justify-center text-white text-sm">
+      <!-- Copyright Text -->
+      <div class="flex flex-wrap gap-3 font-semibold text-lg">
+        <span> Copyright © 2024 NorthStar Systems, LLC |</span>
+        <div>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Site Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+
+
+<script src="/assets/js/animations/common-animation.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+<!-- Script -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const navItems = document.querySelectorAll('#mobile-menu .nav-item');  // Select all nav items
+  const body = document.body;
+
+  // Open the sidebar
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+    body.classList.add('overflow-hidden');  // Prevent scrolling when sidebar is open
+  });
+
+  // Close the sidebar
+  closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+    body.classList.remove('overflow-hidden');
+  });
+
+  // Close sidebar when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+      mobileMenu.classList.add('-translate-x-full');
+      body.classList.remove('overflow-hidden');
+    }
+  });
+
+  // Prevent sidebar from closing when clicking inside of it
+  mobileMenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  // Close sidebar when clicking on any nav-item
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+      body.classList.remove('overflow-hidden');
+    });
+  });
+</script>
+
+</body>
+
+</html>

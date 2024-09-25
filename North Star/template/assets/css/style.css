@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* --main-blue-color--: #2f587b */
+    --main-blue-color: 47, 88, 123;
+    /* --main-red-color: #aa0000; */
+    --main-red-color: 170, 0, 0;
+    /* --main-yellow-color: #ffb400; */
+    --main-yellow-color: 255, 180, 0;
+
+    --transition-time--: .5s all ease;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ========GENERAL CLASSES========= */
+.yellow-btn {
+    background-color: rgb(var(--main-yellow-color));
+}
+
+.yellow-btn:hover {
+    opacity: .96;
+}
+
+.yellow-color {
+    color: rgb(var(--main-yellow-color));
+}
+
+.blue-heading {
+    color: rgb(var(--main-blue-color));
+}
+
+.blue-bg {
+    background-color: rgb(var(--main-blue-color));
+}
+
+.red-heading {
+    color: rgb(var(--main-red-color));
+}
+
+.red-bg {
+    background-color: rgb(var(--main-red-color));
+}
+
+/* ========NAV BAR ========== */
+.nav-item {
+    color: rgb(var(--main-blue-color));
+    transition: var(--transition-time--);
+}
+
+.nav-item:hover {
+    color: rgb(var(--main-red-color));
+}
+
+.active {
+    color: rgb(var(--main-red-color));
+}
+
+/* =======HOME SECTION ========== */
+.home-section {
+    background-image: linear-gradient(to right, rgba(var(--main-blue-color), 0.8) 18%, rgba(var(--main-red-color), .2), rgba(209, 207, 111, 0.1)), url('/assets/images/home/NorthStar\ \ Home.png');
+
+}
+
+.home-section .welcome-text {
+    color: white;
+    position: relative;
+    /* Position relative to contain the pseudo-element */
+    display: inline-block;
+    /* Ensure text width is taken into account */
+    z-index: 1;
+    /* Ensure the text appears above the line */
+    left: 13%;
+}
+
+.home-section .welcome-text::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    background-color: rgb(var(--main-yellow-color));
+    width: 20%;
+    height: 3px;
+}
+
+@media screen and (max-width:600px) {
+
+
+    .home-section .welcome-text {
+        left: 20%;
+    }
+
+    .home-section .welcome-text::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -30%;
+        background-color: rgb(var(--main-yellow-color));
+        width: 20%;
+        height: 3px;
+    }
+
+}
+
+
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button opacity animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Applying animations with delay */
+.home-section .welcome-text {
+    opacity: 0;
+    animation: slideInRight 1.4s ease-out forwards;
+}
+
+.home-section .partner-text {
+    opacity: 0;
+    animation: slideInUp 1.4s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.home-section .cta-btn {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.8s;
+    /* Button fades in after both text are in place */
+}
+
+
+/* ============COMMON HOME SECTION ======== */
+.common-home-section {
+    background-image: linear-gradient(to right, rgba(var(--main-blue-color), 0.7), rgba(var(--main-blue-color), 01)), url('/assets/images/home/NorthStar\ \ Home.png');
+    padding: 3rem 0;
+}
+
+/* Initial state for animations */
+.home-breadcrumb,
+.home-title {
+    opacity: 0;
+    transform: translateX(-200px);
+    /* Start off-screen for the breadcrumb */
+    transition: all 1.5s ease;
+}
+
+/* Initial state for the title to come from the right */
+.home-title {
+    transform: translateX(700px);
+    /* Start off-screen to the right */
+}
+
+/* Animation when the section becomes visible */
+.common-home-section.animate .home-breadcrumb {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move breadcrumb from left to its position */
+}
+
+.common-home-section.animate .home-title {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move title from right to its position */
+}
+
+
+
+/* ==========EXPERTISE SECTION ====== */
+.expertise-section {
+    background-image: linear-gradient(to right, rgba(var(--main-blue-color), .9), rgba(var(--main-blue-color), 1)), url('/assets/images/home/NorthStar\ \ Home.png');
+    padding: 4.5rem 1rem;
+}
+
+@media screen and (max-width:1024px) {
+    .expertise-section {
+        padding: 3rem 0rem;
+    }
+}
+
+/* Base styles */
+.expertise-section .text-container,
+.expertise-section .text-right-container,
+.expertise-section .img-animate,
+.expertise-section.reverse-animation .reverse-text-container,
+.expertise-section.reverse-animation .reverse-img-animate {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+
+    .expertise-section .text-container,
+    .expertise-section .text-right-container,
+    .expertise-section.reverse-animation .reverse-text-container {
+        transform: translateY(50px);
+    }
+
+    .expertise-section .img-animate,
+    .expertise-section.reverse-animation .reverse-img-animate {
+        transform: translateY(50px);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .expertise-section .text-container {
+        transform: translateX(100px);
+    }
+
+    .expertise-section .text-right-container {
+        transform: translateX(-100px);
+    }
+
+    .expertise-section .img-animate {
+        transform: translateY(100px);
+    }
+
+    .expertise-section.reverse-animation .reverse-text-container {
+        transform: translateX(-100px);
+    }
+
+    .expertise-section.reverse-animation .reverse-img-animate {
+        transform: translateX(100px);
+    }
+}
+
+/* Animated state */
+.expertise-section .text-container.animate,
+.expertise-section .text-right-container.animate,
+.expertise-section .img-animate.animate,
+.expertise-section.reverse-animation .reverse-text-container.animate,
+.expertise-section.reverse-animation .reverse-img-animate.animate {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* =========CONTACT SECTION========== */
+.contact-section-blue-bg {
+    background-image: linear-gradient(to right, rgba(var(--main-blue-color), 0.7), rgba(var(--main-blue-color), 01)), url('/assets/images/home/NorthStar\ \ Home.png');
+}
+
+
+/* =============FOOTER SECTION=========== */
+.footer-section {
+    background-image: linear-gradient(to right, rgba(var(--main-blue-color), 1), rgba(var(--main-blue-color), .9)), url('/assets/images/home/NorthStar\ \ Home.png');
+    background-image: url(/assets/images/footer-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ===========SERVICE SECTION=========== */
+.service-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.service-item h3 {
+    color: rgb(var(--main-yellow-color));
+    transition: var(--transition-time--);
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--main-blue-color), .6);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-item:hover::before {
+    opacity: 0;
+}
+
+.service-item:hover h3 {
+    color: white;
+}
+
+/* Initial state for text and images */
+.text-section,
+.service-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Add animation for the text first */
+.service-section.animate .text-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* Sequential animation for images from different directions */
+.service-section.animate .image-1 {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+
+.service-section.animate .image-2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.service-section.animate .image-3 {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.8s;
+}
+
+.service-section.animate .image-4 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+.service-section.animate .image-5 {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.2s;
+}
+
+/* Initial transform positions */
+.image-1 {
+    transform: translateX(-100px);
+    /* From the left */
+}
+
+.image-2 {
+    transform: translateY(100px);
+    /* From the bottom */
+}
+
+.image-3 {
+    transform: translateX(100px);
+    /* From the right */
+}
+
+.image-4 {
+    transform: translateY(-100px);
+    /* From the top */
+}
+
+.image-5 {
+    transform: translateX(-100px);
+    /* From the left */
+}
+
+
+
+/* ==== WHO WE ARE ========== */
+.who-we-are-section {
+    position: relative;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .9)), url('/assets/images/home/NorthStar\ \ Home.png');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Initial State: No opacity or transformation */
+.who-we-are-section .image-container,
+.who-we-are-section .text-container,
+.who-we-are-section .icon-text {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Text starts slightly down */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Slide-in from left for the image */
+.who-we-are-section .image-container {
+    opacity: 0;
+    transform: translateX(-50px);
+    /* Initially offset to the left */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    /* Ensure transitions apply */
+}
+
+/* When animate class is added */
+.who-we-are-section .image-container.animate {
+    opacity: 1;
+    transform: translateX(0);
+    /* Slide in from left */
+}
+
+/* Fade-in and slide-up for text */
+.who-we-are-section .text-container.animate,
+.who-we-are-section .icon-text.animate {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide-up */
+}
+
+/* Delayed Animation for Staggered Effects */
+.who-we-are-section .text-container.animate h4,
+.who-we-are-section .text-container.animate h2 {
+    transition-delay: 0.2s;
+}
+
+.who-we-are-section .text-container.animate p {
+    transition-delay: 0.5s;
+}
+
+.who-we-are-section .icon-text.animate {
+    transition-delay: 1s;
+}
+
+/* Extra Improvement: Add a keyframes fadeInUp if you prefer using keyframes */
+/* Optional: Keyframe for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Keyframe for slideInLeft */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==========COMMON RED BLUE BOX ======== */
+
+.common-red-blue-sec {
+    background-image: linear-gradient(105deg, rgba(var(--main-blue-color), .8) 37%, rgba(var(--main-red-color), .8) 37%), url('/assets/images/home/NorthStar\ \ Home.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:1024px) {
+
+    .common-red-blue-sec {
+        background-image: url('/assets/images/home/NorthStar\ \ Home.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .common-red-blue-sec .section-left {
+        width: 100vw;
+        background-color: rgba(var(--main-blue-color), .8);
+    }
+
+    .common-red-blue-sec .section-right {
+        width: 100vw;
+        background-color: rgba(var(--main-red-color), .8);
+    }
+
+}
+
+.common-red-blue-sec {
+    position: relative;
+}
+
+.common-red-blue-sec .section-left,
+.common-red-blue-sec .section-right {
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    position: relative;
+}
+
+.common-red-blue-sec .section-left {
+    z-index: 1;
+    transform: translateY(100px) translateX(-50px);
+    /* Move from below */
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.common-red-blue-sec .section-right {
+    z-index: 2;
+    transform: translateX(200px);
+    /* Move from the right */
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.common-red-blue-sec .section-left.animate {
+    transform: translateY(0) translateX(0);
+    /* Move into view */
+    opacity: 1;
+}
+
+.common-red-blue-sec .section-right.animate {
+    transform: translateX(0);
+    /* Move into view */
+    opacity: 1;
+}
+
+/* After animation, bring section-left to the front */
+.common-red-blue-sec .section-left.animate {
+    z-index: 2;
+}
+
+
+/* ===============COMMON SECTION WHY US */
+/* Initial hidden state for all elements */
+.common-why-us-sec .section-content,
+.common-why-us-sec .section-image,
+.common-why-us-sec .badge {
+    opacity: 0;
+    transform: translateY(240px);
+    /* Slide-up effect for text */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When the section is in view, animate the elements */
+.common-why-us-sec .section-content.animate,
+.common-why-us-sec .section-image.animate,
+.common-why-us-sec .badge.animate {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to its original position */
+}
+
+/* Special case for image, sliding from the right */
+.common-why-us-sec .section-image.animate {
+    transform: translateX(0);
+    /* Slide-in from right */
+}
+
+.common-why-us-sec .section-image {
+    transform: translateX(200px);
+    /* Initially positioned to the right */
+}
+
+/* Special case for badge counter */
+.common-why-us-sec .badge.animate {
+    transition: opacity 1s ease;
+    transform: translateY(0);
+    /* Fade in and move badge to original position */
+}
+
+/* Animate the count for badge */
+@keyframes countUp {
+    from {
+        content: '0';
+    }
+
+    to {
+        content: '25';
+    }
+}
+
+
+/* =============COMMON CALL TO ACTION SECTION=========== */
+/* Initial State for Text (hidden with bottom position) */
+.common-action-sec .text-wrapper {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Text starts below */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Final State for Text (visible and in place) */
+.common-action-sec .text-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+    /* Text moves to its original place */
+}
+
+
+/* =================== */
+/* Initial state */
+.animated-part-left,
+.animated-part-right {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/* Animate from right (to original position) */
+.animate-from-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animate from left (to original position) */
+.animate-from-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* RESOURCES CERTIFICATE */
+.certificate .animate-slide-left {
+    opacity: 0;
+    transform: translateX(-800px);
+    transition: opacity .7s ease-out, transform .9s ease-out;
+}
+
+.certificate .animate-slide-right {
+    opacity: 0;
+    transform: translateX(700px);
+    transition: opacity .7s ease-out, transform .9s ease-out;
+}
+
+.certificate .animate-slide-up {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: opacity .7s ease-out, transform .9s ease-out;
+}
+
+.certificate .animate-slide-down {
+    opacity: 0;
+    transform: translateY(300px);
+    transition: opacity .7s ease-out, transform .9s ease-out;
+}
+
+.certificate .animate {
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) !important;
+}
+
+/* .common-project-section {
+background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox='0 0 32 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0v3.994C14 7.864 10.858 11 7 11c-3.866 0-7-3.138-7-7.006V0h2v4.005C2 6.765 4.24 9 7 9c2.756 0 5-2.236 5-4.995V0h2zm0 26v-5.994C14 16.138 10.866 13 7 13c-3.858 0-7 3.137-7 7.006V26h2v-6.005C2 17.235 4.244 15 7 15c2.76 0 5 2.236 5 4.995V26h2zm2-18.994C16 3.136 19.142 0 23 0c3.866 0 7 3.138 7 7.006v9.988C30 20.864 26.858 24 23 24c-3.866 0-7-3.138-7-7.006V7.006zm2-.01C18 4.235 20.244 2 23 2c2.76 0 5 2.236 5 4.995v10.01C28 19.765 25.756 22 23 22c-2.76 0-5-2.236-5-4.995V6.995z' fill='%23ece9f1' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+} */
+.project-section-2 {
+    background-image: url('/assets/images/paper.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: red; */
+}
+
+/* .project-section-3{
+    background-image: url('/assets/images/white-bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.red-white-bar {
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+}
+
+.red-white-bar svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* Align to the right */
+    width: 100%;
+    height: 100%;
+    transform: rotateX(180deg);
+}

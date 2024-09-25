@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="4irinc">
+    <meta name="keywords" content="4irinc">
+    <meta name="author" content="4irinc">
+    <link rel="icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <title>Fourth Industrial Revolution Inc</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/remixicon.css">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/iconsax.css" />
+
+    <!-- animation css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/aos.css">
+
+    <!-- swiper slider css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="/assets/css/landing.css">
+
+    <link rel="stylesheet" href="/assets/css/landing_mic.css.css">
+
+
+
+    <style>
+        .mic {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(#198754, #00BDFF);
+            background: radial-gradient(#198754, #00BDFF);
+            background: radial-gradient(#00BDFF, #12a35f);
+            background: radial-gradient(#00BDFF, #198754);
+            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #0000);
+            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #044929);
+            background: radial-gradient(#075f80, #00BDFF);
+            /* background: radial-gradient(#494848, #00BDFF ); */
+            color: #fff;
+            font-size: 37px;
+            font-size: 37px;
+            padding: 6rem;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.25s, box-shadow .25s, filter .3s;
+            animation: move 3s linear infinite alternate;
+            backdrop-filter: blur(10px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            overflow: visible;
+            box-shadow: 0 0 50px 10px;
+            box-shadow: #075c7a 0px 20px 50px 40px;
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 40px 0px; */
+            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 80px; */
+            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 0px; */
+            /* background: linear-gradient(#00BDFF, #198754);  */
+        }
+
+
+        .mic:hover {
+            /* filter: brightness(1.5); */
+            /* opacity: .5; */
+            /* box-shadow: 0 0 10px #00BDFF; */
+            /* background: linear-gradient(#00BDFF, #198754); */
+            filter: brightness(1.1);
+        }
+
+        .mic::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            animation: listening 1.8s infinite;
+            z-index: -1;
+        }
+
+        .visualizer {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(-10px);
+            }
+
+            to {
+                transform: translateY(11.2435px);
+                box-shadow: 0 0 50px 10px #075c7a;
+            }
+        }
+
+        @keyframes listening {
+
+            /* 0% {
+                transform: scale(1);
+                opacity: 0.35;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            } */
+            0% {
+                -webkit-transform: scale(1, 1);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(1.5, 1.5);
+                opacity: 0;
+            }
+        }
+
+
+        .mic-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .mic_text {
+            font-size: 1rem;
+            color: white !important;
+            border: 1px solid #8800ff;
+            background-color: #8800ff;
+            display: inline;
+            border-radius: 1rem;
+            padding: 3px 12px;
+            width: max-content;
+        }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #00BDFF;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+        /* Ensure the nav-link text doesn't shift when the bullet appears */
+        /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+        /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+
+        header .navbar-nav .nav-item:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: rgba(var(--theme-color), 1);
+            border-radius: 100%;
+            position: absolute;
+            left: -7px;
+            top: 36%;
+            -webkit-transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .service-content {
+            position: relative;
+        }
+
+        .service-content h3 {
+            position: relative;
+            left: -8px;
+        }
+
+        .service-content img {
+            width: 10%;
+            height: 25px;
+        }
+
+        .ai_talk_services .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        @media screen and (min-width:1400px) {
+            .ai_talk_services .row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .ai_talk_services .service-box ul {
+            line-height: 1;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .ai_talk_services .service-box {
+            text-align: center;
+            line-height: 2;
+            padding: 4.7rem 3rem;
+            color: #fff;
+            background-color: #0a0e17;
+            position: relative;
+            transition: 0.5s all ease;
+            cursor: pointer;
+        }
+
+        .ai_talk_services .service-box img {
+            display: inline-block;
+            cursor: pointer;
+            border: 2px solid #00BDFF;
+            background-color: #00BDFF;
+            border-radius: 50%;
+            padding: 1rem;
+            transition: .3s all ease;
+            color: white;
+            width: 40%;
+            margin-bottom: 2rem;
+        }
+
+
+        .btn-hover {
+            border: 1px solid #00BDFF;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 0 10px 0 #00BDFF;
+            font-size: 1.4rem;
+            position: relative;
+            overflow: hidden;
+            /* Ensure content doesn't overflow */
+            z-index: 1;
+            /* Ensure button content is above the background */
+        }
+
+        .btn-hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #00BDFF;
+            transition: .4s all ease;
+            z-index: -1;
+            /* Place the background below the button content */
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn-hover:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 3px #00BDFF;
+        }
+
+        .faq-section .container .row {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .col-lg-6,
+        .col-g-6 {
+            flex: 1;
+        }
+
+
+        .circle {
+            width: 100%;
+            height: 70px;
+            padding: 4.6rem 3rem;
+            border: 2px solid #00BDFF;
+            border-radius: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .circle span {
+            position: relative;
+            top: -1rem;
+        }
+
+        .circles .circle-active {
+            background-color: #00BDFF;
+            color: #fff;
+        }
+
+        .circle:nth-child(2) {
+            position: relative;
+            top: -2rem;
+        }
+
+        .circle:nth-child(3) {
+            position: relative;
+            top: -4rem;
+        }
+
+        .circle:nth-child(4) {
+            position: relative;
+            top: -6rem;
+        }
+
+        .circle:nth-child(5) {
+            position: relative;
+            top: -8rem;
+        }
+
+
+        header {
+            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
+            background-position: center;
+            background-size: cover;
+            z-index: 100;
+        }
+
+        .home-section {
+            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+    .ai-features-section {
+        padding: 50px 0;
+        position: relative;
+    }
+
+    .ai-features-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .ai-vertical-line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background-color: #00BDFF;
+        z-index: 1;
+    }
+
+    .ai-horizontal-line-right,
+    .ai-horizontal-line-left {
+        width: 100px;
+        height: 2px;
+        background-color: #00BDFF;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    .ai-horizontal-line-right {
+        margin-right: 20px;
+    }
+
+    .ai-horizontal-line-left {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .line-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #00BDFF;
+        border-radius: 50%;
+        position: absolute;
+        top: -4px;
+    }
+
+    .ai-horizontal-line-right .line-dot {
+        right: -5px;
+    }
+
+    .ai-horizontal-line-left .line-dot {
+        left: -5px;
+    }
+
+    .ai-feature-box-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .ai-feature-box {
+        background-color: #0a0e17;
+        border: 2px solid #00BDFF;
+        border-radius: 15px;
+        padding: 2rem;
+        color: white;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 2;
+        flex: 1;
+    }
+
+    .ai-feature-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .ai-feature-box p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .animated-in .ai-feature-box {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .animated-in .ai-horizontal-line-right,
+    .animated-in .ai-horizontal-line-left {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    .ai-left-box {
+        grid-column: 1 / span 1;
+    }
+
+    .ai-right-box {
+        grid-column: 2 / span 1;
+    }
+
+    .ai-features-heading{
+        margin-bottom: 6rem !important;
+    }
+
+    @media (max-width: 1024px) {
+        .ai-features-container {
+            grid-template-columns: 1fr;
+        }
+
+        .ai-vertical-line {
+            left: 20px;
+            display: none;
+        }
+
+        .ai-feature-box-wrapper {
+            grid-column: 1 / span 1;
+            margin-left: 40px;
+        }
+
+        .ai-horizontal-line-right,
+        .ai-horizontal-line-left {
+            width: 60px;
+        }
+        
+
+        .ai-feature-box {
+            margin-left: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .ai-feature-box-wrapper {
+            margin-left: 20px;
+        }
+
+        .ai-horizontal-line-right,
+        .ai-horizontal-line-left {
+            width: 20px;
+        }
+
+        .ai-feature-box {
+            margin-left: 10px;
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- header start -->
+    <header>
+        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu">
+            <span class="navbar-toggler-icon">
+                <i class="iconsax" data-icon="text-align-justify"></i>
+            </span>
+        </button>
+        <a href="../home.html">
+            <img src="../assets/images/main-logo.png" id="logo-img" style="position: relative; margin-top: -1rem;"
+                class="img-fluid" alt="logo">
+        </a>
+        <nav class="header-nav-middle">
+            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                    <div class="offcanvas-header navbar-shadow">
+                        <h5 class="mb-0">Back</h5>
+                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../home.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link" href="./services.html" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/html/4ir Education/4ir.html">Training &
+                                            Education</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./blog-grid.html">Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact-us.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a data-cursor="pointer" style="position: relative; margin-top: -1.4rem;" href="/html/contact-us.html"
+            class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></a>
+    </header>
+    <!-- header end -->
+
+
+    <!-- home section start -->
+    <section class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="home-content">
+                        <div class="bg-effect">
+                            <img src="../assets/images/home/home-bg.gif" class="img-fluid bg-gif" alt="">
+                            <img src="../assets/svg/home/1.png" class="img-fluid effect1 rotate-effect" alt="">
+                            <img src="../assets/svg/home/2.svg" class="img-fluid effect2 rotate-effect" alt="">
+                        </div>
+                        <div>
+                            <!-- <h1>USE 4irinc TO <div class="title-effect">
+                                    <img src="../assets/images/title-effect.png" alt=""><span
+                                        style="color: #00BDFF;">SIMPLIFY</span>
+                                </div> YOUR LIFE</h1> -->
+                            <h1>Transform Your Customer
+                                Experience with <br>
+                                <div class="title-effect"><img src="../assets/images/title-effect.png" alt=""><span
+                                        style="color: #ffce00;">AI TALK ASSIST</span>
+                                </div>
+                            </h1>
+                            <p>
+                                Experience the convenience of AI-driven calls. Let technology handle your communication
+                                needs effortlessly, saving you time and hassle.
+
+                            </p>
+                            <a data-cursor="pointer" class="start-link mic_text">Give it a try!</a>
+                        </div>
+                    </div>
+                    <div class="home-laptop px-md-0 px-3">
+                        <div class="laptop-sec position-relative">
+                            <div class="mic-sec">
+                                <div class="mic-div">
+                                    <button type="button" class="mic listening ">
+                                        <i class="fa fa-microphone" style="color: #fff;"></i>
+                                        <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
+
+                                        <canvas class="visualizer" width="80" height="40"></canvas>
+                                    </button>
+                                    <a style=" 
+                                    font-size: 1rem;
+                                    color: white;
+                                    border: 1px solid #8800ff ;
+                                    background-color: #8800ff ;
+                                    display: inline;
+                                    border-radius: 1rem;
+                                    padding: 3px 12px;" href="/html/contact-us.html">Book a
+                                        Demo</a>
+                                </div>
+                            </div>
+                            <div class="hand-sec" style="position: relative; margin-top: 16rem; top: 15rem;">
+                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid left-hand"
+                                    style="margin-left: 5rem;" alt="hand">
+                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid right-hand"
+                                    style="margin-right: 5rem;" alt="hand">
+                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid left-finger" style="position: absolute; top: 1rem; left: 15rem;" alt="hand"> -->
+                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid right-finger" style="position: absolute; top: -4rem;" alt="hand"> -->
+                            </div>
+                        </div>
+                        <!-- <div class="home-info">
+                            <ul class="info-list">
+                                <li>Ask anything </li>
+                                <li>Generate image</li>
+                                <li>Translate anything</li>
+                            </ul>
+                            <ul class="star-rating">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                            </ul>
+                            <h4>A technique to write
+                                all of your material 10 times more quickly.</h4>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+
+    <!-- service section start -->
+    <div class="service-section section-b-space">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="row g-4 service-row">
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid service-effect">24/7 Availability</h3>
+                                    <p>Never miss an opportunity, day or night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/graph.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/graph-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Scalable Solution</h3>
+                                    <p>Handle unlimited conversations simultaneously</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/search-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Cost-Effective</h3>
+                                    <p>Reduce overhead
+                                        while maximizing
+                                        efficiency
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/text-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Personalized Interactions</h3>
+                                    <p>Tailor responses to
+                                        each unique customer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/text-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Seamless Integration
+                                    </h3>
+                                    <p>Connects effortlessly
+                                        with your existing
+                                        CRM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/text-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Data-Driven Insights
+                                    </h3>
+                                    <p>Gain valuable
+                                        customer intelligence
+                                        to inform your
+                                        strategies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <div class="title">
+                                <h2>Why Choose AI Talk Assist?</h2>
+                                <h3>Revolutionizing Customer Connections, 24/7</h3>
+                            </div>
+                            <p style="text-align: justify;">Imagine a world where your business never sleeps, where
+                                every
+                                customer inquiry is answered instantly, and where lead
+                                generation happens seamlessly around the clock. Welcome to
+                                the future of customer interaction with AI Talk Assist.Our cuttingedge conversational
+                                AI doesn't just respond to queries - it
+                                revolutionizes how you connect with your customers. From
+                                acting as a tireless virtual receptionist to scheduling
+                                appointments and qualifying leads, AI Talk Assist is your secret
+                                weapon for business growth.</p>
+                            <a data-cursor="pointer" class="btn-arrow btn-hover" href="/html/contact-us.html">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Get Started
+                                Today
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- service section end -->
+       <section class="ai-features-section section-b-space">
+        <div class="container">
+            <div class="ai-features-heading text-center text-white" style="line-height: 1.3;">
+                <h2> <span style="color: #ffce00;">AI Talk Assist:</span> Automated Calls, <br> Human-Like Conversations</h2>
+                <h3>Effortless Communication, Maximum Efficiency</h3>
+                <p>Transform your customer interactions with AI Talk Assist. Our intelligent, conversational AI makes and receives calls with a natural flow, just
+                    like talking to a real person. Pre-qualify leads, set appointments, and follow up automatically—all while increasing conversion rates and freeing
+                    up your team’s valuable time. Fully customizable and seamlessly integrated with your CRM, AI Talk Assist is available 24/7, reducing costs and
+                    ensuring your business is always ready to grow. Plus, it’s built with security and scalability in mind, adapting as your business evolves.</p>
+            </div>
+            
+        <div class="ai-features-container">
+            <!-- Vertical line -->
+            <div class="ai-vertical-line"></div>
+    
+            <!-- Alternating boxes -->
+            <div class="ai-feature-box-wrapper ai-left-box">
+                <div class="ai-feature-box">
+                    <h3>Automated Calls, Human Results</h3>
+                    <p>AI Talk Assist ensures your business is always available, making and receiving calls with
+                        natural, conversational AI that feels like talking to a real person.</p>
+                </div>
+                <div class="ai-horizontal-line-left">
+                    <div class="line-dot"></div>
+                </div>
+            </div>
+    
+            <div class="ai-feature-box-wrapper ai-right-box">
+                <div class="ai-horizontal-line-right">
+                    <div class="line-dot"></div>
+                </div>
+                <div class="ai-feature-box">
+                    <h3>Increase Conversion Rates</h3>
+                    <p>Pre-qualify leads, set up appointments, and follow up with customers—automatically. Watch your
+                        conversion rates soar while freeing up your team's time.</p>
+                </div>
+            </div>
+    
+            <div class="ai-feature-box-wrapper ai-left-box">
+                <div class="ai-feature-box">
+                    <h3>Fully Customizable</h3>
+                    <p>Tailor AI Talk Assist to your specific business needs. It integrates smoothly with your CRM and
+                        marketing tools, so you can focus on growing your business.</p>
+                </div>
+                <div class="ai-horizontal-line-left">
+                    <div class="line-dot"></div>
+                </div>
+            </div>
+    
+            <div class="ai-feature-box-wrapper ai-right-box">
+                <div class="ai-horizontal-line-right">
+                    <div class="line-dot"></div>
+                </div>
+                <div class="ai-feature-box">
+                    <h3>Save Time, Cut Costs</h3>
+                    <p>No more missed calls or time wasted on repetitive tasks. AI Talk Assist operates 24/7, reducing
+                        the need for additional staff.</p>
+                </div>
+            </div>
+    
+            <div class="ai-feature-box-wrapper ai-left-box">
+                <div class="ai-feature-box">
+                    <h3>Secure and Scalable</h3>
+                    <p>Built with cutting-edge technology, AI Talk Assist is secure, scalable, and adaptable as your
+                        business grows.</p>
+                </div>
+                <div class="ai-horizontal-line-left">
+                    <div class="line-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+
+    <!-- service section start -->
+    <div class="service-section section-b-space">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <div class="title">
+                                <h2>Elevate Every Aspect of
+                                    Your Business</h2>
+                            </div>
+                            <p style="text-align: justify;">Don't just keep up with the competition -
+                                leave them in the dust. AI Talk Assist is
+                                more than a chatbot; it's your pathway to
+                                unparalleled customer engagement and
+                                business growth.Ready to see the future of
+                                customer interaction? You can book a
+                                demo today and experience the AI Talk
+                                Assist difference for yourself. Your
+                                customers - and your bottom line - will
+                                thank you.</p>
+                            <a data-cursor="pointer" class="btn-arrow btn-hover" href="/html/contact-us.html">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Unlock the
+                                Future
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row g-4 service-row">
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid service-effect">Customer Service</h3>
+                                    <p>Provide instant,
+                                        accurate responses to
+                                        common inquiries
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/graph.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/graph-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect" class="img-fluid">Lead
+                                        Generation</h3>
+                                    <p>Qualify prospects and
+                                        nurture leads
+                                        automatically
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/search-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect"
+                                            class="img-fluid">Appointment Scheduling</h3>
+                                    <p>Fill your calendar
+                                        without lifting a finger
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="../assets/svg/service/text.svg" class="img-fluid outline-icon" alt="">
+                                    <img src="../assets/svg/service/text-bold.svg" class="img-fluid bold-icon" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h3><img src="../assets/svg/service-title.svg" alt="effect" class="img-fluid">Sales
+                                        Support</h3>
+                                    <p>Guide customers
+                                        through the sales funnel
+                                        with personalized
+                                        recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service section end -->
+
+
+    <div class="section-b-space service-section ai_talk_services">
+        <div class="container">
+            <h1 style="text-align: center; color: #00BDFF; ">AI Talk Assist Across Industries</h1>
+            <h2 style="text-align: center; color: #fff; font-size: 1.4rem;">Tailored AI Solutions Powering Success in
+                Every Sector</h2>
+            <br><br><br>
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/house.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>Real Estate Assistant</h3>
+                            <ul>
+                                <li>Schedule property viewings</li>
+                                <li>Lead Qualification</li>
+                                <li>Real-time booking</li>
+                                <li>Provide property information</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/client.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>Client Management</h3>
+                            <ul>
+                                <li>Schedule appointments</li>
+                                <li>Update client records</li>
+                                <li>Conduct survey calls</li>
+                                <li>Provide support or assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/attorney.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>Attorney Support</h3>
+                            <ul>
+                                <li>Initiate client outreach</li>
+                                <li>Conduct client interviews</li>
+                                <li>Confirm appointments</li>
+                                <li>Follow up on legal matters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/medal.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>Loan Officer Assistant</h3>
+                            <ul>
+                                <li>Schedule appointments.
+                                <li>Provide loan information.</li>
+                                <li>Follow up leads.</li>
+                                <li>Update client records.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/globe.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>Financial Planners Assistant</h3>
+                            <ul>
+                                <li>Schedule meetings.</li>
+                                <li>Confirm appointments.</li>
+                                <li>Update client information.</li>
+                                <li>Follow up inquiries.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="service-box">
+                        <div class="ai_service_logo">
+                            <img src="/assets/images/services icon/lens.png" alt="">
+                        </div>
+                        <div class="ai_service_content">
+                            <h3>AI Medical Receptionist</h3>
+                            <ul>
+                                <li>Schedule appointments.</li>
+                                <li>Confirm bookings.</li>
+                                <li>Update patient records.</li>
+                                <li>Follow up reminders.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- feature section start -->
+    <!-- <section class="feature-section section-b-space">
+        <div class="bg-effect">
+            <img src="../assets/images/feature.gif" class="img-fluid feature-left" alt="">
+            <img src="../assets/images/feature.gif" class="img-fluid feature-right" alt="">
+            <img src="../assets/images/feature-bg.png" class="img-fluid feature-bg" alt="">
+            <span class="round-effect"></span>
+        </div>
+        <div class="container">
+            <div class="title-basic">
+                <h2>Unleash limitless potential &
+                    versatile features for every need</h2>
+            </div>
+            <div class="swiper featureSlider">
+                <div id="featureSlider" class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/message.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/message-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ask anything</h3>
+                                    </div>
+                                    <h4>Unlock the power of curiosity, Ask anything and let our AI unravel the answers
+                                        for you!</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/code.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/code-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Code generator</h3>
+                                    </div>
+                                    <h4>Discover the power of technology, making your coding dreams a reality.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/play.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/play-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>ASO expert</h3>
+                                    </div>
+                                    <h4>Boost your app's success and take over the app stores and win the attention of
+                                        millions.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/insta.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/insta-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Insta caption</h3>
+                                    </div>
+                                    <h4>One caption at a time, unveiling the endless potential of AI</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/mail.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/mail-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Email generator</h3>
+                                    </div>
+                                    <h4>Generating emails that captivates and expresses with brilliance.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/hashtag.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/hashtag-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Hashtag writer</h3>
+                                    </div>
+                                    <h4>Boost your content journey by utilising the power of hashtags!
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/box.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/box-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>E-commerce</h3>
+                                    </div>
+                                    <h4>Promoting sales, enhancing customer experience, and redefining product
+                                        recommendations.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/marketing.svg"
+                                                class="img-fluid outline-icon" alt="">
+                                            <img src="../assets/svg/feature/marketing-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ads & marketing</h3>
+                                    </div>
+                                    <h4>Tap into data-driven facts, target the right clientele, and maximize ad
+                                        performance.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4">
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/message.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/message-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ask anything</h3>
+                                    </div>
+                                    <h4>Unlock the power of curiosity, Ask anything and let our AI unravel the answers
+                                        for you!</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/code.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/code-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Code generator</h3>
+                                    </div>
+                                    <h4>Discover the power of technology, making your coding dreams a reality.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/play.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/play-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>ASO expert</h3>
+                                    </div>
+                                    <h4>Boost your app's success and take over the app stores and win the attention of
+                                        millions.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/insta.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/insta-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Insta caption</h3>
+                                    </div>
+                                    <h4>One caption at a time, unveiling the endless potential of AI</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/mail.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/mail-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Email generator</h3>
+                                    </div>
+                                    <h4>Generating emails that captivates and expresses with brilliance.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/hashtag.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/hashtag-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Hashtag writer</h3>
+                                    </div>
+                                    <h4>Boost your content journey by utilising the power of hashtags!
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/box.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/box-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>E-commerce</h3>
+                                    </div>
+                                    <h4>Promoting sales, enhancing customer experience, and redefining product
+                                        recommendations.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/marketing.svg"
+                                                class="img-fluid outline-icon" alt="">
+                                            <img src="../assets/svg/feature/marketing-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ads & marketing</h3>
+                                    </div>
+                                    <h4>Tap into data-driven facts, target the right clientele, and maximize ad
+                                        performance.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row g-xxl-5 g-4">
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/message.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/message-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ask anything</h3>
+                                    </div>
+                                    <h4>Unlock the power of curiosity, Ask anything and let our AI unravel the answers
+                                        for you!</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/code.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/code-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Code generator</h3>
+                                    </div>
+                                    <h4>Discover the power of technology, making your coding dreams a reality.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/play.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/play-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>ASO expert</h3>
+                                    </div>
+                                    <h4>Boost your app's success and take over the app stores and win the attention of
+                                        millions.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/insta.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/insta-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Insta caption</h3>
+                                    </div>
+                                    <h4>One caption at a time, unveiling the endless potential of AI</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/mail.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/mail-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>Email generator</h3>
+                                    </div>
+                                    <h4>Generating emails that captivates and expresses with brilliance.
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/hashtag.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/hashtag-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Hashtag writer</h3>
+                                    </div>
+                                    <h4>Boost your content journey by utilising the power of hashtags!
+                                    </h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/box.svg" class="img-fluid outline-icon"
+                                                alt="">
+                                            <img src="../assets/svg/feature/box-bold.svg" class="img-fluid bold-icon"
+                                                alt="">
+                                        </div>
+                                        <h3>E-commerce</h3>
+                                    </div>
+                                    <h4>Promoting sales, enhancing customer experience, and redefining product
+                                        recommendations.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="100">
+                                <div class="feature-box">
+                                    <div class="feature-top">
+                                        <div class="feature-icon">
+                                            <img src="../assets/svg/feature/marketing.svg"
+                                                class="img-fluid outline-icon" alt="">
+                                            <img src="../assets/svg/feature/marketing-bold.svg"
+                                                class="img-fluid bold-icon" alt="">
+                                        </div>
+                                        <h3>Ads & marketing</h3>
+                                    </div>
+                                    <h4>Tap into data-driven facts, target the right clientele, and maximize ad
+                                        performance.</h4>
+                                    <div data-cursor="pointer" class="link-overflow"><a hreaf="#">Read more <i
+                                                class="iconsax" data-icon="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination feature-pagination"></div>
+    </section> -->
+    <!-- feature section end -->
+
+
+    <!-- contact section start -->
+    <section class="contact-section pb-md-5 pb-0">
+        <div class="container">
+            <h1 class="text-center text-white">Contact <span style="color: #00BDFF;">Us</span></h1>
+            <br><br>
+            <ul class="contact-box">
+                <li>
+                    <div class="contact-icon">
+                        <img src="../assets/svg/contact/message.svg" class="img-fluid" alt="message">
+                    </div>
+                    <h3>Email</h3>
+                    <h4>info@4irconsultants.com</h4>
+                </li>
+                <li>
+                    <div class="contact-icon">
+                        <img src="../assets/svg/contact/contact.svg" class="img-fluid" alt="message">
+                    </div>
+                    <h3>Phone Number</h3>
+                    <h4>(888) 212-9087</h4>
+                    <h4>(949) 301-9110</h4>
+                </li>
+
+            </ul>
+            <div class="contact-details">
+                <div class="row g-lg-5 g-4">
+                    <div class="col-xl-7 col-lg-6" style="width: 100%;">
+                        <form id="contact-form" class="auth-form">
+                            <div class="row g-4">
+                                <div class="col-sm-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="number" class="form-label">Phone number</label>
+                                    <input type="tel" class="form-control" id="number" name="number" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Additional Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" id="send-email" class="btn-solid">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Include EmailJS SDK -->
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+        </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- pricing section start -->
+    <!-- <section class="pricing-section section-b-space">
+        <div class="container">
+            <div class="title-horizontal">
+                <h2>Unleash limitless potential & versatile features for every need</h2>
+                <p>From robust tools that inspire creativity to innovative ideas that simplify your everyday tasks, our
+                    tool knows no bounds. Utilise the potential and elevate your user experience to new heights with our
+                    cutting-edge technology, adapted just for you.</p>
+            </div>
+            <div class="row pricing-row g-xl-5 g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/weekly.svg" class="img-fluid" alt="">
+                            <h3>Weekly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging-green.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-center.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/monthly.svg" class="img-fluid" alt="">
+                            <h3>Monthly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>15+ new category</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/yearly.svg" class="img-fluid" alt="">
+                            <h3>Lifetime Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- pricing section end -->
+
+    <!-- testimonial section start -->
+    <section class="testimonial-section section-b-space">
+        <div class="container">
+            <div class="title-basic">
+                <h2>Check out how much 4irinc is loved
+                    by our users!</h2>
+            </div>
+            <div class="swiper testimonialSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p> The quality of the generated text is impressive, and
+                                    it saves me so much time and effort. Highly recommended!
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/user/1.jpg" class="img-fluid" alt="user">
+                            </div>
+                            <h4>Marvin McKinney</h4>
+                            <h5>Content writer</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>As a marketer, I'm always looking for ways to streamline my work. The AI
+                                    Tool has been a fantastic addition to my toolkit. It helps me come up with creative
+                                    ideas!
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/user/2.jpg" class="img-fluid" alt="user">
+                            </div>
+                            <h4>Marvin McKinney</h4>
+                            <h5>Content writer</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>I was skeptical about using AI for content generation, but after trying out the AI
+                                    Generation Tool, I was pleasantly surprised.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/user/3.jpg" class="img-fluid" alt="user">
+                            </div>
+                            <h4>Marvin McKinney</h4>
+                            <h5>Content writer</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>The AI Generation Tool has revolutionized the way I write. Whether I need help with
+                                    brainstorming ideas or fleshing out drafts.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/user/3.jpg" class="img-fluid" alt="user">
+                            </div>
+                            <h4>Marvin McKinney</h4>
+                            <h5>Content writer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <!-- faq section start -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-lg-6">
+
+                    <div class="title-basic">
+                        <h3 class="text-white">Have inquiries? In our FAQ, you'll find all the solutions you need.</h3>
+                        <br>
+                    </div>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button data-cursor="pointer" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Do I need a specific background to start learning about AI?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <p>Our AI courses are designed with a diverse audience in mind. Whether you’re new
+                                        to tech
+                                        or looking to enhance your expertise, our structured curriculum will guide you
+                                        from the
+                                        basics to advanced concepts without any prior specialized knowledge required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    What is the typical duration of an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    The length of our AI courses varies, but typically you can expect to complete each
+                                    course
+                                    within 4 to 6 weeks if you dedicate a few hours per week. Our courses are
+                                    self-paced, so you
+                                    have the flexibility to learn on a schedule that fits your life.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    What kind of practical skills will I gain?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    Upon completion, you’ll be proficient in AI fundamentals, data analysis, machine
+                                    learning
+                                    algorithms, and you’ll have hands-on experience with real-world projects. This will
+                                    prepare
+                                    you for applying AI solutions to challenges in various industries.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                    Will I earn a certification after completing an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFour">
+                                <div class="accordion-body">
+                                    Yes, after successfully completing a course, you will receive a digital certificate
+                                    that you
+                                    can add to your resume and LinkedIn profile to showcase your newfound AI expertise
+                                    to
+                                    potential employers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                    Is there support available during the course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFive">
+                                <div class="accordion-body">
+                                    Absolutely! We offer comprehensive support throughout your learning journey. This
+                                    includes
+                                    access to mentorship from experts, a community forum for peer discussion, and
+                                    dedicated
+                                    technical assistance when needed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-g-6 circles">
+                    <div class="circle circle-active" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne"> <span>Prerequisites</span></div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"> <span>Duration of
+                            Course</span> </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree">
+                        <span>Skills You'll Gain</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour">
+                        <span>Completion Certificate</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive">
+                        <span>Support</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- faq section end -->
+
+
+    <!-- contact us start -->
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="hand-effect d-md-block d-none">
+                    <img src="../assets/svg/hand.svg" class="img-fluid left-hand" alt="hand">
+                    <img src="../assets/svg/hand.svg" class="img-fluid right-hand" alt="hand">
+                </div>
+                <h2>Ready to <span>move <img src="../assets/svg/title-effect.svg" class="img-fluid"
+                            alt="title-effect"></span>
+                    ahead?</h2>
+                <p>With the help of our ground-breaking AI tool, unlock the potential of cutting-edge AI technology and
+                    increase your productivity to new heights. Embrace the
+                    future today and let our AI tool redefine what's possible for you.</p>
+
+                <center>
+                    <a href="/html/contact-us.html">
+                        <button class="info-btn btn btn-theme d-sm-inline-block">Book a Demo</button></a>
+                </center>
+            </div>
+        </div>
+    </section>
+    <!-- contact us end -->
+
+    <!-- footer section start-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo"><img src="../assets/images/main-logo.png" id="logo-img"
+                            class="img-fluid" alt=""></a>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your mail">
+                            <a href="" data-cursor="pointer" class="btn-basic">Subscribe</a>
+                        </div>
+                    </form>
+                    <ul class="social-links">
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
+                                    src="../assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
+                        <li><a data-cursor="pointer" target="_blank"
+                                href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                                    src="../assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
+                                    src="../assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        Quick Link
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
+                            <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our service
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
+                            <li><a data-cursor="pointer" href="./landing.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="/html/4ir Education/4ir.html">Training &
+                                    Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="link-section">
+                    <div class="footer-title">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our company
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="login.html">Login</a></li>
+                            <li><a data-cursor="pointer" href="blog-listing.html">Blog listing</a></li>
+                            <li><a data-cursor="pointer" href="blog-grid.html">Blog Grid</a></li>
+                            <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            <div class="footer-copyright">
+                <h4>@2024 All the Copyright Reserved.</h4>
+                <ul class="footer-links">
+                    <li><a href="/html/privacy.html">Privacy Policy </a></li>
+                    <li><a href="/html/terms.html">Terms & Condition </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+
+    <!-- Tap To Top Button Start -->
+    <div class="tap-to-top-box hide">
+        <button class="tap-to-top-button"><i class="iconsax" data-icon="chevron-up"></i></button>
+    </div>
+    <!-- Tap To Top Button End -->
+
+
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+<script>
+    const featureBoxWrappers = document.querySelectorAll('.ai-feature-box-wrapper');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated-in');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    featureBoxWrappers.forEach(wrapper => {
+        observer.observe(wrapper);
+    });
+</script>
+
+    <script>
+        // Get all circles and accordion buttons
+        const circles = document.querySelectorAll('.circle');
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        let activeCircle = document.querySelector('.circle-active'); // Track the currently active circle
+        let activePanel = document.querySelector('.accordion-collapse.show'); // Track the currently open panel
+
+        // Function to close the currently open accordion panel and remove the active circle
+        function closeActivePanel() {
+            if (activePanel) {
+                const collapseInstance = bootstrap.Collapse.getInstance(activePanel) || new bootstrap.Collapse(activePanel, { toggle: false });
+                collapseInstance.hide();
+                activePanel = null;
+            }
+            if (activeCircle) {
+                activeCircle.classList.remove('circle-active');
+                activeCircle = null;
+            }
+        }
+
+        // Function to open a panel and assign the active class to the relevant circle
+        function openPanel(panel, circle) {
+            const collapseInstance = bootstrap.Collapse.getInstance(panel) || new bootstrap.Collapse(panel, { toggle: false });
+            collapseInstance.show();
+            circle.classList.add('circle-active');
+            activePanel = panel;
+            activeCircle = circle;
+        }
+
+        // Add click event listeners to the circles
+        circles.forEach(circle => {
+            circle.addEventListener('click', function () {
+                const target = circle.getAttribute('data-bs-target');
+                const panel = document.querySelector(target);
+
+                // If the clicked circle is already active, close it and remove the active class
+                if (circle === activeCircle) {
+                    closeActivePanel();
+                } else {
+                    // Close the active panel, then open the new one
+                    closeActivePanel();
+                    openPanel(panel, circle);
+                }
+            });
+        });
+
+        // Add click event listeners to the accordion buttons
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const target = button.getAttribute('data-bs-target');
+                const panel = document.querySelector(target);
+
+                // If the clicked accordion is already active, close it and remove the active class
+                if (panel === activePanel) {
+                    closeActivePanel();
+                } else {
+                    // Close the active panel, then open the new one
+                    closeActivePanel();
+
+                    // Find the corresponding circle and activate it
+                    const correspondingCircle = document.querySelector(`.circle[data-bs-target="${target}"]`);
+                    if (correspondingCircle) {
+                        openPanel(panel, correspondingCircle);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "F0BJDnf51VvvepoOz",
+            });
+        })();
+    </script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Get the send button
+            var sendButton = document.getElementById("send-email");
+
+            // Change button text and disable it
+            sendButton.textContent = "Sending...";
+            sendButton.disabled = true;
+            // Collect form data
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                number: document.getElementById('number').value,
+                message: document.getElementById('message').value
+            };
+            console.log("formdata is ", formData)
+
+            // Send email using EmailJS
+            emailjs.send("service_wbtwbed", "template_titopjh", formData)
+                .then(function (response) {
+                    alert("Message sent successfully!");
+                    // Reset button text and re-enable it
+                    sendButton.textContent = "Send message";
+                    sendButton.disabled = false;
+                }, function (error) {
+                    alert("Failed to send message. Please try again.");
+                    // Reset button text and re-enable it
+                    sendButton.textContent = "Send message";
+                    sendButton.disabled = false;
+                    console.log("Error in sending email", error)
+                });
+        });
+
+
+
+    </script>
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+
+        let mic = document.querySelector(".mic");
+        let visualizer = document.querySelector(".visualizer");
+        let micIcon = document.querySelector(".mic i");
+        const micText = document.querySelector('.mic_text')
+
+        let audioContext, analyser, dataArray, source;
+        let isRecording = false;
+
+        mic.addEventListener("click", function () {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        });
+
+        function startRecording() {
+            micText.textContent = 'Listening!'
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function (stream) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    analyser = audioContext.createAnalyser();
+                    source = audioContext.createMediaStreamSource(stream);
+                    source.connect(analyser);
+                    analyser.fftSize = 256;
+                    dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+                    visualizer.style.display = 'block';
+                    micIcon.style.display = 'none';
+                    isRecording = true;
+
+                    draw();
+                })
+                .catch(function (err) {
+                    console.error('Error accessing microphone:', err);
+                });
+        }
+
+        function stopRecording() {
+            if (audioContext) {
+                audioContext.close();
+                micText.textContent = 'Give it a try!'
+            }
+            visualizer.style.display = 'none';
+            micIcon.style.display = 'block';
+            isRecording = false;
+        }
+        function draw() {
+            if (!isRecording) return;
+
+            requestAnimationFrame(draw);
+
+            analyser.getByteFrequencyData(dataArray);
+
+            let ctx = visualizer.getContext('2d');
+            ctx.clearRect(0, 0, visualizer.width, visualizer.height);
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 2;
+
+            let barWidth = visualizer.width / dataArray.length;
+            let x = 0;
+
+            for (let i = 0; i < dataArray.length; i++) {
+                let barHeight = (dataArray[i] / 255) * (visualizer.height / 2);
+
+                ctx.beginPath();
+                ctx.moveTo(x, visualizer.height / 2 - barHeight);
+                ctx.lineTo(x, visualizer.height / 2 + barHeight);
+                ctx.stroke();
+
+                x += barWidth;
+            }
+        }
+
+    </script>
+
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
+    <!-- slider js-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/custom-slider.js"></script>
+
+    <!-- custom cursor -->
+    <script src="../assets/js/custom-cursor.js"></script>
+
+    <!-- aos animation -->
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/custom-aos.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../assets/js/iconsax.js"></script>
+
+    <!-- laptop animation js -->
+    <script src="../assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="../assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="../assets/js/pricing-table.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

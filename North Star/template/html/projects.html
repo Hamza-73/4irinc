@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/images/main logo.png" type="image/x-icon">
+  <title>Projects - North Star</title>
+  <style>
+    .skewed-divider {
+      transform: skewX(-12deg);
+      /* Skew effect */
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+  <header style="background: linear-gradient(to right,#2f587b, rgb(170,0,0));">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Left Section (Email and Social Media Icons) -->
+      <div class="flex items-center space-x-4">
+        <!-- Email Icon -->
+        <div class="flex items-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 12H8m-4 4h16M8 16H4v4m12-8h4v4M8 8h8m-6 6h6" />
+          </svg>
+          <a href="mailto:TW@nssystemsco.com" class="ml-2">TW@nssystemsco.com</a>
+        </div>
+      </div>
+
+      <!-- Right Section (Hamburger for Mobile/Tablet) -->
+      <div class="flex items-center space-x-4 text-white">
+        <button id="menu-btn" class="block lg:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navbar Links with Logo (Desktop) -->
+    <nav class="hidden lg:flex bg-white">
+      <div class="container mx-auto px-10 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex justify-center">
+          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 140px;">
+          <!-- <h1 class="text-3xl text-slate-700 font-semibold">North Star</h1> -->
+        </div>
+
+        <!-- Nav Links -->
+        <div class="flex space-x-6">
+          <a href="/home.html" class="nav-item font-semibold text-xl">Home</a>
+          <a href="/html/about.html" class="nav-item font-semibold text-xl">About Us</a>
+          <a href="/html/services.html" class="nav-item font-semibold text-xl">Services</a>
+          <a href="/html/projects.html" class="nav-item active font-semibold text-xl active">Our Projects</a>
+          <a href="/html/resources.html" class="nav-item font-semibold text-xl">Resources</a>
+          <a href="/html/contact.html" class="nav-item font-semibold text-xl">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar (Mobile/Tablet) -->
+    <div id="mobile-menu"
+      class="fixed left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
+      <div class="flex items-center justify-between p-4">
+        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 100px;">
+        <button id="close-menu-btn" class="text-black focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-4 px-4">
+        <a href="/home.html" class="nav-item font-semibold">Home</a>
+        <a href="/html/about.html" class="nav-item">About Us</a>
+        <a href="/html/services.html" class="nav-item">Services</a>
+        <a href="/html/projects.html" class="nav-item active active">Our Projects</a>
+        <a href="/html/resources.html" class="nav-item">Resources</a>
+        <a href="/html/contact.html" class="nav-item">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- home section start -->
+  <section class="relative bg-cover bg-center text-white common-home-section">
+    <div class="flex flex-col justify-center items-start gap-4 h-64 ml-12">
+      <p class="text-xl font-bold home-breadcrumb">
+        <a href="/home.html" class="text-white">Home</a>
+        <span class="yellow-color"> >> </span>
+        <a href="#" class="text-white">Projects</a>
+      </p>
+      <h1 class="text-4xl font-bold home-title">Our Projects</h1>
+    </div>
+
+    <!-- Fully positioned slanted red bar at the bottom -->
+    <!-- <div class="absolute bottom-0 left-0 w-full h-[100px] lg:h-[130px] bg-red-700"
+      style="clip-path: polygon(0 100%, 100% 60%, 100% 100%, 0% 100%);">
+    </div> -->
+    <div class="red-white-bar w-full absolute bottom-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,100 100,0 100,100" fill="rgb(170,0,0)"/>
+        <polygon points="0,100 0,0 100,0" fill="white"/>
+      </svg>
+    </div>   
+    
+  </section>
+
+  <!-- home section ends -->
+
+
+  <section class="container mx-auto px-4 py-8 who-we-are-section">
+    <!-- Flex Container for Responsive Design -->
+    <div class="flex flex-col gap-8 sm:space-y-8 md:space-y-8 lg:space-x-8 md:flex-row" style="padding: 6rem .9rem;">
+
+      <!-- Text Content Container -->
+      <div class="w-full md:w-1/2 px-4 md:px-8 flex flex-col justify-center text-container">
+        <div>
+          <!-- Section Heading -->
+          <h4 class="text-lg blue-heading font-bold mb-2">
+            OUR LEGACY OF EXCELLENCE
+          </h4>
+          <h2 class="text-2xl font-bold md:text-3xl font-bold mb-4">
+            Showcasing Excellence in Fire Alarm and Low-Voltage Solutions
+          </h2>
+          <p class="text-base  text-justify md:text-lg mb-6 border-b-2 pb-6">
+            At NorthStar Systems, we transform complex fire alarm and low-voltage challenges into seamless,
+            code-compliant solutions. With over 25 years of industry expertise, we empower fire alarm contractors with
+            precision-crafted permit drawings and expert guidance, ensuring your projects are executed with the highest
+            standards of safety and reliability.
+          </p>
+
+          <div class="icon-text">
+            <h2 class="text-xl font-bold mb-2">Our Vision</h2>
+            <p class="border-l-4 border-[#aa0000] pl-6">Our vision is to set new standards in safety and reliability,
+              making
+              every building a safer place for its occupants.</p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Image Container with Overlapping Images -->
+      <div class="w-full md:w-1/2 relative mb-8 md:mb-0 image-container">
+        <!-- First (Background) Image -->
+        <img src="/assets/images/home/NorthStar  Home.png" alt="First Image" class="w-full h-full object-cover ">
+
+        <!-- Second (Overlapping) Image (Position remains the same across all screens) -->
+        <img src="/assets/images/home/FIRE 4.JPG" alt="Second Image"
+          class="absolute bottom-0 left-0 w-5/12 h-auto object-cover border-white border-8 ">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- contact us start -->
+
+  <section
+    class="common-action-sec relative contact-section-blue-bg bg-cover bg-center bg-no-repeat py-12 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+    <!-- White Overlay with Reduced Opacity -->
+    <div class="absolute inset-0  bg-opacity-40"></div>
+
+    <!-- Flex Container (Content) -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto text-wrapper">
+      <!-- Content Wrapper -->
+      <div class="text-center md:text-left md:max-w-lg">
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          Contact NorthStar Systems Today
+        </h2>
+        <!-- Subheading -->
+        <p class="text-white text-justify mb-8 text-base sm:text-lg md:text-xl">
+          Discover how our services can transform your fire alarm and low-voltage projects into success stories. Contact
+          us today to learn more about how we can support your vision and bring your projects to life.
+        </p>
+      </div>
+      <!-- Contact Button -->
+      <div class="mt-4 md:mt-0">
+        <a href="#" class="yellow-btn text-white text-lg font-semibold py-3 px-6 rounded-full  transition duration-300">
+          CONTACT US
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact us end -->
+
+  <section class="container min-w-full  mx-auto common-project-section animated-section" data-animation="right-left">
+    <div class="flex flex-col lg:flex-row gap-6 items-center lg:items-start px-6 lg:px-14 py-24">
+
+      <!-- Left Section (Text Content) -->
+      <div class="lg:w-7/12 space-y-6 animated-part-left left-section">
+        <div>
+          <h5 class="blue-heading text-xl font-bold uppercase t-0">FEATURED PROJECTS</h5>
+          <h2 class="font-bold text-2xl  lg:text-3xl mt-10">3-Story Medical Office Building
+            (New Construction) - Fire Alarm,
+            Surveillance System, Burglary
+            Alarm, Guard Paging, and Clinic
+            Room Status Systems</h2>
+          <p class="font-semibold text-lg">Location: Sante Fe Springs, CA</p>
+        </div>
+
+        <!-- POINTS -->
+        <div>
+          <article class="flex gap-2">
+            <span class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">&#10003</span>
+            <p>Fire Alarm System: 214 initiating devices, 186 notification devices,
+              elevator recall, elevator shunt trip, elevator fire curtain activation,
+              Won door activation, fire door activation, fire sprinkler monitoring,
+              smoke/fire damper shutdown, fan unit shutdown.</p>
+          </article>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+
+            <article class="relative group flex gap-2">
+              <span class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">&#10003</span>
+              <p>Surveillance System: 40 cameras, including
+                license plate recognition.
+              </p>
+            </article>
+            <article class="relative group flex gap-2">
+              <span class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">&#10003</span>
+              <p>Guard Paging: RF guard paging
+                integrated with alarm system activations.
+              </p>
+            </article>
+            <article class="relative group flex gap-2">
+              <span class="text-white font-bold inline bg-[#aa0000]  p-1 h-8 w-8">&#10003</span>
+
+              <p>Burglary Alarm: Three separate burglary alarm
+                systems.</p>
+            </article>
+            <article class="relative group flex gap-2">
+              <span class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">&#10003</span>
+              <p>Clinic Status System: Six clinic room
+                status systems with 87 exam rooms.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Section (Image and Badge) -->
+      <div class="lg:w-5/12 mt-10 lg:mt-0 relative animated-part-right right-section">
+        <!-- Image -->
+        <img class="w-full " src="/assets/images/building.JPG" alt="Fire Alarm System Image">
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class=" project-section-2 container min-w-full animated-section" data-animation="left-right">
+    <div class="flex flex-col lg:flex-row space-x-6 gap-12 items-center lg:items-start  px-6 lg:px-14 py-24">
+
+      <!-- Right Section (Image and Badge) -->
+      <div class="lg:w-6/12 mt-10 lg:mt-0 relative animated-part-left left-section">
+        <!-- Image -->
+        <img class="w-full " src="/assets/images/home/FIRE 4.jpg" alt="Fire Alarm System Image">
+
+      </div>
+
+      <!-- Left Section (Text Content) -->
+      <div class="lg:w-5/12 space-y-6  animated-part-right right-section">
+        <div>
+          <h2 class="font-bold text-2xl  lg:text-3xl">Paper Mill (Existing Facility) -
+            Fire Alarm System Upgrade and
+            Modernization</h2>
+          <p class="font-semibold text-lg my-6">Location: Sante Fe Springs, CA</p>
+        </div>
+
+        <!-- POINTS -->
+        <div class="mt-10">
+          <div>
+            <ul class="space-y-6">
+              <li class="font-semibold"><span class="font-bold">Challenge :</span> The facility featured 28 fire
+                sprinkler risers, and the
+                existing system was prone to false alarms with no capability to
+                pinpoint the alarm source due to outdated technology.
+              </li>
+              <li class="font-semibold"><span class="font-bold">Solution :</span> We designed and implemented an
+                addressable
+                system capable of annunciating each alarm location. Our team
+                provided detailed drafts and coordinated with multiple
+                stakeholders to ensure seamless integration.
+              </li>
+              <li class="font-semibold"><span class="font-bold">Outcome :</span> The project was completed on time and
+                within
+                budget, resulting in a reliable and efficient system for the
+                client.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="  project-section-3 min-w-full container  animated-section" data-animation="left-right">
+    <div class="flex flex-col lg:flex-row space-x-6 gap-12 items-center lg:items-start  px-6 lg:px-14 py-24">
+
+      <!-- Left Section (Text Content) -->
+      <div class="lg:w-5/12 space-y-6   animated-part-left left-section">
+        <div>
+          <h2 class="font-bold text-2xl  lg:text-3xl">R3.1 Hospice Home in a
+            Residential Setting (Existing
+            Facility) - Fire Alarm System
+            Upgrade, Video Access Control,
+            Nurse Call System, Surveillance
+            System, and Burglary Alarm
+            System</h2>
+          <p class="font-semibold text-lg my-6">Location: Sante Fe Springs, CA</p>
+        </div>
+
+        <!-- POINTS -->
+        <div class="mt-10">
+          <div>
+            <ul class="space-y-6">
+              <li class="font-semibold"><span class="font-bold">Challenge :</span> The project involved navigating
+                complex regulatory
+                requirements to secure timely fire alarm approvals for the
+                demolition and remodel of a hospice facility in a residential setting.
+              </li>
+              <li class="font-semibold"><span class="font-bold">Solution :</span> We prepared comprehensive permit
+                drawings and
+                submittal packages that addressed all regulatory concerns and
+                maintained close communication with the AHJ.
+              </li>
+              <li class="font-semibold"><span class="font-bold">Outcome :</span> The project received prompt approvals
+                from Authorities
+                Having Jurisdiction (AHJs), facilitating a smooth and efficient
+                construction process.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Right Section (Image and Badge) -->
+      <div class="lg:w-6/12 mt-10 lg:mt-0 relative animated-part-right right-section">
+        <!-- Image -->
+        <img class="w-full " src="/assets/images/home/FIRE 2.jpg" alt="Fire Alarm System Image">
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <div class="common-red-blue-sec relative h-auto bg-[#aa0000] overflow-hidden">
+
+    <!-- Content container -->
+    <div class="relative h-full flex flex-col lg:gap-8 lg:flex-row items-center lg:items-start text-white lg:p-8">
+      <!-- Left section -->
+      <div class="section-left w-full lg:pr-16 md:pr-16 lg:w-[40%] h-full p-8 lg:mb-8 lg:mb-0 text-center lg:text-left">
+        <h3 class="text-yellow-500 uppercase font-bold mb-2">Our Approach</h3>
+        <h2 class="text-xl font-semibold leading-tight"> <span class="font-bold">Attention to Detail:</span> Every project is approached with meticulous attention to detail, ensuring that our solutions are not only compliant but also optimized for performance.</h2>
+      </div>
+  
+      <!-- Right section -->
+      <div class="section-right w-full lg:w-[60%] h-full">
+        <div class="p-8 lg:pl-16">
+          <ul class="text-left flex flex-col lg:flex-row gap-3 items-center justify-center">
+            <li class="text-lg"><span class="font-semibold">Collaboration:</span> We work closely with our clients and partners to understand their unique needs and deliver solutions that align with their vision and goals.</li>
+            <li class="text-lg"><span class="font-semibold">Innovation:</span> Our commitment to innovation ensures that we provide cutting-edge solutions that enhance safety and efficiency in every project.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section
+    class="common-action-sec relative bg-cover bg-center bg-no-repeat py-12 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+    style="background-image: url('/assets/images/home/NorthStar\ \ Home.png');">
+    <!-- White Overlay -->
+    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+
+    <!-- Flex Container (Content) -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+      <!-- Content Wrapper -->
+      <div class="text-center md:text-left md:max-w-lg">
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold blue-heading mb-4">
+          Join Our Success Stories
+        </h2>
+        <!-- Subheading -->
+        <p class="blue-heading text-justify mb-8 text-base sm:text-lg md:text-xl">
+          Partner with NorthStar Systems and experience the difference that expertise, precision,
+          and dedication can make in your projects. Contact us today to learn more about our past
+          successes and how we can support your fire alarm and low-voltage needs
+        </p>
+      </div>
+      <!-- Contact Button -->
+      <div class="mt-4 md:mt-0">
+        <a href="#" class="yellow-btn text-white text-lg font-semibold py-3 px-6 rounded-full  transition duration-300">
+          CONTACT US
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section with Background Image -->
+  <footer class="footer-section relative py-6">
+
+    <!-- Content Container -->
+    <div class="relative max-w-7xl mx-auto px-4 flex  items-center justify-center text-white text-sm">
+      <!-- Copyright Text -->
+      <div class="flex flex-wrap gap-3 font-semibold text-lg">
+        <span> Copyright © 2024 NorthStar Systems, LLC |</span>
+        <div>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Site Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+
+<script src="/assets/js/animations/common-animation.js"></script>
+
+<!-- Script -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const navItems = document.querySelectorAll('#mobile-menu .nav-item');  // Select all nav items
+  const body = document.body;
+
+  // Open the sidebar
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+    body.classList.add('overflow-hidden');  // Prevent scrolling when sidebar is open
+  });
+
+  // Close the sidebar
+  closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+    body.classList.remove('overflow-hidden');
+  });
+
+  // Close sidebar when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+      mobileMenu.classList.add('-translate-x-full');
+      body.classList.remove('overflow-hidden');
+    }
+  });
+
+  // Prevent sidebar from closing when clicking inside of it
+  mobileMenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  // Close sidebar when clicking on any nav-item
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+      body.classList.remove('overflow-hidden');
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
