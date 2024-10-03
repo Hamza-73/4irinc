@@ -1,0 +1,130 @@
+/* Ensure the home-content takes a reasonable width and is centered */
+body {
+    overflow-x: hidden;
+    width: 100vw !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.home-content {
+    width: 100%;
+    /* Take full width of the parent */
+    max-width: 800px;
+    /* Optional: Set a maximum width for readability */
+    margin: 0 auto;
+    /* Center the content horizontally */
+    text-align: center;
+    /* Center the text inside */
+}
+
+/* Initial state for animation */
+.home-section .animate-text {
+    opacity: 0;
+    transform: translateX(300px);
+    /* Slide in from below */
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+/* Triggered animation state */
+.home-section .animate-text.show {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+@media screen and (max-width:768px) {
+
+    /* Initial state for animation */
+    .home-section .animate-text {
+        opacity: 0;
+        transform: translateX(100px);
+        /* Slide in from below */
+        transition: transform 1.2s ease, opacity 1.2s ease;
+    }
+
+}
+
+/* ----------- SERVICE ------------ */
+
+.service-section .service-info .title,
+.service-section .service-info .service_paragraph {
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.service-section .service-info .title {
+    transform: translateX(-100px);
+}
+
+.service-section .service-info .service_paragraph {
+    transform: translateX(100px);
+}
+
+.service-section .service-info .animate-title.show,
+.service-info .animate-paragraph.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+    .service-section .service-info .title {
+        transform: translateX(-50px);
+    }
+
+    .service-section .service-info .service_paragraph {
+        transform: translateX(50px);
+    }
+
+    .service-section .service-info .animate-title.show,
+    .service-info .animate-paragraph.show {
+        transform: translateX(0);
+    }
+}
+
+/* --------------- OFFER BOX ------------- */
+/* Initial state for offer boxes animation */
+.offer_box {
+    opacity: 0;
+    transform: translateX(300px);
+    /* Default to sliding in from right */
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+/* Initial state for offer boxes that should slide in from the left */
+.offer_box.left {
+    transform: translateX(-300px);
+    /* Slide in from left */
+}
+
+/* Animation triggered when the box is in view */
+.offer_box.show {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+@media screen and (max-width:768px) {
+
+    .offer_box {
+        opacity: 0;
+        transform: translateX(100px);
+        /* Default to sliding in from right */
+        transition: transform 1.2s ease, opacity 1.2s ease;
+    }
+
+    /* Initial state for offer boxes that should slide in from the left */
+    .offer_box.left {
+        transform: translateX(-100px);
+        /* Slide in from left */
+    }
+
+    /* Animation triggered when the box is in view */
+    .offer_box.show {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to original position */
+    }
+
+}

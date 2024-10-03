@@ -1921,10 +1921,18 @@ header {
           justify-content: space-between;
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  border: none;
 }
+header, #home{
+  background: url('/assets/images/new-home-bg.png');
+  background-position: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 header #logo-img{
   height: 90px;
 }
@@ -1940,7 +1948,7 @@ header.sticky {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #20333d;
+  /* background-color: #20333d; */
   padding: 15px calc(15px + 85 * (100vw - 320px) / 1600);
 }
 
@@ -6436,6 +6444,29 @@ header .offcanvas-backdrop {
   overflow: hidden;
 }
 
+.info-section .info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(136, 0, 255, .7), rgba(136, 0, 255, .9)), url('/assets/images/home/home-bg.gif');
+  background-size: cover;
+  /* Ensures the image covers the entire container */
+  background-position: center;
+  /* Centers the image */
+}
+
+.info-section .info-btn {
+  background-color: #0a0e17;
+  transition: .5s all ease;
+}
+
+
+.info-section .info-box h2 {
+  width: 60%;
+  color: #ffff;
+}
+
+
 .info-section .title-effect{
   width: 100%;
 }
@@ -6484,8 +6515,6 @@ header .offcanvas-backdrop {
 }
 .info-section .info-box {
   text-align: center;
-  background-image: url("../images/info-bg.jpg");
-  background-size: cover;
   border-radius: 8px;
   padding: 50px;
   border: 1px solid rgba(var(--theme-color), 0.3);

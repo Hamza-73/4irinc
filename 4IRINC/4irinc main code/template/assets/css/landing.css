@@ -1071,9 +1071,10 @@ nav.navbar {
   1.8 Footer Scss start
 ==========================*/
 footer {
-  background-image: url("../images/landing/footer-bg.jpg");
+  /* background-image: url("../images/landing/footer-bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #0a0e17;
   padding: 45px 0;
   border-radius: 8px 8px 0 0;
   border-top: 2px solid rgba(var(--theme-color), 1);

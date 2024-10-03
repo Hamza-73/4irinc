@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="megabot">
+    <meta name="keywords" content="megabot">
+    <meta name="author" content="megabot">
+    <link rel="icon" href="/assets/images/4IR Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/images/4IR Logo.png" type="image/x-icon" />
+    <title>Fourth Industrial Revolution Inc.</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/remixicon.css">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/iconsax.css" />
+
+    <!-- animation css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/aos.css">
+
+    <!-- swiper slider css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <link rel="stylesheet" href="/assets/css/landing.css">
+
+    <style>
+
+        body,section, header,footer{
+            width: 100vw !important;
+            overflow-x: hidden !important;
+        }
+
+        .feature_container {
+            margin-left: -7rem;
+        }
+
+        @media screen and (max-width:900px) {
+            .feature_container {
+                margin-left: -20px;
+            }
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+        }
+
+        .info-btn:hover {
+            color: #00BDFF;
+        }
+
+        .service_boxes_div {
+            position: relative;
+            left: 16%;
+            margin-top: 20%;
+            width: 100%;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-evenly;
+        }
+
+
+        .service-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-content h3 {
+            position: relative;
+            font-weight: 600;
+            color: #00BDFF !important;
+        }
+
+        .expertise_div {
+            margin-top: -6rem;
+        }
+
+        @media screen and (min-width:600px) and (max-width:1000px) {
+            .service_boxes_div {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+            }
+
+            .service-box {
+                display: block;
+                margin: auto;
+            }
+        }
+
+
+        @media screen and (max-width:600px) {
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .team_box_container {
+                margin-left: -5%;
+                overflow-x: hidden;
+            }
+
+            .card {
+                padding: 2rem;
+                position: relative;
+                left: 3%;
+            }
+
+            .service-section {
+                width: 100vw;
+            }
+
+            .service-info {
+                width: 90vw;
+                position: relative;
+                margin: 3rem auto;
+            }
+        }
+
+        .dropdown-arrow {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .dropdown-arrow::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            color: #0f6686;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        @media (max-width: 1199px) {
+            .nav-item.dropdown {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item.dropdown .nav-link {
+                flex: 1;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        header #logo-img {
+            position: relative;
+            margin-top: -1.4rem;
+
+        }
+
+        @media screen and (max-width:600px) {
+            header #logo-img {
+                margin-top: 0;
+            }
+
+        }
+
+        .service-section .heading_ {
+            position: relative;
+            margin-top: -5%;
+        }
+
+        .future_images img {
+            width: 70%;
+            height: 500px;
+            border: none;
+            border-radius: .4rem;
+            position: relative;
+            left: -10%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            vertical-align: bottom;
+            box-sizing: border-box;
+        }
+
+        .future_images img:nth-child(2) {
+            width: 40%;
+            height: 400px;
+            border-radius: 0 3px 3px 0;
+            position: relative;
+            margin-top: 10%;
+        }
+
+        @media screen and (max-width:900px) {
+
+            .future_images {
+                position: relative;
+                margin: 2rem;
+                left: 4%;
+            }
+
+            .potential_images {
+                position: relative;
+                margin: 2rem;
+                left: -4%;
+            }
+
+            .barry_images {
+                position: relative;
+                margin: -1rem 2.5rem;
+                left: -7%;
+            }
+        }
+
+        .potential_images img {
+            width: 70%;
+            height: 500px;
+            border: none;
+            border-radius: .4rem;
+            position: relative;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            vertical-align: bottom;
+            box-sizing: border-box;
+        }
+
+        .potential_images img:nth-child(1) {
+            width: 40%;
+            height: 400px;
+            border-radius: 0 3px 3px 0;
+            position: relative;
+            margin-top: 10%;
+        }
+
+        .barry_images img {
+            width: 70%;
+            height: 500px;
+            border: none;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            vertical-align: bottom;
+            box-sizing: border-box;
+        }
+
+        .barry_images img:nth-child(1) {
+            width: 48%;
+            height: 400px;
+            position: relative;
+            margin-top: 10%;
+        }
+
+        .service-info {
+            position: relative;
+            top: -13%;
+        }
+
+        .barry_expertise_container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        @media (min-width: 1200px) {
+            .barry_expertise_container {
+                grid-template-columns: repeat(3, 1fr);
+                /* Limit to 3 columns */
+            }
+        }
+
+        .barry_expertise_container .barry_exp_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: start;
+            padding: 2rem;
+            box-shadow: #00BDFF 0px 0px 5px;
+        }
+
+        .barry_expertise_container .barry_exp_box .heading {
+            color: #00BDFF;
+            font-size: 3rem;
+            font-weight: 100;
+        }
+
+        .barry_expertise_container .barry_exp_box h3 {
+            color: #ffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .barry_expertise_container .barry_exp_box p {
+            text-align: start;
+        }
+
+        
+        @media screen and (max-width:768px) {
+            .circles{
+                display: none;
+            }            
+        }
+
+        .faq-section .section-title {
+            color: #00BDFF;
+        }
+
+        .faq-section .questions_container .question h4 {
+            color: #00BDFF;
+            font-weight: 600;
+        }
+
+        .home-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            place-items: center;
+        }
+
+        .home-images img {
+            width: 90%;
+            height: 550px;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+        }
+
+        @media screen and (max-width:1000px) {
+            .home-images {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .home-images img {
+                width: 70%;
+            }
+        }
+
+        .faq-section .container .row {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .col-lg-6,
+        .col-g-6 {
+            flex: 1;
+        }
+
+
+        .circle {
+            width: 100%;
+            height: 70px;
+            padding: 4.6rem 3rem;
+            border: 2px solid #00BDFF;
+            border-radius: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .circle span {
+            position: relative;
+            top: -1rem;
+        }
+
+        .circles .circle-active {
+            background-color: #00BDFF;
+            color: #fff;
+        }
+
+        .circle:nth-child(2) {
+            position: relative;
+            top: -2rem;
+        }
+
+        .circle:nth-child(3) {
+            position: relative;
+            top: -4rem;
+        }
+
+        .circle:nth-child(4) {
+            position: relative;
+            top: -6rem;
+        }
+
+        .circle:nth-child(5) {
+            position: relative;
+            top: -8rem;
+        }
+
+        .ai-features-section {
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .ai-features-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .ai-vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #00BDFF;
+            z-index: 1;
+        }
+
+        .ai-horizontal-line-right,
+        .ai-horizontal-line-left {
+            width: 100px;
+            height: 2px;
+            background-color: #00BDFF;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .ai-horizontal-line-right {
+            margin-right: 20px;
+        }
+
+        .ai-horizontal-line-left {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .line-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #00BDFF;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+        }
+
+        .ai-horizontal-line-right .line-dot {
+            right: -5px;
+        }
+
+        .ai-horizontal-line-left .line-dot {
+            left: -5px;
+        }
+
+        .ai-feature-box-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .ai-feature-box {
+            /* background-color: #0a0e17; */
+            border: 2px solid #00BDFF;
+            padding: 2rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .ai-feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .ai-feature-box p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .animated-in .ai-feature-box {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animated-in .ai-horizontal-line-right,
+        .animated-in .ai-horizontal-line-left {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .ai-left-box {
+            grid-column: 1 / span 1;
+        }
+
+        .ai-right-box {
+            grid-column: 2 / span 1;
+        }
+
+        .ai-features-heading {
+            margin-bottom: 6rem !important;
+        }
+
+        @media (max-width: 1024px) {
+            .ai-features-container {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-vertical-line {
+                left: 20px;
+                display: none;
+            }
+
+            .ai-feature-box-wrapper {
+                grid-column: 1 / span 1;
+                margin-left: 40px;
+            }
+
+            .ai-horizontal-line-right,
+            .ai-horizontal-line-left {
+                width: 60px;
+            }
+
+
+            .ai-feature-box {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ai-feature-box-wrapper {
+                margin-left: 20px;
+            }
+
+            .ai-horizontal-line-right,
+            .ai-horizontal-line-left {
+                width: 20px;
+            }
+
+            .ai-feature-box {
+                margin-left: 10px;
+            }
+        }
+
+        .modal-content {
+            height: 90vh;
+            max-height: 90vh;
+            background-color: #0a0e17;
+            animation: shadow 2s infinite ease-in-out;
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 10px #00BDFF;
+            }
+
+            100% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+        }
+
+        .modal-dialog {
+            width: 80vw;
+            max-width: 90vw;
+        }
+
+        @media screen and (max-width:580px) {
+            .modal-content {
+                position: relative !important;
+                left: 10% !important;
+                overflow: scroll;
+            }
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+
+        <!-- Modal -->
+        <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- header start -->
+
+    <header>
+        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu">
+            <span class="navbar-toggler-icon">
+                <i class="iconsax" data-icon="text-align-justify"></i>
+            </span>
+        </button>
+        <a href="/home.html">
+            <img src="/assets/images/4IR Logo main.png" class="img-fluid" id="logo-img" alt="logo">
+        </a>
+        <nav class="header-nav-middle">
+            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                    <div class="offcanvas-header navbar-shadow">
+                        <h5 class="mb-0">Back</h5>
+                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/about.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link" href="/html/services.html" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="/html/strategic_counselling.html">Strategic
+                                            Counseling</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/html/ai-talk-assist.html">AITalkAssist</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/html/training_and_education.html">Training &
+                                            Education</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/blog-grid.html">Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/contact-us.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a data-cursor="pointer" href="/home.html" style="position: relative; margin-top: -1.4rem;"
+            class="btn btn-theme d-sm-inline-block d-none"><span>Get
+                Started</span></a>
+    </header>
+    <!-- header end -->
+
+
+    <!-- home section start -->
+    <section id="home" class="section-b-space home-section">
+        <div class="container-fluid">
+            <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                <div class="home-content"
+                    style="margin-top: 5rem; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <div>
+                        <!-- <h3 style="color: #fff;">Harness Your Massive Transformative Purpose (MTP)</h3> -->
+                        <h1>AI TRAINING & EMPOWERMENT</h1>
+                        <h3 style="color: #ffff; margin-top: 1rem;">Unlock the Full Potential of Your Team with Tailored
+                            AI <br>
+                            Education and Skills Development
+                        </h3>
+                    </div>
+                    <!-- <p style="width: 100%; font-size: 1rem; line-height: 1.5; margin-top: 1.5rem;">
+                        The concept of a Massive Transformative Purpose is all about setting a grand, aspirational mission that goes beyond conventional goals. It’s a clarion call for innovation, learning, and growth. In this section, we delve into how an MTP can be a powerful catalyst in your educational journey, inspiring you to not just learn, but to transform.
+                    </p> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+
+    <section class="service-section section-b-space mt-2">
+        <div class="container">
+            <div class="row g-5 expertise_div">
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <h4 style="color: #00BDFF; margin-bottom: 2rem;">AI Mastery for Business Growth</h4>
+                            <div class="title">
+                                <h2>Accelerate Your AI Expertise and <span style="color: #ffce00;">Drive Impact</span></h2>
+                            </div>
+                            <p>In today’s fast-evolving world, staying ahead means continuously learning
+                                and adapting. Our AI training and education programs are designed to
+                                equip your team with the skills needed to harness the power of AI
+                                products and apps to optimize their work and drive your business
+                                forward. Whether you’re looking to upskill your employees or foster a
+                                culture of innovation, our comprehensive courses have you covered.
+                                </p>
+                            <!-- <a data-cursor="pointer" class="btn-arrow" href="">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <img style="width: 100%; height: 100%; border:none; border-radius: 1rem;"
+                        src="/assets/images/services/training and education.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-b-space barry_expertise_section">
+        <div class="container">
+
+            <div class="service-info" style="position: relative; margin: 6rem 0;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Purpose-Driven Learning</h4>
+                        <h2 class="text-white">Why Choose Our <span style="color: #ffce00;">AI Training Programs?</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Your learning journey should be
+                        more than just about gaining knowledge—it’s about making an impact. Our programs are
+                        tailored to help your team connect their personal goals to the broader mission of your
+                        organization, ensuring each course is
+                        aligned with real-world outcomes.</p>
+                </div>
+            </div>
+
+            <div class="barry_expertise_container">
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">01</p>
+                        <h3>Identify Your Passion</h3>
+                        <p>Uncover what drives you at your core. Align your learning objectives with your deepest values
+                            and aspirations, setting the stage for purpose-driven education.</p>
+                    </div>
+                </article>
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">02</p>
+                        <h3>Dream Big, Start Bold</h3>
+                        <p>Learn how to scaffold your educational goals within the context of your MTP, ensuring every
+                            step you take is a stride towards a larger vision.</p>
+                    </div>
+                </article>
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">03</p>
+                        <h3>Become an Agent of Change</h3>
+                        <p>Equip yourself with the knowledge to not only succeed in your career but to also drive
+                            meaningful change in your industry or community.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-features-section section-b-space service-section" id="how-it-work">
+        <div class="container">
+            <div class="service-info" style="position: relative; margin-bottom: 6rem;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Maximize AI Skills with Flexible, Practical Training</h4>
+                        <h2 class="text-white"><span style="color: #ffce00;">Course Benefits</span> at a Glance</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Our courses are designed to meet the diverse needs of your team, no matter their experience level. With flexible, self-paced
+                        learning options, employees can master AI skills at their own convenience. Expert mentors and a supportive community ensure
+                        guidance is available every step of the way, while hands-on projects provide practical, real-world experience to immediately
+                        apply AI solutions in the workplace.
+                        </p>
+                </div>
+            </div>
+
+            <div class="ai-features-container">
+                <!-- Vertical line -->
+                <div class="ai-vertical-line"></div>
+
+                <!-- Alternating boxes -->
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box  service-box">
+                        <h3>Tailored for All Skill Levels</h3>
+                        <p>Whether beginner or advanced, we offer
+                            courses that fit your team’s needs.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Flexible, Self-Paced Learning</h3>
+                        <p>Learn at your own speed, anytime and
+                            anywhere, with easy-to-follow content
+                            designed for real-world application.</p>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box   service-box">
+                        <h3>Expert Mentorship and Support</h3>
+                        <p>Gain access to a community of AI experts
+                            and dedicated mentors to guide you
+                            through every step of the way.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Real-World Projects</h3>
+                        <p> Work on industry-relevant projects that
+                            allow you to apply AI concepts directly to
+                            your work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+
+            <div class="service-info" style="position: relative; margin-bottom: 6rem;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Your Questions, Answered</h4>
+                        <h2 class="text-white">Frequently Asked <span style="color: #ffce00;">Questions</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Find quick answers to common questions about our AI training, course duration, certification, and support. We're here to ensure
+                        a seamless learning experience for you and your team.
+                        </p>
+                </div>
+            </div>
+            <div class="row ">
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button data-cursor="pointer" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Do I need a specific background to start learning about AI?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <p>Our AI courses are designed with a diverse audience in mind. Whether you’re new
+                                        to tech
+                                        or looking to enhance your expertise, our structured curriculum will guide you
+                                        from the
+                                        basics to advanced concepts without any prior specialized knowledge required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    What is the typical duration of an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    The length of our AI courses varies, but typically you can expect to complete each
+                                    course
+                                    within 4 to 6 weeks if you dedicate a few hours per week. Our courses are
+                                    self-paced, so
+                                    you have the flexibility to learn on a schedule that fits your life.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    What kind of practical skills will I gain?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    Upon completion, you’ll be proficient in AI fundamentals, data analysis, machine
+                                    learning
+                                    algorithms, and you’ll have hands-on experience with real-world projects. This will
+                                    prepare you for applying AI solutions to challenges in various industries.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                    Will I earn a certification after completing an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFour">
+                                <div class="accordion-body">
+                                    Yes, after successfully completing a course, you will receive a digital certificate
+                                    that
+                                    you can add to your resume and LinkedIn profile to showcase your newfound AI
+                                    expertise
+                                    to potential employers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                    Is there support available during the course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFive">
+                                <div class="accordion-body">
+                                    Absolutely! We offer comprehensive support throughout your learning journey. This
+                                    includes access to mentorship from experts, a community forum for peer discussion,
+                                    and
+                                    dedicated technical assistance when needed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-g-6 circles">
+                    <div class="circle circle-active" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne"> <span>Background</span></div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"> <span>Duration</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree">
+                        <span>Skills</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour">
+                        <span>Certification</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive">
+                        <span>Support</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <h2 class="text-white">Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <a href="#">
+                    <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#demo-modal">Book a Demo</button></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section start-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo"><img src="/assets/images/4IR Logo main.png" id="logo-img"
+                            class="img-fluid" alt=""></a>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your mail">
+                            <a href="" data-cursor="pointer" class="btn-basic">Subscribe</a>
+                        </div>
+                    </form>
+                    <ul class="social-links">
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
+                                    src="/assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
+                        <li><a data-cursor="pointer" target="_blank"
+                                href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                                    src="/assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
+                                    src="/assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="/assets/svg/star.svg" class="img-fluid" alt="star">
+                        Quick Link
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
+                            <li><a data-cursor="pointer" href="/html/contact-us.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="/assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our service
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/html/strategic_counselling.html">Strategic
+                                    Counselling</a>
+                            </li>
+                            <li><a data-cursor="pointer" href="/html/ai-talk-assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="/html/training_and_education.html">Training &
+                                    Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <h4>@2024 All the Copyright Reserved.</h4>
+                <ul class="footer-links">
+                    <li><a href="/html/privacy.html">Privacy Policy </a></li>
+                    <li><a href="/html/terms.html">Terms & Condition </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+     
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                let demoModal = new bootstrap.Modal(document.getElementById('demo-modal'));
+                demoModal.show();
+            }, 20000); // 20000 milliseconds = 20 seconds
+        };
+
+        const featureBoxWrappers = document.querySelectorAll('.ai-feature-box-wrapper');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated-in');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        featureBoxWrappers.forEach(wrapper => {
+            observer.observe(wrapper);
+        });
+    </script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var navLinks = document.querySelectorAll('.nav-links');
+            console.log('nav-links', navLinks)
+            var cardTitle = document.querySelector('.card-title');
+            var cardText = document.querySelector('.card-text');
+            var lastActiveTab = 'mission';
+
+            const content = {
+                mission: {
+                    text: "Empowering businesses and solopreneurs to think big and embrace the Fourth Industrial Revolution. We offer cutting-edge solutions and expert support for digital transformation. Our commitment is to help clients navigate technological changes and achieve sustainable growth."
+                },
+                vision: {
+                    text: "We aim to lead change by driving transformative tech and big thinking in businesses and solopreneurs. Our goal is to build a resilient, innovative community ready for the Fourth Industrial Revolution, revolutionizing digital transformation for long-term success in a changing world."
+                },
+                value: {
+                    text: "We value innovation, collaboration, and continuous learning in the face of rapid technological change. Integrity, excellence, and a client-centric approach are at the core of everything we do. We are passionate about empowering our clients to achieve their full potential in the digital age."
+                }
+            };
+
+            navLinks.forEach(function (navLink) {
+                navLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var tabId = navLink.getAttribute('data-tab');
+
+                    // If clicking the same tab that's already active, do nothing
+                    if (tabId === lastActiveTab) {
+                        return;
+                    }
+
+                    // Remove active class from all nav-links
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    // Add active class to the clicked nav-link
+                    navLink.classList.add('active');
+
+                    cardText.textContent = content[tabId].text;
+
+                    // Update the lastActiveTab
+                    lastActiveTab = tabId;
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        // Get all circles and accordion buttons
+        const circles = document.querySelectorAll('.circle');
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        let activeCircle = document.querySelector('.circle-active'); // Track the currently active circle
+        let activePanel = document.querySelector('.accordion-collapse.show'); // Track the currently open panel
+
+        // Function to close the currently open accordion panel and remove the active circle
+        function closeActivePanel() {
+            if (activePanel) {
+                const collapseInstance = bootstrap.Collapse.getInstance(activePanel) || new bootstrap.Collapse(activePanel, { toggle: false });
+                collapseInstance.hide();
+                activePanel = null;
+            }
+            if (activeCircle) {
+                activeCircle.classList.remove('circle-active');
+                activeCircle = null;
+            }
+        }
+
+        // Function to open a panel and assign the active class to the relevant circle
+        function openPanel(panel, circle) {
+            const collapseInstance = bootstrap.Collapse.getInstance(panel) || new bootstrap.Collapse(panel, { toggle: false });
+            collapseInstance.show();
+            circle.classList.add('circle-active');
+            activePanel = panel;
+            activeCircle = circle;
+        }
+
+        // Add click event listeners to the circles
+        circles.forEach(circle => {
+            circle.addEventListener('click', function () {
+                const target = circle.getAttribute('data-bs-target');
+                const panel = document.querySelector(target);
+
+                // If the clicked circle is already active, close it and remove the active class
+                if (circle === activeCircle) {
+                    closeActivePanel();
+                } else {
+                    // Close the active panel, then open the new one
+                    closeActivePanel();
+                    openPanel(panel, circle);
+                }
+            });
+        });
+
+        // Add click event listeners to the accordion buttons
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const target = button.getAttribute('data-bs-target');
+                const panel = document.querySelector(target);
+
+                // If the clicked accordion is already active, close it and remove the active class
+                if (panel === activePanel) {
+                    closeActivePanel();
+                } else {
+                    // Close the active panel, then open the new one
+                    closeActivePanel();
+
+                    // Find the corresponding circle and activate it
+                    const correspondingCircle = document.querySelector(`.circle[data-bs-target="${target}"]`);
+                    if (correspondingCircle) {
+                        openPanel(panel, correspondingCircle);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+    <!-- Bootstrap js-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- slider js-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/custom-slider.js"></script>
+
+    <!-- custom cursor -->
+    <script src="/assets/js/custom-cursor.js"></script>
+
+    <!-- aos animation -->
+    <script src="/assets/js/aos.js"></script>
+    <script src="/assets/js/custom-aos.js"></script>
+
+    <!-- iconsax js -->
+    <script src="/assets/js/iconsax.js"></script>
+
+    <!-- laptop animation js -->
+    <script src="/assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="/assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="/assets/js/pricing-table.js"></script>
+
+    <!-- Theme js-->
+    <script src="/assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

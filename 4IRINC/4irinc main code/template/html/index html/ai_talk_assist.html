@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="4irinc">
+    <meta name="keywords" content="4irinc">
+    <meta name="author" content="4irinc">
+    <link rel="icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/images/4IR Logo.png" type="image/x-icon" />
+    <title>Fourth Industrial Revolution Inc.</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/remixicon.css">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/iconsax.css" />
+
+    <!-- animation css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/aos.css">
+
+    <!-- swiper slider css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/css/landing.css">
+
+</head>
+
+<style>
+    .ai_services_box_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+
+    .ai_services_box_container:has(:hover)> :not(:hover) {
+        opacity: 0.6;
+        /* filter: blur(2px); */
+        scale: .8;
+    }
+
+
+
+    .ai_services_box {
+        text-align: center;
+        line-height: 2;
+        border: 2px solid grey;
+        padding: 4.7rem 3rem;
+        border-radius: 0.4rem;
+        color: #fff;
+        background-color: #0a0e17;
+        position: relative;
+        /* Added */
+        transition: 0.5s all ease;
+        box-shadow: 0 0 10px #20c997;
+        cursor: pointer;
+    }
+
+    .ai_services_box::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 5px;
+        background-color: #20c997;
+    }
+
+    .ai_services_box:hover {
+        border-color: #20c997;
+        box-shadow: 0 0 10px 5px #20c997;
+    }
+
+    .ai_services_box .ai_service_logo img {
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid #20c997;
+        background-color: #20c997;
+        border-radius: 50%;
+        padding: 1rem;
+        transition: .3s all ease;
+        color: white;
+        width: 40%;
+    }
+
+    .ai_services_box .ai_service_logo img:hover {
+        transform: rotate(15deg) scale(1.1);
+        /* Removed quotes to correctly apply rotation */
+    }
+
+
+    .ai_services_box .ai_service_content {
+        margin-top: 2rem;
+    }
+
+    .ai_services_box .ai_service_content h3 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width:600px) {
+        .ai_services_box_container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .service_ai_boxes_container {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ai_box {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+        border: 1px solid grey;
+        padding: 1rem 2rem;
+        position: relative;
+        transition: .5s all ease;
+    }
+
+    .ai_box:hover {
+        border-color: #20c997;
+    }
+
+    .ai_box::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+
+        background-color: #20c997;
+    }
+
+    .ai_box i {
+        font-size: 2.5rem;
+    }
+
+    .info-btn:hover {
+        color: #20c997;
+    }
+
+    .dropdown-arrow {
+        background: none;
+        border: none;
+        padding: 0;
+        margin-left: 5px;
+    }
+
+    .dropdown-arrow::after {
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        color: #12a35f;
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+    }
+
+    @media (max-width: 1199px) {
+        .nav-item.dropdown {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-item.dropdown .nav-link {
+            flex: 1;
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: static;
+            float: none;
+            width: 100%;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+    }
+
+    .navbar-nav .nav-item {
+        position: relative;
+    }
+
+    /* .navbar-nav .nav-item::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .nav-item:hover::before {
+            opacity: 1;
+        } */
+
+    /* Ensure the nav-link text doesn't shift when the bullet appears */
+    /* .navbar-nav .nav-link {
+            padding-left: 15px;
+        } */
+
+    /* For mobile view, you might want to adjust the positioning
+        @media (max-width: 1199px) {
+            .navbar-nav .nav-item::before {
+                left: 0;
+            }
+
+            .navbar-nav .nav-link {
+                padding-left: 20px;
+            }
+        } */
+</style>
+
+<body>
+
+
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+
+
+    <!-- header start -->
+    <header>
+        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu">
+            <span class="navbar-toggler-icon">
+                <i class="iconsax" data-icon="text-align-justify"></i>
+            </span>
+        </button>
+        <a href="../home.html">
+            <img src="../assets/images/logo.svg"  class="img-fluid" alt="logo">
+        </a>
+        <nav class="header-nav-middle">
+            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                    <div class="offcanvas-header navbar-shadow">
+                        <h5 class="mb-0">Back</h5>
+                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../home.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./about.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="./services.html" id="servicesLink">
+                                    Services
+                                </a>
+                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                            Counseling</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/html/4ir Education/4ir.html">Training &
+                                            Education</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./blog-grid.html">Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact-us.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a data-cursor="pointer" href="/html/contact-us.html" class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></a>
+    </header>
+    <!-- header end -->
+
+
+    <!-- home section start -->
+    <section id="home" class="section-b-space home-section">
+        <div class="container-fluid">
+            <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                <div class="home-content" style="margin-top: 5rem;">
+                    <div>
+                        <h2 style="font-size: 18px;font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2>
+                        <h1 style="font-size: 30px;">Simplify Your Life With AI-Powered Calls</h1>
+                        <p>Experience the convenience of AI-driven calls. Let technology handle your communication needs
+                            effortlessly, saving you time and hassle.</p>
+                        <!-- <div class="d-flex flex-row gap-3 mx-5">
+
+                            <a href="html/index.html" class="btn-solid">Get started <i class="iconsax"
+                                    data-icon="arrow-right"></i></a>
+
+                            <a href="html/index.html" class="btn-solid">Learn More <i class="iconsax"
+                                    data-icon="arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="home-img d-lg-flex d-none">
+                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
+                    <div class="round-effect">
+                        <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+
+    <section id="ai_services" class="section-b-space">
+        <div class="container">
+            <div class="ai_services_box_container">
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/house.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>Real Estate Assistant</h3>
+                        <ul>
+                            <li>Schedule property viewings</li>
+                            <li>Lead Qualification</li>
+                            <li>Real-time booking</li>
+                            <li>Provide property information</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/client.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>Client Management</h3>
+                        <ul>
+                            <li>Schedule appointments</li>
+                            <li>Update client records</li>
+                            <li>Conduct survey calls</li>
+                            <li>Provide support or assistance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/attorney.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>Attorney Support</h3>
+                        <ul>
+                            <li>Initiate client outreach</li>
+                            <li>Conduct client interviews</li>
+                            <li>Confirm appointments</li>
+                            <li>Follow up on legal matters</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/medal.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>Loan Officer Assistant</h3>
+                        <ul>
+                            <li>Schedule appointments.
+                            <li>Provide loan information.</li>
+                            <li>Follow up leads.</li>
+                            <li>Update client records.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/globe.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>Financial Planners Assistant</h3>
+                        <ul>
+                            <li>Schedule meetings.</li>
+                            <li>Confirm appointments.</li>
+                            <li>Update client information.</li>
+                            <li>Follow up inquiries.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai_services_box">
+                    <div class="ai_service_logo">
+                        <img src="/assets/images/services icon/lens.png" alt="">
+                    </div>
+                    <div class="ai_service_content">
+                        <h3>AI Medical Receptionist</h3>
+                        <ul>
+                            <li>Schedule appointments.</li>
+                            <li>Confirm bookings.</li>
+                            <li>Update patient records.</li>
+                            <li>Follow up reminders.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- servce section start -->
+
+
+    <div class="service-section section-b-space mt-2">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <div class="title">
+                                <h1 style="color: #20c997;">Elevate Your Organization With Us By Your Side!</h1>
+                            </div>
+                            <p>Empower your organization with our innovative solutions and expertise, driving growth and
+                                success in today's dynamic market.</p>
+
+                            <div class="service_ai_boxes_container">
+                                <div class="ai_box">
+                                    <div class="ai_logo">
+                                        <i class="fa-solid fa-house"></i>
+                                    </div>
+                                    <div class="ai_content">
+                                        <h3>Increased Productivity</h3>
+                                        <p>By leveraging AI-powered calls, tasks such as client communication,
+                                            appointment scheduling, and data management can be automated, freeing up
+                                            valuable time for employees to focus on high-value activities and strategic
+                                            initiatives.</p>
+                                    </div>
+                                </div>
+                                <div class="ai_box">
+                                    <div class="ai_logo">
+                                        <i class="fa-solid fa-house"></i>
+                                    </div>
+                                    <div class="ai_content">
+                                        <h3>Enhanced Client Satisfaction</h3>
+                                        <p>AI-driven calls can provide seamless and personalized interactions with
+                                            clients, leading to improved responsiveness, accuracy, and consistency in
+                                            communication. This, in turn, can contribute to higher levels of client
+                                            satisfaction and loyalty.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a data-cursor="pointer" class="btn-arrow" href="">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <img style="width: 90%; height: 70%; border:none; border-radius: 2rem;"
+                        src="../assets/images/home/expertise.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- service section ends -->
+
+
+    <!-- pricing section start -->
+    <section class="pricing-section pb-md-5 pb-0">
+        <div class="container">
+            <div class="title-basic fs-sm">
+                <h2 class="text-white">Unleash limitless potential & versatile features for every need</h2>
+            </div>
+            <div class="row pricing-row g-xl-5 g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/weekly.svg" class="img-fluid" alt="">
+                            <h3>Weekly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging-green.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-center.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/monthly.svg" class="img-fluid" alt="">
+                            <h3>Monthly Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>15+ new category</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <img src="../assets/svg/hanging.svg" class="img-fluid handing-cls" alt="effect">
+                        <div class="pricing-top">
+                            <img src="../assets/svg/pricing/pricing-top.svg" class="img-fluid pricing-bg" alt="">
+                            <img src="../assets/svg/pricing/yearly.svg" class="img-fluid" alt="">
+                            <h3>Lifetime Plan</h3>
+                        </div>
+                        <div class="pricing-mid">
+                            <div class="clip-path-content">
+                                <div>
+                                    <h2>$3.99</h2>
+                                    <h4>/ only</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="clip-path-content">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Intelligent AI chatbot</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Unlimited answer of question</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Avoid buying coin forever</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>No ad in background</h4>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/svg/arrow.svg" class="img-fluid" alt="arrow">
+                                        <h4>Early access to new features</h4>
+                                    </li>
+                                </ul>
+                                <a class="pricing-link" href="#" data-cursor="pointer">Choose plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pricing section end -->
+
+
+    <!-- contact us start -->
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="hand-effect d-md-block d-none">
+                    <img src="../assets/svg/hand.svg" class="img-fluid left-hand" alt="hand">
+                    <img src="../assets/svg/hand.svg" class="img-fluid right-hand" alt="hand">
+                </div>
+                <h2>Ready to <span>move <img src="../assets/svg/title-effect.svg" class="img-fluid"
+                            alt="title-effect"></span>
+                    ahead?</h2>
+                <p>With the help of our ground-breaking AI tool, unlock the potential of cutting-edge AI technology and
+                    increase your productivity to new heights. Embrace the
+                    future today and let our AI tool redefine what's possible for you.</p>
+                <!-- <ul>
+                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Free images for lifetime</li>
+                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Get details on any topic</li>
+                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Quick advisor to help you</li>
+                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">15+ category to explore</li>
+                </ul> -->
+                <!-- <a data-cursor="pointer" class="btn-arrow" href="">
+                    <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Contact us now
+                </a> -->
+                <center>
+                    <a href="./contact-us.html">
+                        <button class="info-btn btn btn-theme d-sm-inline-block">Book a Demo</button></a>
+                </center>
+            </div>
+        </div>
+    </section>
+    <!-- contact us end -->
+
+
+
+    <!-- footer section start-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo"><img src="../assets/images/logo.svg" class="img-fluid" alt=""></a>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your mail">
+                            <a href="" data-cursor="pointer" class="btn-basic">Subscribe</a>
+                        </div>
+                    </form>
+                    <ul class="social-links">
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
+                                    src="../assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                                    src="../assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
+                                    src="../assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        Quick Link
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
+                            <li><a data-cursor="pointer" href="./contact-us.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="../assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our service
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
+                            </li>
+                            <li><a data-cursor="pointer" href="./ai_talk_assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank" href="/html/4ir Education/4ir.html">Training &
+                                    Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="link-section">
+                    <div class="footer-title">
+                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our company
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="login.html">Login</a></li>
+                            <li><a data-cursor="pointer" href="blog-listing.html">Blog listing</a></li>
+                            <li><a data-cursor="pointer" href="blog-grid.html">Blog Grid</a></li>
+                            <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            <div class="footer-copyright">
+                <h4>@2024 All the Copyright Reserved.</h4>
+                <ul class="footer-links">
+                    <li><a href="/html/privacy.html">Privacy Policy </a></li>
+                    <li><a href="/html/terms.html">Terms & Condition </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var servicesLink = document.getElementById('servicesLink');
+            var servicesDropdown = document.getElementById('servicesDropdown');
+            var dropdownMenu = servicesDropdown.nextElementSibling;
+            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
+
+            function toggleDropdown(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            }
+
+            servicesDropdown.addEventListener('click', toggleDropdown);
+
+            // For mobile view, prevent the link from navigating when the dropdown is open
+            servicesLink.addEventListener('click', function (event) {
+                if (!isXlScreen && dropdownMenu.style.display === 'block') {
+                    event.preventDefault();
+                }
+            });
+
+            // Update isXlScreen on window resize
+            window.addEventListener('resize', function () {
+                isXlScreen = window.innerWidth >= 1200;
+                if (isXlScreen) {
+                    dropdownMenu.style.display = '';
+                }
+            });
+        });
+
+
+    </script>
+
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- slider js-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/custom-slider.js"></script>
+
+    <!-- custom cursor -->
+    <script src="../assets/js/custom-cursor.js"></script>
+
+    <!-- aos animation -->
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/custom-aos.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../assets/js/iconsax.js"></script>
+
+    <!-- laptop animation js -->
+    <script src="../assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="../assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="../assets/js/pricing-table.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

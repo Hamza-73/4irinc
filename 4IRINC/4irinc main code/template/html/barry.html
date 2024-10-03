@@ -81,12 +81,12 @@
             font-weight: 600;
             color: #00BDFF !important;
         }
-        
+
         .expertise_div {
             margin-top: -6rem;
         }
 
-        
+
         @media screen and (min-width:600px) and (max-width:1000px) {
             .service_boxes_div {
                 flex-direction: column;
@@ -102,13 +102,13 @@
         }
 
         @media screen and (max-width:576px) {
-                      
+
             .service_boxes_div {
                 position: relative;
                 margin-left: .8rem;
-            }  
+            }
 
-            .barry_images{
+            .barry_images {
                 margin: 0 1.5rem;
             }
         }
@@ -118,7 +118,7 @@
             body {
                 overflow-x: hidden;
             }
-            
+
             .service_boxes_div {
                 position: relative;
                 padding-left: 1.5rem;
@@ -129,7 +129,7 @@
             }
 
 
-            .service-box{
+            .service-box {
                 display: block;
                 margin: auto;
             }
@@ -201,7 +201,7 @@
             position: relative;
         }
 
-       
+
         header #logo-img {
             position: relative;
             margin-top: -1.4rem;
@@ -271,6 +271,40 @@
         .barry_expertise_container .barry_exp_box p {
             text-align: justify;
         }
+
+        .modal-content {
+            height: 90vh;
+            max-height: 90vh;
+            background-color: #0a0e17;
+            animation: shadow 2s infinite ease-in-out;
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 10px #00BDFF;
+            }
+
+            100% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+        }
+
+        .modal-dialog {
+            width: 80vw;
+            max-width: 90vw;
+        }
+
+        @media screen and (max-width:580px) {
+            .modal-content {
+                position: relative !important;
+                left: 10% !important;
+                overflow: scroll;
+            }
+        }
     </style>
 
 
@@ -284,6 +318,28 @@
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
 
+    <!-- Modal -->
+    <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- header start -->
     <header>
@@ -294,7 +350,7 @@
             </span>
         </button>
         <a href="/home.html">
-            <img src="../assets/images/main-logo.png" class="img-fluid" id="logo-img" alt="logo">
+            <img src="../assets/images/4IR Logo main.png" class="img-fluid" id="logo-img" alt="logo">
         </a>
         <nav class="header-nav-middle">
             <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
@@ -328,7 +384,7 @@
                                             Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/html/4ir Education/4ir.html">Training &
@@ -349,8 +405,9 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="/html/contact-us.html" style="position: relative; margin-top: -1.4rem;"
-            class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></a>
+        <div data-cursor="pointer" style="position: relative; margin-top: -1.4rem;"
+            class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal" data-bs-target="#demo-modal">
+            <span>Book a Demo</span></div>
     </header>
     <!-- header end -->
 
@@ -410,38 +467,40 @@
 
             </div>
             <div class="row">
-                
-        <div class="col-lg-6">
-            <div class="service_boxes_div">
-                
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <div class="service-content">
-                            <h3>To 500K Monthly Visitors</h3>
-                            <p>"Collectible Trader" - online auction pioneer since '95, reshaping collectibles market.</p>
+
+                <div class="col-lg-6">
+                    <div class="service_boxes_div">
+
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-content">
+                                    <h3>To 500K Monthly Visitors</h3>
+                                    <p>"Collectible Trader" - online auction pioneer since '95, reshaping collectibles
+                                        market.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <div class="service-content">
-                            <h3>30% Cost Reduction</h3>
-                            <p>Achieved through early adoption of internet technologies in business, enhancing productivity and efficiency for our clients</p>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-content">
+                                    <h3>30% Cost Reduction</h3>
+                                    <p>Achieved through early adoption of internet technologies in business, enhancing
+                                        productivity and efficiency for our clients</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <div class="service-content">
-                            <h3>Top 5% Performance</h3>
-                            <p>37 years of sales leadership, innovative strategies & team development.</p>
+                        <div class="col-sm-6">
+                            <div class="service-box">
+                                <div class="service-content">
+                                    <h3>Top 5% Performance</h3>
+                                    <p>37 years of sales leadership, innovative strategies & team development.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
 
-            </div>
-        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -454,20 +513,11 @@
     <section class="info-section section-b-space">
         <div class="container">
             <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
-                <div class="hand-effect d-md-block d-none">
-                    <img src="../assets/svg/hand.svg" class="img-fluid left-hand" alt="hand">
-                    <img src="../assets/svg/hand.svg" class="img-fluid right-hand" alt="hand">
-                </div>
-                <h2>Ready to <span>move <img src="../assets/svg/title-effect.svg" class="img-fluid"
-                            alt="title-effect"></span>
-                    ahead?</h2>
-                <p>With the help of our ground-breaking AI tool, unlock the potential of cutting-edge AI technology and
-                    increase your productivity to new heights. Embrace the
-                    future today and let our AI tool redefine what's possible for you.</p>
-                <center>
-                    <a href="./contact-us.html">
-                        <button class="info-btn btn btn-theme d-sm-inline-block">Book a Demo</button></a>
-                </center>
+                <h2 class="text-white">Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#demo-modal">Book
+                    a
+                    Demo</button>
             </div>
         </div>
     </section>
@@ -528,7 +578,7 @@
         <div class="container">
             <div class="footer-row">
                 <div class="footer-main">
-                    <a href="#" class="footer-logo"><img src="../assets/images/main-logo.png" id="logo-img"
+                    <a href="#" class="footer-logo"><img src="../assets/images/4IR Logo main.png" id="logo-img"
                             class="img-fluid" alt=""></a>
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
                     <form>
@@ -571,7 +621,7 @@
                         <ul>
                             <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
                             </li>
-                            <li><a data-cursor="pointer" href="./landing.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" href="./ai-talk-assist.html">AI Talk Assist</a></li>
                             <li><a data-cursor="pointer" target="_blank" href="/html/4ir Education/4ir.html">Training &
                                     Education</a></li>
                         </ul>
@@ -603,6 +653,7 @@
     </footer>
     <!-- footer section end-->
 
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
     <script>
 

@@ -36,92 +36,120 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
     <link rel="stylesheet" href="../assets/css/landing.css">
+
+    <link rel="stylesheet" href="/assets/css/animations/strategic_counselling.css">
+
     <style>
         .container {
             margin-top: 3rem;
         }
-    
-        .offers_container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            margin-top: 2rem;
-            gap: 2rem;
-            transition: .5s all ease;
-        }
 
-        @media screen and (min-width:1400px) {
-            .offers_container {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            
-        }
-    
         /* @media screen and (min-width:1200px) {
             .offers_container:has(:hover) > :not(:hover) {
             opacity: 0.6;
             scale: .8;
         }
         } */
-        
-    
+
+        /* Default styles for larger screens */
         .offer_box {
             border: 2px solid grey;
             transition: .5s all ease;
             cursor: pointer;
             box-shadow: 0 0 10px 0px rgba(0, 189, 255, 1);
-            background-color: #0a0e17;
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            border-radius: 1.7rem;
+            margin: 3rem 0;
         }
-    
+
         .offer_box:hover {
             border-color: rgba(0, 189, 255, 1);
             box-shadow: 0 0 10px 4px rgba(0, 189, 255, 1);
         }
-    
+
         .offer_box .offer_img {
             z-index: -10;
         }
-    
+
         .offer_box img {
+            width: 80%;
+        }
+
+        .offer_box .offer_content {
             width: 100%;
         }
-    
-        .offer_box .offer_content {
-            padding: 1rem;
-            z-index: 100;
-            color: #fff;
-        }
-    
+
         .offer_box .offer_content h3 {
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 600;
-        }
-    
-        .offer_box .offer_content ul {
-            list-style-position: outside;
             color: #fff;
-            padding: 0 .5rem;
         }
-    
-        .offer_box .offer_content ul li {
-            list-style: disc !important;
-            list-style-type: disc !important;
-            display: list-item !important;
+
+        .offer_box .offer_content p {
+            font-size: 1.2rem;
+            color: #fff;
+            line-height: 1.7;
+            font-weight: 100;
         }
-    
-        @media screen and (max-width:600px) {
-            .offers_container {
-                grid-template-columns: 1fr;
+
+        /* Responsive styles for tablets */
+        @media (max-width: 1024px) {
+            .offer_box {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.7rem;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .offer_box img {
+                width: 60%;
+                margin-bottom: 1rem;
+            }
+
+            .offer_box .offer_content h3 {
+                font-size: 1.8rem;
+            }
+
+            .offer_box .offer_content p {
+                font-size: 1.1rem;
             }
         }
-    
+
+        /* Responsive styles for mobile */
+        @media (max-width: 480px) {
+            .offer_box {
+                flex-direction: column;
+                padding: 1.3rem;
+                gap: 1rem;
+            }
+
+            .offer_box img {
+                width: 100%;
+            }
+
+            .offer_box .offer_content h3 {
+                font-size: 1.5rem;
+            }
+
+            .offer_box .offer_content p {
+                font-size: 1rem;
+            }
+        }
+
+
         .dropdown-arrow {
             background: none;
             border: none;
             padding: 0;
             margin-left: 5px;
         }
-    
+
         .dropdown-arrow::after {
             display: inline-block;
             margin-left: .255em;
@@ -133,17 +161,17 @@
             border-bottom: 0;
             border-left: .3em solid transparent;
         }
-    
+
         @media (max-width: 1199px) {
             .nav-item.dropdown {
                 display: flex;
                 flex-wrap: wrap;
             }
-    
+
             .nav-item.dropdown .nav-link {
                 flex: 1;
             }
-    
+
             .navbar-nav .dropdown-menu {
                 position: static;
                 float: none;
@@ -154,36 +182,93 @@
                 box-shadow: none;
             }
         }
-    
+
         .navbar-nav .nav-item {
             position: relative;
         }
-    
+
         header #logo-img {
             position: relative;
             margin-top: -1.4rem;
         }
-    
+
         @media screen and (max-width:600px) {
             header #logo-img {
                 margin-top: 0;
             }
         }
-    </style>
-    
 
+        @media screen and (min-width:1024px) {
+            .service-section .container {
+                margin-top: -5rem;
+            }
+        }
+
+        .modal-content {
+            height: 90vh;
+            max-height: 90vh;
+            background-color: #0a0e17;
+            animation: shadow 2s infinite ease-in-out;
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 10px #00BDFF;
+            }
+
+            100% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+        }
+
+        .modal-dialog {
+            width: 80vw;
+            max-width: 90vw;
+        }
+
+        @media screen and (max-width:580px) {
+            .modal-content {
+                position: relative !important;
+                left: 10% !important;
+                overflow: scroll;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-
 
     <!--custom cursor start  -->
     <div id="cursor"></div>
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
 
-
+    <!-- Modal -->
+    <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- header start -->
     <header>
@@ -194,7 +279,7 @@
             </span>
         </button>
         <a href="../home.html">
-            <img src="../assets/images/main-logo.png" id="logo-img" class="img-fluid" alt="logo">
+            <img src="../assets/images/4IR Logo main.png" id="logo-img" class="img-fluid" alt="logo">
         </a>
         <nav class="header-nav-middle">
             <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
@@ -228,10 +313,10 @@
                                             Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/html/4ir Education/4ir.html">Training &
+                                        <a class="dropdown-item" href="/html/training_and_education.html">Training &
                                             Education</a>
                                     </li>
                                 </ul>
@@ -249,7 +334,8 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="/html/contact-us.html" style="position: relative; margin-top: -1.4rem;" class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></a>
+        <div data-cursor="pointer" style="position: relative; margin-top: -1.4rem;"
+            class="btn btn-theme d-sm-inline-block d-none"  data-bs-toggle="modal" data-bs-target="#demo-modal"><span>Book a Demo</span></div>
     </header>
     <!-- header end -->
 
@@ -257,181 +343,197 @@
     <!-- home section start -->
     <section id="home" class="section-b-space home-section">
         <div class="container-fluid">
-            <div class="home-sec" style="text-align: center;
-            justify-content: center; display: flex;">
-                <div class="home-content" style="margin-top: 5rem;">
+            <div class="home-sec" style="text-align: center; justify-content: center; display: flex;">
+                <div class="home-content animate-text" style="margin-top: 5rem;">
                     <div>
-                        <h2 style="font-size: 18px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
-                        </h2>
-                        <h1 style="font-size: 30px;">Strategic Counseling Services</h1>
+                        <h1 style="font-size: 40px;">Strategic Counseling <br> Services</h1>
                         <p>Business Automation with Technology and AI on it</p>
-                        <!-- <div class="d-flex flex-row gap-3 mx-5">
-
-                            <a href="html/index.html" class="btn-solid">Get started <i class="iconsax"
-                                    data-icon="arrow-right"></i></a>
-
-                            <a href="html/index.html" class="btn-solid">Learn More <i class="iconsax"
-                                    data-icon="arrow-right"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <!-- <div class="home-img d-lg-flex d-none">
-                    <img src="../assets/images/landing/robot.png" class="img-fluid robot-img" alt="robot">
-                    <div class="round-effect">
-                        <img src="../assets/images/landing/round.gif" class="img-fluid " alt="robot">
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
+
+
     <!-- home section end -->
 
-
-    <div id="offers" class="section-b-space">
+    <section class="service-section section-b-space mt-2">
         <div class="container">
-            <h1 class="text-center text-white">We Are Offering</h1>
+            <div class="service-info">
+                <div>
+                    <div class="title animate-title">
+                        <h4 style="color: #00BDFF;">AI-Powered Strategic Solutions</h4>
+                        <h2 class="text-white">Our <span style="color: #ffce00;">AI-Driven</span> Strategic Consulting
+                            Services</h2>
+                    </div>
+                    <p class="service_paragraph animate-paragraph">At the forefront of digital transformation, we offer
+                        comprehensive
+                        AI-driven consulting services designed to help businesses innovate, optimize,
+                        and grow. Our approach blends cutting-edge AI technologies with strategic insights to streamline
+                        operations, enhance customer experiences, and
+                        future-proof your business. From business model innovation to workforce transformation and data
+                        governance, we provide tailored solutions that
+                        deliver measurable results while ensuring smooth implementation and adoption across your
+                        organization. Discover how our AI expertise can take
+                        your business to the next level.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="offers" class="section-b-space" style="overflow-x: hidden;">
+        <div class="container">
             <div class="offers_container">
-                <div class="offer_box">
+                <div class="offer_box left">
                     <div class="offer_img">
                         <img src="/assets/images/services/strategic counselling/strategic consulting.png" alt="">
                     </div>
                     <div class="offer_content">
                         <h3>Strategic Consulting</h3>
-                        <ul>
-                            <li>Assessment of current technology landscape and identification of gaps</li>
-                            <li>Prioritization of technology initiatives based on business objectives and ROI</li>
-                            <li>Development of a phased implementation plan with milestones and deadlines</li>
-                            <li>Guidance on budget allocation and resource management for technology adoption</li>
-                        </ul>
+                        <p>
+                            Assessment of current technology landscape and identification of gaps
+                            Prioritization of technology initiatives based on business objectives and ROI
+                            Development of a phased implementation plan with milestones and deadlines
+                            Guidance on budget allocation and resource management for technology adoption
+                        </p>
                     </div>
                 </div>
                 <div class="offer_box">
+                    <div class="offer_content">
+                        <h3>Business Model Innovation</h3>
+                        <p>
+                            Evaluation of existing business model and identification of areas for improvement
+                            Exploration of new revenue streams and value propositions enabled by technology
+                            Assistance with the design and validation of innovative business models
+                            Guidance on the implementation and scaling of new business models
+                        </p>
+                    </div>
                     <div class="offer_img">
                         <img src="/assets/images/services/strategic counselling/business model innovation.png" alt="">
                     </div>
-                    <div class="offer_content">
-                        <h3>Business Model Innovation</h3>
-                        <ul>
-                            <li>Evaluation of existing business model and identification of areas for improvement</li>
-                            <li>Exploration of new revenue streams and value propositions enabled by technology</li>
-                            <li>Assistance with the design and validation of innovative business models</li>
-                            <li>Guidance on the implementation and scaling of new business models</li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="offer_box">
+                <div class="offer_box left">
                     <div class="offer_img">
                         <img src="/assets/images/services/strategic counselling/digital workforce strategy.png" alt="">
                     </div>
                     <div class="offer_content">
                         <h3>Digital Workforce Strategy</h3>
-                        <ul>
-                            <li>Assessment of current workforce skills and identification of future skill requirements
-                            </li>
-                            <li>Development of a digital workforce transformation plan</li>
-                            <li>Guidance on talent acquisition, upskilling, and reskilling strategies</li>
-                            <li>Assistance with the implementation of digital workforce management practices</li>
-                        </ul>
+                        <p>
+                            Assessment of current workforce skills and identification of future skill requirements
+
+                            Development of a digital workforce transformation plan
+                            Guidance on talent acquisition, upskilling, and reskilling strategies
+                            Assistance with the implementation of digital workforce management practices
+                        </p>
                     </div>
                 </div>
                 <div class="offer_box">
-                    <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/data governance and management.png" alt="">
-                    </div>
                     <div class="offer_content">
                         <h3>Data Governance And Management</h3>
-                        <ul>
-                            <li>Assessment of current data management practices and identification of gaps</li>
-                            <li>Development of a comprehensive data governance framework</li>
-                            <li>Guidance on data quality, security, privacy, and compliance issues</li>
-                            <li>Assistance with the implementation of data management tools and processes</li>
-                        </ul>
+                        <p>
+                            Assessment of current data management practices and identification of gaps
+                            Development of a comprehensive data governance framework
+                            Guidance on data quality, security, privacy, and compliance issues
+                            Assistance with the implementation of data management tools and processes
+                        </p>
+                    </div>
+                    <div class="offer_img">
+                        <img src="/assets/images/services/strategic counselling/data governance and management.png"
+                            alt="">
                     </div>
                 </div>
-                <div class="offer_box">
+                <div class="offer_box left">
                     <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/digital supply chain optimization.png" alt="">
+                        <img src="/assets/images/services/strategic counselling/digital supply chain optimization.png"
+                            alt="">
                     </div>
                     <div class="offer_content">
                         <h3>Digital Supply Chain Optimization</h3>
-                        <ul>
-                            <li>Evaluation of current supply chain processes and identification of inefficiencies</li>
-                            <li>Exploration of digital technologies to optimize supply chain performance</li>
-                            <li>Development of a digital supply chain transformation roadmap</li>
-                            <li>Guidance on the implementation of digital supply chain solutions</li>
-                        </ul>
+                        <p>
+                            Evaluation of current supply chain processes and identification of inefficiencies
+                            Exploration of digital technologies to optimize supply chain performance
+                            Development of a digital supply chain transformation roadmap
+                            Guidance on the implementation of digital supply chain solutions
+                        </p>
                     </div>
                 </div>
                 <div class="offer_box">
-                    <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/customer experience transformation.png" alt="">
-                    </div>
                     <div class="offer_content">
                         <h3>Customer Experience Transformation</h3>
-                        <ul>
-                            <li>Assessment of current customer experience and identification of improvement areas</li>
-                            <li>Exploration of digital technologies to enhance customer engagement and loyalty</li>
-                            <li>Development of a customer experience transformation strategy</li>
-                            <li>Guidance on the implementation of digital customer experience solutions</li>
-                        </ul>
+                        <p>
+                            Assessment of current customer experience and identification of improvement areas
+                            Exploration of digital technologies to enhance customer engagement and loyalty
+                            Development of a customer experience transformation strateg
+                            Guidance on the implementation of digital customer experience solutions
+                        </p>
+                    </div>
+                    <div class="offer_img">
+                        <img src="/assets/images/services/strategic counselling/customer experience transformation.png"
+                            alt="">
                     </div>
                 </div>
-                <div class="offer_box">
+                <div class="offer_box left">
                     <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/digital ecosystem partnership.png" alt="">
+                        <img src="/assets/images/services/strategic counselling/digital ecosystem partnership.png"
+                            alt="">
                     </div>
                     <div class="offer_content">
                         <h3>Digital Ecosystem Partnerships</h3>
-                        <ul>
-                            <li>Evaluation of existing business model and identification of areas for improvement</li>
-                            <li>Exploration of new revenue streams and value propositions enabled by technology</li>
-                            <li>Assistance with the design and validation of innovative business models</li>
-                            <li>Guidance on the implementation and scaling of new business models</li>
-                        </ul>
+                        <p>
+                            Evaluation of existing business model and identification of areas for improvement
+                            Exploration of new revenue streams and value propositions enabled by technology
+                            Assistance with the design and validation of innovative business models
+                            Guidance on the implementation and scaling of new business models
+                        </p>
                     </div>
                 </div>
                 <div class="offer_box">
-                    <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/digital governance and risk management.png" alt="">
-                    </div>
                     <div class="offer_content">
                         <h3>Digital Governance And Risk Management</h3>
-                        <ul>
-                            <li>Assessment of current digital governance practices and identification of gaps</li>
-                            <li>Development of a comprehensive digital governance framework</li>
-                            <li>Guidance on digital risk assessment, mitigation, and monitoring strategies</li>
-                            <li>Assistance with the implementation of digital governance and risk management processes
-                            </li>
-                        </ul>
+                        <p>
+                            Assessment of current digital governance practices and identification of gaps
+                            Development of a comprehensive digital governance framework
+                            Guidance on digital risk assessment, mitigation, and monitoring strategies
+                            Assistance with the implementation of digital governance and risk management processes
+
+                        </p>
+                    </div>
+                    <div class="offer_img">
+                        <img src="/assets/images/services/strategic counselling/digital governance and risk management.png"
+                            alt="">
                     </div>
                 </div>
-                <div class="offer_box">
+                <div class="offer_box left">
                     <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/change management and adoption.png" alt="">
+                        <img src="/assets/images/services/strategic counselling/change management and adoption.png"
+                            alt="">
                     </div>
                     <div class="offer_content">
                         <h3>Change Management And Adoption</h3>
-                        <ul>
-                            <li>Assessment of organizational readiness for change and identification of barriers</li>
-                            <li>Development of a change management and adoption strategy</li>
-                            <li>Guidance on stakeholder engagement, communication, and training strategies</li>
-                            <li>Assistance with the implementation of change management and adoption programs</li>
-                        </ul>
+                        <p>
+                            Assessment of organizational readiness for change and identification of barriers
+                            Development of a change management and adoption strategy
+                            Guidance on stakeholder engagement, communication, and training strategies
+                            Assistance with the implementation of change management and adoption programs
+                        </p>
                     </div>
                 </div>
                 <div class="offer_box">
-                    <div class="offer_img">
-                        <img src="/assets/images/services/strategic counselling/digital innovation culture.png" alt="">
-                    </div>
                     <div class="offer_content">
                         <h3>Digital Innovation Culture</h3>
-                        <ul>
-                            <li>Assessment of current organizational culture and identification of cultural barriers to
-                                innovation</li>
-                            <li>Development of a digital innovation culture transformation plan</li>
-                            <li>Guidance on leadership development, employee engagement, and incentive strategies</li>
-                            <li>Assistance with the implementation of digital innovation culture initiative</li>
-                        </ul>
+                        <p>
+                            Assessment of current organizational culture and identification of cultural barriers to
+                            innovation
+                            Development of a digital innovation culture transformation plan
+                            Guidance on leadership development, employee engagement, and incentive strategies
+                            Assistance with the implementation of digital innovation culture initiative
+                        </p>
+                    </div>
+                    <div class="offer_img">
+                        <img src="/assets/images/services/strategic counselling/digital innovation culture.png" alt="">
                     </div>
                 </div>
             </div>
@@ -439,13 +541,118 @@
     </div>
 
 
+    <!-- testimonial section start -->
+    <section class="testimonial-section section-b-space" id="testimonial-section">
+        <div class="container">
+            <div class="service-info" style="position: relative; margin-bottom: 5rem;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Real Clients, Real Success</h4>
+                        <h2 class="text-white">What <span style="color: #ffce00;">Our Clients</span> Are Saying</h2>
+                    </div>
+                    <p class="service_paragraph">Explore How Our AI Solutions and Training Empower Businesses to Save
+                        Time, Increase Conversions, and Elevate Customer
+                        Experiences
+                    </p>
+                </div>
+            </div>
+            <div class="swiper testimonialSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>Best of the best that about sums up my experience.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Jim Thiel .png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Jim Thiel</h4>
+                            <h5>Mortage Advisor</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>There commitment to helping clients incorporate AI and stay updated with the latest
+                                    technologies is evident. Working with them has been both fun and rewarding, saving
+                                    me time and money. I highly recommend Fourth Industrial Revolution to any buisness
+                                    looking to enhance its digital presence and operational efficiency.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Toby Woods.png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Toby Woods</h4>
+                            <h5>NorthStar Systems, LLC</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="testimonial-box">
+                            <div class="content-sec">
+                                <div class="quote-img">
+                                    <img src="../assets/svg/quote.svg" class="img-fluid outline-img" alt="">
+                                    <img src="../assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
+                                </div>
+                                <p>While many people are intimidated by AI, Barry has a way of making it practical and
+                                    approachable. He's taen the mystery -- and the fear--out of it, showing us how AI
+                                    can be a powerful tool in our arsenal. Thanks to Barry, we now see AI as a
+                                    game-changer that frees up our time so we can focus on what truly matters--our
+                                    clients.
+                                </p>
+                            </div>
+                            <div class="small-circle"><span></span></div>
+                            <div class="large-circle"><span></span></div>
+                            <div class="avtar-img">
+                                <img src="../assets/images/landing/ai_talk_assist/Carol Huston.png" class="img-fluid"
+                                    alt="user">
+                            </div>
+                            <h4>Carol Huston</h4>
+                            <h5>True Story Realty</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <h2 class="text-white">Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <a href="#">
+                    <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#demo-modal">Book a
+                        Demo</button></a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- footer section start-->
     <footer>
         <div class="container">
             <div class="footer-row">
                 <div class="footer-main">
-                    <a href="#" class="footer-logo"><img src="../assets/images/main-logo.png" id="logo-img" class="img-fluid" alt=""></a>
+                    <a href="#" class="footer-logo"><img src="../assets/images/4IR Logo main.png" id="logo-img"
+                            class="img-fluid" alt=""></a>
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
                     <form>
                         <div class="input-group">
@@ -457,7 +664,8 @@
                     <ul class="social-links">
                         <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
                                     src="../assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
-                        <li><a data-cursor="pointer" target="_blank" href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                        <li><a data-cursor="pointer" target="_blank"
+                                href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
                                     src="../assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
                         <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
                                     src="../assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
@@ -486,8 +694,9 @@
                         <ul>
                             <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
                             </li>
-                            <li><a data-cursor="pointer" href="./landing.html">AI Talk Assist</a></li>
-                            <li><a data-cursor="pointer" target="_blank" href="/html/4ir Education/4ir.html">Training &
+                            <li><a data-cursor="pointer" href="./ai-talk-assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank"
+                                    href="/html/training_and_education.html">Training &
                                     Education</a></li>
                         </ul>
                     </div>
@@ -518,6 +727,9 @@
     </footer>
     <!-- footer section end-->
 
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
+    <script src="/assets/js/animations/strategic_counselling.js"></script>
 
     <script>
 

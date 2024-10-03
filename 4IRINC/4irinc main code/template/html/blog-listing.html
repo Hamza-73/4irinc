@@ -37,10 +37,48 @@
 
     <link rel="stylesheet" href="/assets/css/landing.css">
 
+    <style>
+                .modal-content {
+            height: 90vh;
+            max-height: 90vh;
+            background-color: #0a0e17;
+            animation: shadow 2s infinite ease-in-out;
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 10px #00BDFF;
+            }
+
+            100% {
+                box-shadow: 0 0 10px 5px #00BDFF;
+            }
+        }
+
+        .modal-dialog {
+            width: 80vw;
+            max-width: 90vw;
+        }
+
+        @media screen and (max-width:580px) {
+            .modal-content {
+                position: relative !important;
+                left: 10% !important;
+                overflow: scroll;
+            }
+        }
+    </style>
+
 
 </head>
 
 <body class="inner-bg">
+
+
 
     <!-- header start -->
     <header>
@@ -80,7 +118,7 @@
                                         <a class="dropdown-item" href="./strategic_counselling.html">Strategic Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./landing.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#">Training & Education</a>
@@ -101,7 +139,7 @@
                 </div>
             </div>
         </nav>
-        <a data-cursor="pointer" href="/html/contact-us.html" class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></a>
+        <div data-cursor="pointer" class="btn btn-theme d-sm-inline-block d-none"><span>Book a Demo</span></div>
     </header>
     <!-- header end -->
 
@@ -294,25 +332,12 @@
     <section class="info-section section-b-space">
         <div class="container">
             <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
-                <div class="hand-effect d-md-block d-none">
-                    <img src="../assets/svg/hand.svg" class="img-fluid left-hand" alt="hand">
-                    <img src="../assets/svg/hand.svg" class="img-fluid right-hand" alt="hand">
-                </div>
-                <h2>Ready to <span>move <img src="../assets/svg/title-effect.svg" class="img-fluid"
-                            alt="title-effect"></span>
-                    ahead?</h2>
-                <p>With the help of our ground-breaking AI tool, unlock the potential of cutting-edge AI technology and
-                    increase your productivity to new heights. Embrace the
-                    future today and let our AI tool redefine what's possible for you.</p>
-                <!-- <ul>
-                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Free images for lifetime</li>
-                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Get details on any topic</li>
-                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">Quick advisor to help you</li>
-                    <li><img src="../assets/svg/tick.svg" class="img-fluid" alt="tick">15+ category to explore</li>
-                </ul> -->
-                <a data-cursor="pointer" class="btn-arrow" href="">
-                    <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>Contact us now
-                </a>
+                <h2 class="text-white">Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <a href="#">
+                    <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#demo-modal">Book a
+                        Demo</button></a>
             </div>
         </div>
     </section>

@@ -48,7 +48,7 @@
 
         <!-- Logo -->
         <div class="flex justify-center">
-          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 140px;">
+          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" class="nav-logo">
           <!-- <h1 class="text-3xl text-slate-700 font-semibold">North Star</h1> -->
         </div>
 
@@ -66,16 +66,11 @@
 
     <!-- Sidebar (Mobile/Tablet) -->
     <div id="mobile-menu"
-      class="fixed left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
+      class="fixed  flex flex-col items-center   left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
       <div class="flex items-center justify-between p-4">
-        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 100px;">
-        <button id="close-menu-btn" class="text-black focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 110px;">
       </div>
-      <div class="flex flex-col space-y-4 px-4">
+      <div class="flex flex-col space-y-6">
         <a href="/home.html" class="nav-item font-semibold">Home</a>
         <a href="/html/about.html" class="nav-item active">About Us</a>
         <a href="/html/services.html" class="nav-item">Services</a>
@@ -133,7 +128,7 @@
           <h2 class="text-3xl font-bold  font-bold mb-4">
             Transforming Fire Alarm Solutions with Unmatched Expertise
           </h2>
-          <p class="text-base font-semibold text-justify md:text-lg mb-6">
+          <p class="text-base text-justify md:text-lg mb-6">
             At NorthStar Systems, we transform complex fire alarm and low-voltage challenges into seamless,
             code-compliant solutions. With over 25 years of industry expertise, we empower fire alarm contractors with
             precision-crafted permit drawings and expert guidance, ensuring your projects are executed with the highest
@@ -143,8 +138,8 @@
           <!-- Icons and Text -->
           <div class="flex flex-col lg:flex-row gap-4 icon-text">
             <div class="flex gap-3">
-              <div class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">
-                &#10003;
+              <div class="text-white font-bold tick-icon">
+                <i class="fa-solid fa-check"></i>
               </div>
               <div>
                 <h4 class="font-bold">25+ Years of Expertise</h4>
@@ -154,8 +149,8 @@
             </div>
 
             <div class="flex gap-3">
-              <div class="text-white font-bold inline bg-[#aa0000] p-1 h-8 w-8">
-                &#10003;
+              <div class="text-white font-bold tick-icon">
+                <i class="fa-solid fa-check"></i>
               </div>
               <div>
                 <h4 class="font-bold">Trusted and Reliable</h4>
@@ -266,7 +261,7 @@
         </h4>
         <h2 class="font-bold text-4xl text-gray-700">Leadership You Can Trust
         </h2>
-        <p class="text-lg  lg:w-10/12 font-semibold">Toby's extensive technical expertise and dedication to excellence
+        <p class="text-lg  lg:w-10/12">Toby's extensive technical expertise and dedication to excellence
           make him an invaluable leader at NorthStar Systems. His insider
           knowledge of installation practices and ability to navigate
           complex building codes position him as a trusted resource for
@@ -314,7 +309,7 @@
       <div class="w-10/12 lg:w-7/12 space-y-6 section-content">
         <h4 class="blue-heading text-xl font-bold uppercase">our commitment to excellence</h4>
         <h2 class="font-bold text-4xl text-gray-700">What Makes Us Unique</h2>
-        <p class="text-lg  lg:w-10/12 font-semibold">NorthStar Systems distinguishes itself through its personalized
+        <p class="text-lg  lg:w-10/12 text-justify">NorthStar Systems distinguishes itself through its personalized
           approach and unparalleled technical expertise. We provide solutions that comply with regulatory standards,
           ensuring that your projects recieve the approvals they deserve. Our commitment to quality and accuracy makes
           us a valuable partner in your journey to building safer spaces.</p>
@@ -336,29 +331,37 @@
   </section>
 
   <!-- why us section end -->
-
-
-  <!-- Footer Section with Background Image -->
-  <footer class="footer-section relative py-6">
-
-    <!-- Content Container -->
-    <div class="relative max-w-7xl mx-auto px-4 flex  items-center justify-center text-white text-sm">
-      <!-- Copyright Text -->
-      <div class="flex flex-wrap gap-3 font-semibold text-lg">
-        <span> Copyright © 2024 NorthStar Systems, LLC |</span>
-        <div>
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <a href="#" class="hover:underline">Site Map</a>
-        </div>
+   
+  
+  <footer class="footer-section p-10">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      
+      <!-- Left side: Logo -->
+      <div class="mb-4 md:mb-0">
+        <img src="/assets/images/main logo.png" alt="NorthStar Systems Logo" class="h-[130px]">
       </div>
-
+  
+      <!-- Center: Text and Links -->
+      <div class="text-center text-white mb-4 md:mb-0">
+        <a href="#" class="text-white text-lg hover:underline mr-2">Privacy Policy</a> |
+        <a href="#" class="text-white text-lg hover:underline ml-2">Terms and Conditions</a>
+        <p class="text-sm mt-2">Copyright © 2024 NorthStar Systems, LLC</p>
+      </div>
+  
+      <!-- Right side: NICET certification logo and text -->
+      <div class="text-center flex flex-col items-center text-white">
+        <img src="/assets/images/nicet_logo.2f1e347e.png" alt="NICET Certification" class="h-[100px]">
+        <p class="text-sm mt-2 leading-tight text-center">We support and encourage <br> NICET certification</p>
+      </div>
+  
     </div>
   </footer>
-
-
+  
+  
 </body>
 
 
+<script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
 <script src="/assets/js/animations/common-animation.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
