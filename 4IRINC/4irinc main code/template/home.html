@@ -37,56 +37,36 @@
 
     <link rel="stylesheet" href="./assets/css/landing.css">
 
-    <style>
-        :root {
-            --yellow-color--: #ffce00;
-        }
+    <link rel="stylesheet" href="/assets/css/pages/home.css">
 
-        .mic {
+    <style>
+        /* Target the auto-generated Vapi button */
+        /* .vapi-btn {
             position: relative;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             width: 100px;
             height: 100px;
-            background: linear-gradient(#198754, #00BDFF);
-            background: radial-gradient(#198754, #00BDFF);
-            background: radial-gradient(#00BDFF, #12a35f);
-            background: radial-gradient(#00BDFF, #198754);
-            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #0000);
-            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #044929);
             background: radial-gradient(#075f80, #00BDFF);
-            /* background: radial-gradient(#494848, #00BDFF ); */
             color: #fff;
-            font-size: 37px;
             font-size: 37px;
             padding: 6rem;
             border: none;
             border-radius: 50%;
             cursor: pointer;
-            transition: background-color 0.25s, box-shadow .25s, filter .3s;
+            transition: background-color 0.25s, box-shadow 0.25s, filter 0.3s;
             animation: move 3s linear infinite alternate;
             backdrop-filter: blur(10px);
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             overflow: visible;
-            box-shadow: 0 0 50px 10px;
             box-shadow: #075c7a 0px 20px 50px 40px;
-            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 40px 0px; */
-            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 80px; */
-            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 0px; */
-            /* background: linear-gradient(#00BDFF, #198754);  */
         }
 
-
-        .mic:hover {
-            /* filter: brightness(1.5); */
-            /* opacity: .5; */
-            /* box-shadow: 0 0 10px #00BDFF; */
-            /* background: linear-gradient(#00BDFF, #198754); */
+        .vapi-btn:hover {
             filter: brightness(1.1);
         }
 
-        .mic::before {
+        .vapi-btn::before {
             content: "";
             position: absolute;
             top: 0;
@@ -97,420 +77,45 @@
             background: inherit;
             animation: listening 1.8s infinite;
             z-index: -1;
-        }
-
-        .visualizer {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes move {
-            from {
-                transform: translateY(-10px);
-            }
-
-            to {
-                transform: translateY(11.2435px);
-                box-shadow: 0 0 50px 10px #075c7a;
-            }
-        }
-
-        @keyframes listening {
-
-            /* 0% {
-                transform: scale(1);
-                opacity: 0.35;
-            }
-
-            100% {
-                transform: scale(2);
-                opacity: 0;
-            } */
-            0% {
-                -webkit-transform: scale(1, 1);
-                opacity: 1;
-            }
-
-            100% {
-                -webkit-transform: scale(1.5, 1.5);
-                opacity: 0;
-            }
-        }
-
-        .info-btn:hover {
-            color: #00BDFF;
-        }
-
-        .mic-sec {
-            margin-left: 15rem;
-        }
-
-        .service_boxes_div {
-            position: relative;
-            left: 16%;
-            margin-top: 20%;
-            width: 100%;
-            display: flex;
-            gap: 3rem;
-            justify-content: space-evenly;
-        }
-
-        .service-content {
-            position: relative;
-        }
-
-        .service-content h3 {
-            position: relative;
-            left: -8px;
-        }
-
-        .service-content img {
-            width: 10%;
-            height: 25px;
-        }
-
-        .expertise_div {
-            margin-top: -6rem;
-        }
-
-        .home-contents {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media screen and (min-width:600px) and (max-width:1000px) {
-            .service_boxes_div {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                left: 0;
-            }
-
-            .service-box {
-                display: block;
-                margin: auto;
-            }
-        }
-
-        @media screen and (max-width:600px) {
-            section {
-                width: 100vw;
-                overflow-x: hidden;
-            }
-
-            .mic-sec {
-                margin-left: 0;
-            }
-
-            .mic {
-                padding: 5rem;
-            }
-
-            .service-section {
-                width: 100vw;
-            }
-
-            .service_boxes_div {
-                position: relative;
-                padding-left: 1.5rem;
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .expertise_div {
-                margin-top: 0;
-            }
-
-            .home_links a {
-                font-size: 1rem;
-                padding: .4rem 1rem;
-            }
-
-
-            .home-section .home-content {
-                position: relative;
-                left: .7% !important;
-            }
-        }
-
-
-        @media screen and (max-width:900px) {
-
-            .mic-sec {
-                margin-left: 3%;
-            }
-
-            .service_boxes_div {
-                left: -3%;
-                position: relative;
-                margin: 10rem auto;
-                width: 90%;
-            }
-        }
-
-        @media screen and (max-width:1500px) {
-
-            .home-section .home-content {
-                position: relative;
-                left: -5%;
-            }
-
-        }
-
-        @media screen and (min-width:1500px) {
-
-            .mic {
-                padding: 10rem;
-                font-size: 4rem;
-            }
-        }
-
-        .mic-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5rem;
-        }
-
-        .mic_text {
-            font-size: 1rem;
-            color: #00BDFF;
-            border: 1px solid #272424;
-            background-color: #272424;
-            display: inline;
-            border-radius: 1rem;
-            padding: 3px 12px;
-            width: max-content;
-        }
-
-        .btn-hover {
-            border: 1px solid #00BDFF;
-            padding: 0.6rem 1.1rem;
-            border-radius: 0.6rem;
-            box-shadow: 0 0 10px 0 #00BDFF;
-            font-size: 1.4rem;
-            position: relative;
-            overflow: hidden;
-            /* Ensure content doesn't overflow */
-            z-index: 1;
-            /* Ensure button content is above the background */
-        }
-
-        .btn-hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: #00BDFF;
-            transition: .4s all ease;
-            z-index: -1;
-            /* Place the background below the button content */
-        }
-
-        .btn-hover:hover::before {
-            width: 100%;
-        }
-
-        .btn-hover:hover {
-            color: #fff;
-            box-shadow: 0 0 10px 3px #00BDFF;
-        }
-
-
-        @media screen and (min-width:1500px) {
-            .service_boxes_div {
-                margin-top: 15%;
-            }
-        }
-
-        .dropdown-arrow {
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 5px;
-        }
-
-        .dropdown-arrow::after {
-            display: inline-block;
-            margin-left: .255em;
-            vertical-align: .255em;
-            content: "";
-            color: #075c7a;
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            border-left: .3em solid transparent;
-        }
-
-        @media (max-width: 1199px) {
-            .nav-item.dropdown {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .nav-item.dropdown .nav-link {
-                flex: 1;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: 100%;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-        }
-
-        .navbar-nav .nav-item {
-            position: relative;
-        }
-
-        /* .navbar-nav .nav-item::before {
-            content: '•';
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .navbar-nav .nav-item:hover::before {
-            opacity: 1;
         } */
 
-        /* Ensure the nav-link text doesn't shift when the bullet appears */
-        /* .navbar-nav .nav-link {
-            padding-left: 15px;
-        } */
-
-        /* For mobile view, you might want to adjust the positioning
-        @media (max-width: 1199px) {
-            .navbar-nav .nav-item::before {
-                left: 0;
-            }
-
-            .navbar-nav .nav-link {
-                padding-left: 20px;
-            }
-        } */
-
-        header #logo-img {
-            position: relative;
-            margin-top: -1.4rem;
-
-        }
-
-        @media screen and (max-width:600px) {
-            header #logo-img {
-                margin-top: 0;
-            }
-
-        }
-
-        .btn-second {
-            border: 1px solid rgba(0, 189, 255, 1);
-            background-color: transparent;
-            color: #fff !important;
-            transition: .3s all ease;
-        }
-
-        .btn-second:hover {
-            background-color: rgba(0, 189, 255, 1);
-            color: rgb(13, 18, 31) !important;
-        }
-
-        .btn-second i {
-            color: #fff !important;
-            transition: .3s all ease;
-        }
-
-        .btn-second:hover i {
-            color: rgb(13, 18, 31) !important;
-        }
-
-        /* Additional specificity */
-        .d-flex .home_links .btn-second:hover .iconsax {
-            color: rgb(13, 18, 31) !important;
-        }
-
-        .info-section .info-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(rgba(136, 0, 255, .7), rgba(136, 0, 255, .9)), url('/assets/images/home/home-bg.gif');
-            background-size: cover;
-            /* Ensures the image covers the entire container */
+        #home-header {
+            background-image: url('/assets/images/new-home-bg.png');
             background-position: center;
-            /* Centers the image */
-        }
-
-        .info-section .info-btn {
-            background-color: #0a0e17;
-            transition: .5s all ease;
-        }
-
-
-        .info-section .info-box h2 {
-            width: 60%;
-            color: #ffff;
-        }
-
-        /* header,
-        #home {
-            background: url('/assets/images/new-home-bg.png');
-            background-position: initial;
             background-size: cover;
             background-repeat: no-repeat;
-        } */
-
-
-        .modal-content {
-            height: 90vh;
-            max-height: 90vh;
-            background-color: #0a0e17;
-            animation: shadow 2s infinite ease-in-out;
+            /* background-attachment: fixed; */
+            /* min-height: 100vh; */
+            width: 100%;
+            position: relative;
         }
 
-        @keyframes shadow {
-            0% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
+        header,
+        #home {
+            background: none;
+        }
 
-            50% {
-                box-shadow: 0 0 20px 10px #00BDFF;
-            }
-
-            100% {
-                box-shadow: 0 0 10px 5px #00BDFF;
+        @media (max-width: 768px) {
+            #home-header {
+                /* background-position: right; */
+                /* min-height: max-content; */
             }
         }
 
-        .modal-dialog {
-            width: 80vw;
-            max-width: 90vw;
+        .mic-sec canvas{
+            /* width:300" height="100" style="left: 100%;" */
+            height: 40%;
+            width: 140%;
+            left: 100%;
         }
-
-        @media screen and (max-width:580px) {
-            .modal-content {
-                position: relative !important;
-                left: 10% !important;
-                overflow: scroll;
-            }
+        @media screen and (min-width:1500px) {
+            .mic-sec canvas{
+            /* width:300" height="100" style="left: 100%;" */
+            width: 140%;
+            left: 100%;
+        }
         }
     </style>
-
-
 
 </head>
 
@@ -539,8 +144,10 @@
         </div>
     </div>
 
-    <!-- <div class="sc-ktwOfi buEEPp" style="box-shadow: rgba(148, 255, 210, 0.2) 0px 20px 50px 40px;"><div class="sc-hABBmJ gSZKcT"><div class="absolute z-10 w-full h-full flex items-center justify-center" style="opacity: 1;"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.9998 25.3333V28M15.9998 25.3333C11.0955 25.3333 8.19552 22.3268 6.68555 20M15.9998 25.3333C20.9041 25.3333 23.804 22.3268 25.314 20M21.3331 9.33333V14.6667C21.3331 17.6122 18.9453 20 15.9998 20C13.0543 20 10.6664 17.6122 10.6664 14.6667V9.33333C10.6664 6.38781 13.0543 4 15.9998 4C18.9453 4 21.3331 6.38781 21.3331 9.33333Z" stroke="#94FFD2" stroke-width="2" stroke-linecap="square"></path></svg></div><div class="sc-fmKFGs fNNYwP backdrop-blur-[50px]"></div><div style="height: 100%; width: 100%; opacity: 0;"></div></div></div> -->
-    <!-- header start -->
+    <div id="home-header">
+
+        <!-- <div class="sc-ktwOfi buEEPp" style="box-shadow: rgba(148, 255, 210, 0.2) 0px 20px 50px 40px;"><div class="sc-hABBmJ gSZKcT"><div class="absolute z-10 w-full h-full flex items-center justify-center" style="opacity: 1;"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.9998 25.3333V28M15.9998 25.3333C11.0955 25.3333 8.19552 22.3268 6.68555 20M15.9998 25.3333C20.9041 25.3333 23.804 22.3268 25.314 20M21.3331 9.33333V14.6667C21.3331 17.6122 18.9453 20 15.9998 20C13.0543 20 10.6664 17.6122 10.6664 14.6667V9.33333C10.6664 6.38781 13.0543 4 15.9998 4C18.9453 4 21.3331 6.38781 21.3331 9.33333Z" stroke="#94FFD2" stroke-width="2" stroke-linecap="square"></path></svg></div><div class="sc-fmKFGs fNNYwP backdrop-blur-[50px]"></div><div style="height: 100%; width: 100%; opacity: 0;"></div></div></div> -->
+        <!-- header start -->
         <header>
             <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
@@ -612,7 +219,6 @@
         <!-- header end -->
 
 
-
         <!-- home section start -->
         <section id="home" class="section-b-space home-section">
             <div class="container-fluid">
@@ -645,7 +251,7 @@
                         </div>
                         <ul class="home-effect">
                             <li><img src="./assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                    src="./assets/svg/service/search.svg" class="img-fluid outline-icon" alt="">
+                                    src="./assets/images/AI-Driven Solutions.png" class="img-fluid outline-icon" alt="">
                                 AI-Driven
                                 Solutions
                             </li>
@@ -654,7 +260,8 @@
                                 Growth Strategies
                             </li>
                             <li><img src="./assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                    src="./assets/svg/service/copy.svg" class="img-fluid outline-icon" alt="">
+                                    src="./assets/images/Innovative Tech Consulting.png" class="img-fluid outline-icon"
+                                    alt="">
                                 Innovative
                                 Tech Consulting
                             </li>
@@ -663,7 +270,8 @@
                                 Training Programs
                             </li>
                             <li><img src="./assets/images/landing/effect.png" class="img-fluid effect-img" alt=""><img
-                                    src="./assets/svg/service/text.svg" class="img-fluid outline-icon" alt=""> AI
+                                    src="./assets/images/AI Appointment Marketing.png" class="img-fluid outline-icon"
+                                    alt=""> AI
                                 Appointment Marketing
                             </li>
                         </ul>
@@ -673,6 +281,7 @@
         </section>
         <!-- home section end -->
 
+    </div>
 
 
     <!-- service section start -->
@@ -703,12 +312,19 @@
                     </div>
                 </div>
 
+
                 <div class="col-lg-6">
+
+                    <!-- <div id="mic_div"><button id="vapi-support-btn" class="vapi-btn vapi-btn-is-idle vapi-btn-round" title="Have a quick question?"><div id="vapi-icon-container"><img src="https://unpkg.com/lucide-static@0.321.0/icons/phone.svg" alt="Icon"></div></button></div> -->
+
+                    <!-- <div id="mic_div">
+                        <h1 class="text-white">MIC DIV </h1>
+                    </div> -->
                     <div class="mic-sec">
                         <div class="mic-div ">
                             <button type="button" class="mic listening ">
-                                <i class="fa fa-microphone" style="color: #65bada;"></i>
-                                <canvas class="visualizer" width="80" height="40"></canvas>
+                                <i class="fa fa-microphone" id="vapiButton" style="color: #65bada;"></i>
+                                <canvas class="visualizer" ></canvas>
                             </button>
                             <div class="mic_text">Give it a try!</div>
                         </div>
@@ -951,21 +567,12 @@
             <div class="title-basic">
                 <h2>Innovative Minds Behind The Vision</h2>
             </div>
-            <!-- <div class="swiper featureSlider">
-                <div id="featureSlider" class="swiper-wrapper">
-                    <div class="swiper-slide"> -->
             <div class="row d-flex justify-content-evenly align-items-center gap-3 feature_container"
                 style="margin-left: -12%;">
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="team-box">
                         <img src="/assets/images/team/Barry Krevoy.png" alt="">
                         <div class="feature-top mt-4">
-                            <!-- <div class="feature-icon">
-                                            <img src="./assets/svg/feature/mail.svg" class="img-fluid outline-icon"
-                                                alt="">
-                                            <img src="./assets/svg/feature/mail-bold.svg" class="img-fluid bold-icon"
-                                                alt="">
-                                        </div> -->
                             <h3>Barry Krevoy</h3>
                         </div>
                         <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">CEO | 4IR Transformative
@@ -980,12 +587,6 @@
                     <div class="team-box">
                         <img style="left: -4%;" src="/assets/images/team/Shane Krevoy.png" alt="">
                         <div class="feature-top mt-4">
-                            <!-- <div class="feature-icon">
-                                            <img src="./assets/svg/feature/mail.svg" class="img-fluid outline-icon"
-                                                alt="">
-                                            <img src="./assets/svg/feature/mail-bold.svg" class="img-fluid bold-icon"
-                                                alt="">
-                                        </div> -->
                             <h3>Shane Krevoy</h3>
                         </div>
                         <h4 style="text-align: start; margin-left: 1rem; margin-top: 1rem;">4IR Transformative
@@ -998,14 +599,6 @@
                     </div>
                 </div>
             </div>
-            <!-- </div>
-                </div>
-            </div> -->
-        </div>
-        <!-- <div class="pagination-effect">
-            <img src="./assets/svg/pagination-robot.svg" class="img-fluid" alt="">
-        </div>
-        <div class="swiper-pagination feature-pagination"></div> -->
     </section>
     <!-- feature section end -->
 
@@ -1067,212 +660,6 @@
 
     </section>
     <!-- pricing section end -->
-
-    <!-- testimonial section start -->
-    <!-- <section class="testimonial-section section-b-space">
-        <div class="container">
-            <div class="title-basic">
-                <h2>Check out how our clients loved our services</h2>
-            </div>
-            <div class="swiper testimonialSlider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-box">
-                            <div class="content-sec">
-                                <div class="quote-img">
-                                    <img src="./assets/svg/quote.svg" class="img-fluid outline-img" alt="">
-                                    <img src="./assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
-                                </div>
-                                <p> The quality of the generated text is impressive, and
-                                    it saves me so much time and effort. Highly recommended!
-                                </p>
-                            </div>
-                            <div class="small-circle"><span></span></div>
-                            <div class="large-circle"><span></span></div>
-                            <div class="avtar-img">
-                                <img src="./assets/images/user/1.jpg" class="img-fluid" alt="user">
-                            </div>
-                            <h4>Marvin McKinney</h4>
-                            <h5>Content writer</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="testimonial-box">
-                            <div class="content-sec">
-                                <div class="quote-img">
-                                    <img src="./assets/svg/quote.svg" class="img-fluid outline-img" alt="">
-                                    <img src="./assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
-                                </div>
-                                <p>As a marketer, I'm always looking for ways to streamline my work. The AI
-                                    Tool has been a fantastic addition to my toolkit. It helps me come up with creative
-                                    ideas!
-                                </p>
-                            </div>
-                            <div class="small-circle"><span></span></div>
-                            <div class="large-circle"><span></span></div>
-                            <div class="avtar-img">
-                                <img src="./assets/images/user/2.jpg" class="img-fluid" alt="user">
-                            </div>
-                            <h4>Marvin McKinney</h4>
-                            <h5>Content writer</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                        <div class="testimonial-box">
-                            <div class="content-sec">
-                                <div class="quote-img">
-                                    <img src="./assets/svg/quote.svg" class="img-fluid outline-img" alt="">
-                                    <img src="./assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
-                                </div>
-                                <p>I was skeptical about using AI for content generation, but after trying out the AI
-                                    Generation Tool, I was pleasantly surprised.
-                                </p>
-                            </div>
-                            <div class="small-circle"><span></span></div>
-                            <div class="large-circle"><span></span></div>
-                            <div class="avtar-img">
-                                <img src="./assets/images/user/3.jpg" class="img-fluid" alt="user">
-                            </div>
-                            <h4>Marvin McKinney</h4>
-                            <h5>Content writer</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="testimonial-box">
-                            <div class="content-sec">
-                                <div class="quote-img">
-                                    <img src="./assets/svg/quote.svg" class="img-fluid outline-img" alt="">
-                                    <img src="./assets/svg/quote-green.svg" class="img-fluid fill-img" alt="">
-                                </div>
-                                <p>The AI Generation Tool has revolutionized the way I write. Whether I need help with
-                                    brainstorming ideas or fleshing out drafts.
-                                </p>
-                            </div>
-                            <div class="small-circle"><span></span></div>
-                            <div class="large-circle"><span></span></div>
-                            <div class="avtar-img">
-                                <img src="./assets/images/user/3.jpg" class="img-fluid" alt="user">
-                            </div>
-                            <h4>Marvin McKinney</h4>
-                            <h5>Content writer</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section> -->
-    <!-- testimonial section end -->
-
-    <!-- faq section start -->
-    <!-- <section class="faq-section">
-        <div class="container">
-            <div class="title-basic">
-                <h2 class="text-white">Have inquiries? In our FAQ, you'll find all the solutions you need.</h2>
-            </div>
-            <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button data-cursor="pointer" class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            Is the content unique?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body">
-                            <p>Given that it is generated in real-time from the data and context given, 4irinc's
-                                content is indeed distinctive. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button data-cursor="pointer" class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            How can I boost traffic with 4irinc?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                            Leverage AI-driven analytics to identify and target your audience with personalised content
-                            and recommendations.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button data-cursor="pointer" class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                            How long will it take to write an article with AI?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body">
-                            with advanced AI models, it's possible to generate an article within minutes or even
-                            seconds.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                        <button data-cursor="pointer" class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
-                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                            Is there a limit to the amount of stuff that I can create?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingFour">
-                        <div class="accordion-body">
-                            No, there is no inherent limit to the amount of stuff you can create. The possibilities are
-                            virtually limitless.
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                        <button data-cursor="pointer" class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
-                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                            What languages do you support?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingFive">
-                        <div class="accordion-body">
-                            No, there is no inherent limit to the amount of stuff you can create. The possibilities are
-                            virtually limitless.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                        <button data-cursor="pointer" class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseSix">
-                            Is there a limit to the amount of stuff I can create?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingSix">
-                        <div class="accordion-body">
-                            No, there is no inherent limit to the amount of stuff you can create. The possibilities are
-                            virtually limitless.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- faq section end -->
-
 
     <!-- contact us start -->
     <section class="info-section section-b-space">
@@ -1343,20 +730,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="link-section">
-                    <div class="footer-title">
-                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
-                        Our company
-                    </div>
-                    <div class="footer-content">
-                        <ul>
-                            <li><a data-cursor="pointer" href="login.html">Login</a></li>
-                            <li><a data-cursor="pointer" href="blog-listing.html">Blog listing</a></li>
-                            <li><a data-cursor="pointer" href="blog-grid.html">Blog Grid</a></li>
-                            <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </div>
-                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2024 All the Copyright Reserved.</h4>
@@ -1382,126 +755,14 @@
     <div id="cursor-border"></div>
     <!--custom cursor start  -->
 
+    <!-- <script src="/assets/js/pages/home.js"></script> -->
+    <script src="/assets/js/pages/mic.js"></script>
+    <script src="/assets/js/pages/dropdown.js"></script>
+
     <script src="/assets/js/blogjs/blog.js"></script>
 
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesLink = document.getElementById('servicesLink');
-            var servicesDropdown = document.getElementById('servicesDropdown');
-            var dropdownMenu = servicesDropdown.nextElementSibling;
-            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
-
-            function toggleDropdown(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (dropdownMenu.style.display === 'block') {
-                    dropdownMenu.style.display = 'none';
-                } else {
-                    dropdownMenu.style.display = 'block';
-                }
-            }
-
-            servicesDropdown.addEventListener('click', toggleDropdown);
-
-            // For mobile view, prevent the link from navigating when the dropdown is open
-            servicesLink.addEventListener('click', function (event) {
-                if (!isXlScreen && dropdownMenu.style.display === 'block') {
-                    event.preventDefault();
-                }
-            });
-
-            // Update isXlScreen on window resize
-            window.addEventListener('resize', function () {
-                isXlScreen = window.innerWidth >= 1200;
-                if (isXlScreen) {
-                    dropdownMenu.style.display = '';
-                }
-            });
-        });
-        // document.getElementById('servicesDropdown').addEventListener('click', function (event) {
-        //     if (!this.parentNode.classList.contains('show')) {
-        //         window.location.href = './html/services.html';
-        //     }
-        // });
-
-        let mic = document.querySelector(".mic");
-        let visualizer = document.querySelector(".visualizer");
-        let micIcon = document.querySelector(".mic i");
-        const micText = document.querySelector('.mic_text')
-
-        let audioContext, analyser, dataArray, source;
-        let isRecording = false;
-
-        mic.addEventListener("click", function () {
-            if (!isRecording) {
-                startRecording();
-            } else {
-                stopRecording();
-            }
-        });
-
-        function startRecording() {
-            micText.textContent = 'Listening!'
-            navigator.mediaDevices.getUserMedia({ audio: true })
-                .then(function (stream) {
-                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    analyser = audioContext.createAnalyser();
-                    source = audioContext.createMediaStreamSource(stream);
-                    source.connect(analyser);
-                    analyser.fftSize = 256;
-                    dataArray = new Uint8Array(analyser.frequencyBinCount);
-
-                    visualizer.style.display = 'block';
-                    micIcon.style.display = 'none';
-                    isRecording = true;
-
-                    draw();
-                })
-                .catch(function (err) {
-                    console.error('Error accessing microphone:', err);
-                });
-        }
-
-        function stopRecording() {
-            if (audioContext) {
-                audioContext.close();
-                micText.textContent = 'Give it a try!'
-            }
-            visualizer.style.display = 'none';
-            micIcon.style.display = 'block';
-            isRecording = false;
-        }
-        function draw() {
-            if (!isRecording) return;
-
-            requestAnimationFrame(draw);
-
-            analyser.getByteFrequencyData(dataArray);
-
-            let ctx = visualizer.getContext('2d');
-            ctx.clearRect(0, 0, visualizer.width, visualizer.height);
-            ctx.strokeStyle = '#fff';
-            ctx.lineWidth = 2;
-
-            let barWidth = visualizer.width / dataArray.length;
-            let x = 0;
-
-            for (let i = 0; i < dataArray.length; i++) {
-                let barHeight = (dataArray[i] / 255) * (visualizer.height / 2);
-
-                ctx.beginPath();
-                ctx.moveTo(x, visualizer.height / 2 - barHeight);
-                ctx.lineTo(x, visualizer.height / 2 + barHeight);
-                ctx.stroke();
-
-                x += barWidth;
-            }
-        }
-
-    </script>
 
     <!-- Bootstrap js-->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

@@ -48,7 +48,12 @@
 
         <!-- Logo -->
         <div class="flex justify-center">
+          <a href="/home.html">
+          
+          <a href="/home.html">
           <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" class="nav-logo">
+        </a>
+        </a>
           <!-- <h1 class="text-3xl text-slate-700 font-semibold">North Star</h1> -->
         </div>
 
@@ -68,7 +73,11 @@
     <div id="mobile-menu"
       class="fixed  flex flex-col items-center  left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
       <div class="flex items-center justify-between p-4">
-        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 110px;">
+        <a href="/assets/js/script.js">
+          <a href="/home.html">
+          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 110px;">
+        </a>
+        </a>
       </div>
       <div class="flex flex-col space-y-6">
         <a href="/home.html" class="nav-item active font-semibold">Home</a>
@@ -99,7 +108,7 @@
         </h1>
 
         <!-- CTA Button -->
-        <a href="#"
+        <a href="/html/contact.html"
           class="cta-btn inline-block yellow-btn text-xl  text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-colors">
           Learn More
         </a>
@@ -109,18 +118,15 @@
     <!-- Stats Section -->
     <div class="absolute bottom-0 left-0 w-full">
       <div class="container mx-auto px-4 pb-3">
-        <div class="flex justify-center md:justify-end space-x-1 text-white">
+        <div class="flex justify-center md:justify-end space-x-[1px] text-white">
           <!-- Years Experience -->
-          <div class="bg-blue-900 bg-opacity-70 p-6 text-center shadow-md">
-            <h2 class="text-5xl font-bold counter" data-end="25"
-              style=" font-size: clamp(2.9375rem, 2.2527rem + 3.0435vw, 4.6875rem);">0</h2>
-            <p class="text-sm roboto-font" style="font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);">Years
-              Experience</p>
+          <div class="bg-blue-900 bg-opacity-70 p-6 px-[100px] text-center shadow-md">
+            <h2 class="text-5xl font-bold counter" data-end="25">0</h2>
+            <p class="text-sm roboto-font" style="font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);">Cool Number</p>
           </div>
           <!-- Trust Us -->
-          <div class="bg-blue-900 bg-opacity-70 p-6 text-center shadow-md">
-            <h2 class="text-5xl font-bold counter" data-end="50"
-              style=" font-size: clamp(2.9375rem, 2.2527rem + 3.0435vw, 4.6875rem);"></h2>
+          <div class="bg-blue-900 bg-opacity-70 p-6 px-[100px] text-center shadow-md">
+            <h2 class="text-5xl font-bold counter" data-end="50">0</h2>
             <p class="text-sm roboto-font" style=" font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);">Trust Us</p>
           </div>
         </div>
@@ -130,17 +136,17 @@
 
   <!-- home section ends -->
   <!-- expertise section start -->
-  <section class="container mx-auto px-4 py-8 who-we-are-section">
+  <section class="container min-w-full px-4 py-8 who-we-are-section">
     <!-- Flex Container for Responsive Design -->
     <div class="flex flex-col gap-8 lg:space-x-8 md:flex-row" style="padding: 6rem .9rem;">
       <!-- Image Container with Overlapping Images -->
       <div class="w-full md:w-1/2 relative mb-8 md:mb-0 image-container">
         <!-- First (Background) Image -->
-        <img src="/assets/images/home/NorthStar  Home.png" alt="First Image" class="w-full h-full object-cover">
+        <img src="/assets/images/user/6.jpg" alt="First Image" class="w-full h-full object-cover">
 
         <!-- Second (Overlapping) Image -->
-        <img src="/assets/images/home/FIRE 4.JPG" alt="Second Image"
-          class="absolute -bottom-4 -right-6 w-5/12 h-auto object-cover border-white border-8 shadow-lg">
+        <img src="/assets/images/fire/FIRE 4.png" alt="Second Image"
+          class="absolute -bottom-4 -right-6 w-5/12 h-auto object-cover shadow-lg" style="border: 16px solid white;">
       </div>
 
       <!-- Text Content Container -->
@@ -150,7 +156,7 @@
           <h4 class="text-lg blue-heading font-bold">
             WHO WE ARE
           </h4>
-          <h2 class="text-2xl font-bold md:text-3xl font-bold mb-4">
+          <h2 class="text-3xl font-bold mb-4">
             Transforming Fire Alarm Solutions with Unmatched Expertise
           </h2>
           <p class="text-base text-justify mb-6">
@@ -221,8 +227,8 @@
   <!-- why us section start -->
 
   <section class="container min-w-full  section common-why-us-sec"
-    style="background: url('/assets/images/paper.avif'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center p-8 lg:px-20 lg:items-start py-28 lg:px-10">
+    style="background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url('/assets/images/pattern-bg.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center p-8 lg:px-10 lg:items-start py-28 lg:px-10">
       <!-- Left Section (Text Content) -->
       <div class="lg:w-6/12 space-y-5 section-content">
         <h4 class="blue-heading text-lg font-bold uppercase">Why Choose Us</h4>
@@ -277,7 +283,7 @@
       <!-- Right Section (Image and Badge) -->
       <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image">
         <!-- Image -->
-        <img class="w-full h-full lg:h-[450px] shadow-lg" src="/assets/images/home/FIRE 2.jpg"
+        <img class="w-full h-full lg:h-[450px] shadow-lg" src="/assets/images/fire/FIRE 2.png"
           alt="Fire Alarm System Image">
 
         <!-- Badge -->
@@ -299,14 +305,14 @@
       <!-- Left Section (Text Content) -->
       <div class="lg:w-7/12 lg:pl-10 mt-10 lg:mt-0 text-container">
         <h4 class="text-yellow-400 text-lg font-semibold uppercase mb-2">Our Expertise</h4>
-        <h2 class="text-3xl font-bold mb-6 lg:w-10/12">Fire Alarm Solutions with Over 25 Years of Experience</h2>
-        <p class="text-lg mb-6 lg:w-10/12 text-justify">
+        <h2 class="text-4xl font-bold mb-6 lg:w-10/12">Fire Alarm Solutions with Over 25 Years of Experience</h2>
+        <p class="text-lg mb-6 lg:w-10/12 text-justify" style="line-height: 1.4;">
           At NorthStar Systems, our mission is to create safer buildings and communities by setting new standards in
           the
           fire alarm and low-voltage industry. We understand the importance of precision and reliability, and we are
           dedicated to delivering solutions that not only meet but exceed expectations.
         </p>
-        <p class="text-lg lg:w-10/12">
+        <p class="text-lg lg:w-10/12" style="line-height: 1.4;">
           Contact us today to learn more about how NorthStar Systems can support your fire alarm and low-voltage
           projects. Let us help you turn your vision into reality.
         </p>
@@ -315,7 +321,7 @@
       <!-- Right Section (Image with overlay text) -->
       <div class="lg:w-5/12 relative image-container">
         <div class="relative">
-          <img class="w-full h-full lg:h-[500px] img-animate rounded-lg" src="/assets/images/home/FIRE 2.jpg"
+          <img class="w-full h-full lg:h-[500px] img-animate rounded-lg" src="/assets/images/fire/FIRE 7.png"
             alt="Building a Safer Future Together">
           <!-- Overlay text on image -->
           <div class="absolute bottom-0 left-0 p-4">
@@ -334,8 +340,8 @@
   <!-- contact us start -->
 
   <section
-    class="common-action-sec relative bg-cover bg-center bg-no-repeat py-10 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
-    style="background-image: url('/assets/images/home/NorthStar\ \ Home.png');">
+    class="common-action-sec relative bg-cover bg-center bg-no-repeat py-12 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+    style="background-image: url('');">
     <!-- White Overlay -->
     <div class="absolute inset-0 bg-white bg-opacity-80"></div>
 
@@ -349,14 +355,13 @@
         </h2>
         <!-- Subheading -->
         <p class="text-gray-600 text-justify mb-8 text-base sm:text-lg md:text-xl">
-          Discover how our services can transform your fire alarm and low-voltage projects into success stories.
-          Contact
+          Discover how our services can transform your fire alarm and low-voltage projects into success stories. Contact
           us today to learn more about how we can support your vision and bring your projects to life.
         </p>
       </div>
       <!-- Contact Button -->
       <div class="mt-4 md:mt-0">
-        <a href="#" class="yellow-btn text-white text-lg font-semibold py-3 px-6 rounded-full  transition duration-300">
+        <a href="/html/contact.html" class="yellow-btn text-white text-lg font-semibold py-3 px-6 rounded-full  transition duration-300">
           CONTACT US
         </a>
       </div>
@@ -366,30 +371,30 @@
 
   <!-- contact us end -->
 
-  <footer class="footer-section p-10">
+  <footer class="footer-section py-4 px-10">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-      
+
       <!-- Left side: Logo -->
       <div class="mb-4 md:mb-0">
-        <img src="/assets/images/main logo.png" alt="NorthStar Systems Logo" class="h-[130px]">
+        <img src="/assets/images/NorthStartLogo-White.png" alt="NorthStar Systems Logo" class="h-[80px]">
       </div>
-  
+
       <!-- Center: Text and Links -->
       <div class="text-center text-white mb-4 md:mb-0">
         <a href="#" class="text-white text-lg hover:underline mr-2">Privacy Policy</a> |
         <a href="#" class="text-white text-lg hover:underline ml-2">Terms and Conditions</a>
         <p class="text-sm mt-2">Copyright © 2024 NorthStar Systems, LLC</p>
       </div>
-  
+
       <!-- Right side: NICET certification logo and text -->
       <div class="text-center flex flex-col items-center text-white">
-        <img src="/assets/images/nicet_logo.2f1e347e.png" alt="NICET Certification" class="h-[100px]">
+        <img src="/assets/images/nicet_logo.2f1e347e.png" alt="NICET Certification" class="h-[40px]">
         <p class="text-sm mt-2 leading-tight text-center">We support and encourage <br> NICET certification</p>
       </div>
-  
+
     </div>
   </footer>
-  
+
 
 </body>
 
@@ -399,47 +404,7 @@
 <script src="/assets/js/animations/common-animation.js"></script>
 
 <!-- Script -->
-<script>
-
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenuBtn = document.getElementById('close-menu-btn');
-  const navItems = document.querySelectorAll('#mobile-menu .nav-item');  // Select all nav items
-  const body = document.body;
-
-  // Open the sidebar
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('-translate-x-full');
-    body.classList.add('overflow-hidden');  // Prevent scrolling when sidebar is open
-  });
-
-  // Close the sidebar
-  closeMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('-translate-x-full');
-    body.classList.remove('overflow-hidden');
-  });
-
-  // Close sidebar when clicking outside of it
-  document.addEventListener('click', (event) => {
-    if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
-      mobileMenu.classList.add('-translate-x-full');
-      body.classList.remove('overflow-hidden');
-    }
-  });
-
-  // Prevent sidebar from closing when clicking inside of it
-  mobileMenu.addEventListener('click', (event) => {
-    event.stopPropagation();
-  });
-
-  // Close sidebar when clicking on any nav-item
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      mobileMenu.classList.add('-translate-x-full');
-      body.classList.remove('overflow-hidden');
-    });
-  });
-</script>
+<script src="/assets/js/script.js"></script>
 
 </body>
 

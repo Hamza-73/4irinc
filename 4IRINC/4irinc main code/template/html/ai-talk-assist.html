@@ -42,796 +42,8 @@
 
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/assets/css/pages/ai-talk-assist.css">
 
-
-
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 5rem;
-        }
-
-        .mic {
-            position: relative;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(#198754, #00BDFF);
-            background: radial-gradient(#198754, #00BDFF);
-            background: radial-gradient(#00BDFF, #12a35f);
-            background: radial-gradient(#00BDFF, #198754);
-            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #0000);
-            background: radial-gradient(circle 50vh at 50% 100%, #00BDFF, #044929);
-            background: radial-gradient(#075f80, #00BDFF);
-            /* background: radial-gradient(#494848, #00BDFF ); */
-            color: #fff;
-            font-size: 37px;
-            font-size: 37px;
-            padding: 6rem;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.25s, box-shadow .25s, filter .3s;
-            animation: move 3s linear infinite alternate;
-            backdrop-filter: blur(10px);
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-            overflow: visible;
-            box-shadow: 0 0 50px 10px;
-            box-shadow: #075c7a 0px 20px 50px 40px;
-            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 40px 0px; */
-            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 80px; */
-            /* box-shadow:  rgba(93, 254, 202, 0.533) 0px 0px 0px; */
-            /* background: linear-gradient(#00BDFF, #198754);  */
-        }
-
-
-        .mic:hover {
-            /* filter: brightness(1.5); */
-            /* opacity: .5; */
-            /* box-shadow: 0 0 10px #00BDFF; */
-            /* background: linear-gradient(#00BDFF, #198754); */
-            filter: brightness(1.1);
-        }
-
-        .mic::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: inherit;
-            animation: listening 1.8s infinite;
-            z-index: -1;
-        }
-
-        .visualizer {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes move {
-            from {
-                transform: translateY(-10px);
-            }
-
-            to {
-                transform: translateY(11.2435px);
-                box-shadow: 0 0 50px 10px #075c7a;
-            }
-        }
-
-        @keyframes listening {
-
-            /* 0% {
-                transform: scale(1);
-                opacity: 0.35;
-            }
-
-            100% {
-                transform: scale(2);
-                opacity: 0;
-            } */
-            0% {
-                -webkit-transform: scale(1, 1);
-                opacity: 1;
-            }
-
-            100% {
-                -webkit-transform: scale(1.5, 1.5);
-                opacity: 0;
-            }
-        }
-
-
-        .mic-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5rem;
-        }
-
-        .mic_text {
-            font-size: 1rem;
-            color: white !important;
-            border: 1px solid #8800ff;
-            background-color: #8800ff;
-            display: inline;
-            border-radius: 1rem;
-            padding: 3px 12px;
-            width: max-content;
-        }
-
-        .dropdown-arrow {
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 5px;
-        }
-
-        .dropdown-arrow::after {
-            display: inline-block;
-            margin-left: .255em;
-            vertical-align: .255em;
-            content: "";
-            color: #00BDFF;
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            border-left: .3em solid transparent;
-        }
-
-        @media (max-width: 1199px) {
-            .nav-item.dropdown {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .nav-item.dropdown .nav-link {
-                flex: 1;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: 100%;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-        }
-
-        .navbar-nav .nav-item {
-            position: relative;
-        }
-
-        .navbar-nav .nav-item::before {
-            content: '•';
-            position: absolute;
-            left: -15px;
-            top: 50% !important;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .navbar-nav .nav-item:hover::before {
-            opacity: 1;
-        }
-
-        /* Ensure the nav-link text doesn't shift when the bullet appears */
-        /* .navbar-nav .nav-link {
-            padding-left: 15px;
-        } */
-
-        /* For mobile view, you might want to adjust the positioning
-        @media (max-width: 1199px) {
-            .navbar-nav .nav-item::before {
-                left: 0;
-            }
-
-            .navbar-nav .nav-link {
-                padding-left: 20px;
-            }
-        } */
-
-        header .navbar-nav .nav-item:before {
-            content: "";
-            width: 6px;
-            height: 6px;
-            background-color: rgba(var(--theme-color), 1);
-            border-radius: 100%;
-            position: absolute;
-            left: -7px;
-            top: 36%;
-            -webkit-transform: translateY(-50%) scale(0);
-            transform: translateY(-50%) scale(0);
-            -webkit-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-        }
-
-        .service-content {
-            position: relative;
-        }
-
-        .service-content h3 {
-            position: relative;
-            left: -8px;
-        }
-
-        .service-content img {
-            width: 10%;
-            height: 25px;
-        }
-
-        .ai_talk_services .row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        @media screen and (min-width:1400px) {
-            .ai_talk_services .row {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .ai_talk_services .service-box ul {
-            line-height: 1;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .ai_talk_services .service-box {
-            text-align: center;
-            line-height: 2;
-            padding: 4.7rem 3rem;
-            color: #fff;
-            background-color: #0a0e17;
-            position: relative;
-            transition: 0.5s all ease;
-            cursor: pointer;
-        }
-
-        .ai_talk_services .service-box img {
-            display: inline-block;
-            cursor: pointer;
-            border: 2px solid #00BDFF;
-            background-color: #00BDFF;
-            border-radius: 50%;
-            padding: 1rem;
-            transition: .3s all ease;
-            color: white;
-            width: 40%;
-            margin-bottom: 2rem;
-        }
-
-
-        .btn-hover {
-            border: 1px solid #00BDFF;
-            padding: 0.6rem 1.1rem;
-            border-radius: 0.6rem;
-            box-shadow: 0 0 10px 0 #00BDFF;
-            font-size: 1.4rem;
-            position: relative;
-            overflow: hidden;
-            /* Ensure content doesn't overflow */
-            z-index: 1;
-            /* Ensure button content is above the background */
-        }
-
-        .btn-hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: #00BDFF;
-            transition: .4s all ease;
-            z-index: -1;
-            /* Place the background below the button content */
-        }
-
-        .btn-hover:hover::before {
-            width: 100%;
-        }
-
-        .btn-hover:hover {
-            color: #fff;
-            box-shadow: 0 0 10px 3px #00BDFF;
-        }
-
-        .faq-section .container .row {
-            display: flex;
-            gap: 4rem;
-            align-items: flex-start;
-        }
-
-        .col-lg-6,
-        .col-g-6 {
-            flex: 1;
-        }
-
-        @media screen and (max-width:768px) {
-            .circles{
-                display: none;
-            }            
-        }
-
-        .circle {
-            width: 100%;
-            height: 70px;
-            padding: 4.6rem 3rem;
-            border: 2px solid #00BDFF;
-            border-radius: 100%;
-            text-align: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .circle span {
-            position: relative;
-            top: -1rem;
-        }
-
-        .circles .circle-active {
-            background-color: #00BDFF;
-            color: #fff;
-        }
-
-        .circle:nth-child(2) {
-            position: relative;
-            top: -2rem;
-        }
-
-        .circle:nth-child(3) {
-            position: relative;
-            top: -4rem;
-        }
-
-        .circle:nth-child(4) {
-            position: relative;
-            top: -6rem;
-        }
-
-        .circle:nth-child(5) {
-            position: relative;
-            top: -8rem;
-        }
-
-
-        header {
-            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
-            background-position: inherit;
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 100;
-        }
-
-        .home-section {
-            background-image: url('/assets/images/landing/ai_talk_assist/4IR-Home-banner.png');
-            background-position: center;
-            background-size: cover;
-        }
-
-        .ai-features-section {
-            padding: 50px 0;
-            position: relative;
-        }
-
-        .ai-features-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-        }
-
-        .ai-vertical-line {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background-color: #00BDFF;
-            z-index: 1;
-        }
-
-        .ai-horizontal-line-right,
-        .ai-horizontal-line-left {
-            width: 100px;
-            height: 2px;
-            background-color: #00BDFF;
-            opacity: 0;
-            transform: scaleX(0);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            z-index: 2;
-            position: relative;
-        }
-
-        .ai-horizontal-line-right {
-            margin-right: 20px;
-        }
-
-        .ai-horizontal-line-left {
-            margin-left: 20px;
-            margin-right: 0;
-        }
-
-        .line-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #00BDFF;
-            border-radius: 50%;
-            position: absolute;
-            top: -4px;
-        }
-
-        .ai-horizontal-line-right .line-dot {
-            right: -5px;
-        }
-
-        .ai-horizontal-line-left .line-dot {
-            left: -5px;
-        }
-
-        .ai-feature-box-wrapper {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .ai-feature-box {
-            /* background-color: #0a0e17; */
-            border: 2px solid #00BDFF;
-            padding: 2rem;
-            color: white;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            z-index: 2;
-            flex: 1;
-        }
-
-        .ai-feature-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .ai-feature-box p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .animated-in .ai-feature-box {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .animated-in .ai-horizontal-line-right,
-        .animated-in .ai-horizontal-line-left {
-            opacity: 1;
-            transform: scaleX(1);
-        }
-
-        .ai-left-box {
-            grid-column: 1 / span 1;
-        }
-
-        .ai-right-box {
-            grid-column: 2 / span 1;
-        }
-
-        .ai-features-heading {
-            margin-bottom: 6rem !important;
-        }
-
-        @media (max-width: 1024px) {
-            .ai-features-container {
-                grid-template-columns: 1fr;
-            }
-
-            .ai-vertical-line {
-                left: 20px;
-                display: none;
-            }
-
-            .ai-feature-box-wrapper {
-                grid-column: 1 / span 1;
-                margin-left: 40px;
-            }
-
-            .ai-horizontal-line-right,
-            .ai-horizontal-line-left {
-                width: 60px;
-            }
-
-
-            .ai-feature-box {
-                margin-left: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ai-feature-box-wrapper {
-                margin-left: 20px;
-            }
-
-            .ai-horizontal-line-right,
-            .ai-horizontal-line-left {
-                width: 20px;
-            }
-
-            .ai-feature-box {
-                margin-left: 10px;
-            }
-        }
-
-        .services_section {
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .boxs_container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            transition: .5s all ease;
-        }
-
-        .boxs_container .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            /* Ensure content is spaced evenly */
-            border: 1px solid #00BDFF;
-            /* box-shadow: 0 0 10px 0 #00BDFF; */
-            padding: 2rem;
-            width: 350px;
-            height: 100%;
-            color: #fff;
-            border-radius: 0.4rem;
-            position: relative;
-            cursor: pointer;
-            transition: .4s all ease;
-            margin: auto !important;
-        }
-
-        .boxs_container .box_content {
-            flex: 1 0 auto;
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .btn-hover {
-            margin-top: auto;
-            /* Push the button to the bottom */
-            border: 1px solid #00BDFF;
-            padding: 0.6rem 1.1rem;
-            border-radius: 0.6rem;
-            box-shadow: 0 0 10px 0 #087faa;
-            font-size: 1.4rem;
-            position: relative;
-            overflow: hidden;
-            background-color: transparent;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .btn-hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: #00BDFF;
-            transition: .4s all ease;
-            z-index: -1;
-        }
-
-        .btn-hover:hover::before {
-            width: 100%;
-        }
-
-        .btn-hover:hover {
-            color: #fff;
-            box-shadow: 0 0 10px 3px #068ec0;
-        }
-
-
-        .boxs_container .box:hover {
-            box-shadow: 0 0 10px 5px #00BDFF;
-        }
-
-        .box .box_img {
-            flex: 0 0 auto;
-        }
-
-        .box .box_img img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: .5s all ease;
-        }
-
-        .box .box_img img:hover {
-            transform: scale(1.09);
-        }
-
-        .boxs_container .box_content h4 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .boxs_container .box_content ul {
-            margin-top: 1rem;
-            padding-left: 1rem;
-        }
-
-        .boxs_container .box_content ul li {
-            list-style: disc !important;
-            list-style-type: disc !important;
-            display: list-item !important;
-            margin: 1rem 0;
-        }
-
-        .boxs_container .box_content img {
-            width: 15%;
-        }
-
-        .boxs_container .box .box_text {
-            font-size: 1.4rem;
-            position: relative;
-            margin-left: 1rem;
-        }
-
-        .boxs_container .box .box_text::before {
-            content: "";
-            width: 2px;
-            height: 100%;
-            position: absolute;
-            background-color: #00BDFF;
-            top: 0%;
-            left: -6%;
-        }
-
-
-
-        @media screen and (max-width:600px) {
-            .service_container {
-                left: 0;
-                margin-top: 0;
-                margin: auto;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .boxs_container {
-                grid-template-columns: 1fr;
-                margin: auto;
-            }
-
-            .box {
-                display: block;
-                margin: auto;
-            }
-
-            .services_section {
-                margin: 2rem auto;
-                left: 0%;
-            }
-
-            .service_row {
-                margin-top: 0;
-            }
-
-            .service_img {
-                width: 100%;
-                height: 100%;
-            }
-
-            .expertise_container {
-                grid-template-columns: 1fr;
-                margin-left: 4.5%;
-            }
-
-            .expertise_box {
-                width: 80vw;
-            }
-
-        }
-
-        @media screen and (max-width:1000px) {
-            .boxs_container {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        @media screen and (min-width:1500px) {
-            .service_container {
-                margin-top: -15%;
-            }
-        }
-
-        .info-section .info-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(rgba(136, 0, 255, .7), rgba(136, 0, 255, .9)), url('/assets/images/home/home-bg.gif');
-            background-size: cover;
-            /* Ensures the image covers the entire container */
-            background-position: center;
-            /* Centers the image */
-        }
-
-        .info-section .info-btn {
-            background-color: #0a0e17;
-            transition: .5s all ease;
-        }
-
-
-        .info-section .info-box h2 {
-            width: 60%;
-            color: #ffff;
-        }
-
-        .modal-content {
-            height: 90vh;
-            max-height: 90vh;
-            background-color: #0a0e17;
-            animation: shadow 2s infinite ease-in-out;
-        }
-
-        @keyframes shadow {
-            0% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-
-            50% {
-                box-shadow: 0 0 20px 10px #00BDFF;
-            }
-
-            100% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-        }
-
-        .modal-dialog {
-            width: 80vw;
-            max-width: 90vw;
-        }
-
-        @media screen and (max-width:580px) {
-            .modal-content {
-                position: relative !important;
-                left: 10% !important;
-                overflow: scroll;
-            }
-        }
-    </style>
 
 </head>
 
@@ -861,36 +73,37 @@
     </div>
 
 
+    <div id="home-header" >
 
-    <!-- header start -->
-    <header>
-        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#primaryMenu">
-            <span class="navbar-toggler-icon">
-                <i class="iconsax" data-icon="text-align-justify"></i>
-            </span>
-        </button>
-        <img src="../assets/images/4IR Logo main.png" id="logo-img" style="position: relative; margin-top: -0.6rem;"
-            class="img-fluid" alt="logo">
-        <nav class="header-nav-middle">
-            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
-                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
-                    <div class="offcanvas-header navbar-shadow">
-                        <h5 class="mb-0">Back</h5>
-                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#feature-section">Features</a>
-                            </li>
+        <!-- header start -->
+        <header>
+            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                <span class="navbar-toggler-icon">
+                    <i class="iconsax" data-icon="text-align-justify"></i>
+                </span>
+            </button>
+            <img src="../assets/images/4IR Logo main.png" id="logo-img" style="position: relative; margin-top: -0.6rem;"
+                class="img-fluid" alt="logo">
+            <nav class="header-nav-middle">
+                <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                    <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <h5 class="mb-0">Back</h5>
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#feature-section">Features</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#how-it-work">How It Works</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#how-it-work">How It Works</a>
+                                </li>
 
-                            <!-- <li class="nav-item dropdown active">
+                                <!-- <li class="nav-item dropdown active">
                                 <a class="nav-link" href="#" id="servicesLink">
                                     Services
                                 </a>
@@ -904,7 +117,7 @@
                                             Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="https://aitalkassist.com/">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/html/training_and_education.html">Training &
@@ -914,65 +127,67 @@
                             </li> -->
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#faq-section">FAQ</a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a class="nav-link" href="#testimonial-section">Testimonials</a>
                             </li>
-                        </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#faq-section">FAQ</a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-        <a data-cursor="pointer" style="position: relative; margin-top: -.8rem;" href="#"
-            class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal"
-            data-bs-target="#demo-modal"><span>Book a Demo</span></a>
-    </header>
-    <!-- header end -->
+            </nav>
+            <a data-cursor="pointer" style="position: relative; margin-top: -.8rem;" href="#"
+                class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal"
+                data-bs-target="#demo-modal"><span>Book a Demo</span></a>
+        </header>
+        <!-- header end -->
 
 
-    <!-- home section start -->
-    <section class="home-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="home-content">
-                        <div class="bg-effect">
-                            <img src="../assets/images/home/home-bg.gif" class="img-fluid bg-gif" alt="">
-                            <img src="../assets/svg/home/1.png" class="img-fluid effect1 rotate-effect" alt="">
-                            <img src="../assets/svg/home/2.svg" class="img-fluid effect2 rotate-effect" alt="">
-                        </div>
-                        <div>
-                            <!-- <h1>USE 4irinc TO <div class="title-effect">
+        <!-- home section start -->
+        <section id="home" class="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="home-content">
+                            <div class="bg-effect">
+                                <img src="../assets/images/home/home-bg.gif" class="img-fluid bg-gif" alt="">
+                                <img src="../assets/svg/home/1.png" class="img-fluid effect1 rotate-effect" alt="">
+                                <img src="../assets/svg/home/2.svg" class="img-fluid effect2 rotate-effect" alt="">
+                            </div>
+                            <div>
+                                <!-- <h1>USE 4irinc TO <div class="title-effect">
                                     <img src="../assets/images/title-effect.png" alt=""><span
                                         style="color: #00BDFF;">SIMPLIFY</span>
                                 </div> YOUR LIFE</h1> -->
-                            <h1>Transform Your Customer
-                                Experience with <br>
-                                <div class="title-effect"><img src="../assets/images/title-effect.png" alt=""><span
-                                        style="color: #ffce00;">AI TALK ASSIST</span>
-                                </div>
-                            </h1>
-                            <p>
-                                Experience the convenience of AI-driven calls. Let technology handle your communication
-                                needs effortlessly, saving you time and hassle.
+                                <h1>Transform Your Customer
+                                    Experience with <br>
+                                    <div class="title-effect"><img src="../assets/images/title-effect.png" alt=""><span
+                                            style="color: #ffce00;">AI TALK ASSIST</span>
+                                    </div>
+                                </h1>
+                                <p>
+                                    Experience the convenience of AI-driven calls. Let technology handle your
+                                    communication
+                                    needs effortlessly, saving you time and hassle.
 
-                            </p>
-                            <a data-cursor="pointer" class="start-link mic_text">Give it a try!</a>
+                                </p>
+                                <a data-cursor="pointer" class="start-link mic_text">Give it a try!</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="home-laptop px-md-0 px-3">
-                        <div class="laptop-sec position-relative">
-                            <div class="mic-sec">
-                                <div class="mic-div">
-                                    <button type="button" class="mic listening ">
-                                        <i class="fa fa-microphone" style="color: #00BDFF;"></i>
-                                        <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
+                        <div class="home-laptop px-md-0 px-3">
+                            <div class="laptop-sec position-relative">
+                                <div class="mic-sec">
+                                    <div class="mic-div">
+                                        <button type="button" class="mic listening ">
+                                            <i class="fa fa-microphone" style="color: #00BDFF;"></i>
+                                            <!-- <img src="/assets/images/mic1.png" style="width: 46%; mix-blend-mode: multiply;" alt=""> -->
 
-                                        <canvas class="visualizer" width="80" height="40"></canvas>
-                                    </button>
-                                    <a style=" 
+                                            <canvas class="visualizer" width="300" height="100"
+                                                style="left: 100%;"></canvas>
+                                        </button>
+                                        <a style=" 
                                     font-size: 1rem;
                                     color: white;
                                     border: 1px solid #8800ff ;
@@ -980,20 +195,20 @@
                                     display: inline;
                                     border-radius: 1rem;
                                     padding: 3px 12px;" href="#" data-bs-toggle="modal"
-                                        data-bs-target="#demo-modal">Book a
-                                        Demo</a>
+                                            data-bs-target="#demo-modal">Book a
+                                            Demo</a>
+                                    </div>
+                                </div>
+                                <div class="hand-sec" style="position: relative; margin-top: 16rem; top: 15rem;">
+                                    <img src="../assets/images/landing/ai_talk_assist/hand.png"
+                                        class="img-fluid left-hand" style="margin-left: 5rem;" alt="hand">
+                                    <img src="../assets/images/landing/ai_talk_assist/hand.png"
+                                        class="img-fluid right-hand" style="margin-right: 5rem;" alt="hand">
+                                    <!-- <img src="../assets/images/home/finger.png" class="img-fluid left-finger" style="position: absolute; top: 1rem; left: 15rem;" alt="hand"> -->
+                                    <!-- <img src="../assets/images/home/finger.png" class="img-fluid right-finger" style="position: absolute; top: -4rem;" alt="hand"> -->
                                 </div>
                             </div>
-                            <div class="hand-sec" style="position: relative; margin-top: 16rem; top: 15rem;">
-                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid left-hand"
-                                    style="margin-left: 5rem;" alt="hand">
-                                <img src="../assets/images/landing/ai_talk_assist/hand.png" class="img-fluid right-hand"
-                                    style="margin-right: 5rem;" alt="hand">
-                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid left-finger" style="position: absolute; top: 1rem; left: 15rem;" alt="hand"> -->
-                                <!-- <img src="../assets/images/home/finger.png" class="img-fluid right-finger" style="position: absolute; top: -4rem;" alt="hand"> -->
-                            </div>
-                        </div>
-                        <!-- <div class="home-info">
+                            <!-- <div class="home-info">
                             <ul class="info-list">
                                 <li>Ask anything </li>
                                 <li>Generate image</li>
@@ -1009,12 +224,15 @@
                             <h4>A technique to write
                                 all of your material 10 times more quickly.</h4>
                         </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- home section end -->
+        </section>
+        <!-- home section end -->
+
+
+    </div>
 
     <!-- servce section start -->
 
@@ -1586,6 +804,8 @@
     </section>
     <!-- faq section end -->
 
+    
+
 
     <div class="section-b-space">
         <div class="container">
@@ -1664,20 +884,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="link-section">
-                    <div class="footer-title">
-                        <img src="./assets/svg/star.svg" class="img-fluid" alt="star">
-                        Our company
-                    </div>
-                    <div class="footer-content">
-                        <ul>
-                            <li><a data-cursor="pointer" href="login.html">Login</a></li>
-                            <li><a data-cursor="pointer" href="blog-listing.html">Blog listing</a></li>
-                            <li><a data-cursor="pointer" href="blog-grid.html">Blog Grid</a></li>
-                            <li><a data-cursor="pointer" href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </div>
-                </div> -->
             </div>
             <div class="footer-copyright">
                 <h4>@2024 All the Copyright Reserved.</h4>
@@ -1707,101 +913,11 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 
-    <script>
-        window.onload = function () {
-            setTimeout(function () {
-                let demoModal = new bootstrap.Modal(document.getElementById('demo-modal'));
-                demoModal.show();
-            }, 20000); // 20000 milliseconds = 20 seconds
-        };
+    <script src="/assets/js/pages/ai-talk-assist.js"></script>
+    <script src="/assets/js/pages/mic.js"></script>
 
-        const featureBoxWrappers = document.querySelectorAll('.ai-feature-box-wrapper');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated-in');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -10% 0px'
-        });
-
-        featureBoxWrappers.forEach(wrapper => {
-            observer.observe(wrapper);
-        });
-    </script>
-
-    <script>
-        // Get all circles and accordion buttons
-        const circles = document.querySelectorAll('.circle');
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        let activeCircle = document.querySelector('.circle-active'); // Track the currently active circle
-        let activePanel = document.querySelector('.accordion-collapse.show'); // Track the currently open panel
-
-        // Function to close the currently open accordion panel and remove the active circle
-        function closeActivePanel() {
-            if (activePanel) {
-                const collapseInstance = bootstrap.Collapse.getInstance(activePanel) || new bootstrap.Collapse(activePanel, { toggle: false });
-                collapseInstance.hide();
-                activePanel = null;
-            }
-            if (activeCircle) {
-                activeCircle.classList.remove('circle-active');
-                activeCircle = null;
-            }
-        }
-
-        // Function to open a panel and assign the active class to the relevant circle
-        function openPanel(panel, circle) {
-            const collapseInstance = bootstrap.Collapse.getInstance(panel) || new bootstrap.Collapse(panel, { toggle: false });
-            collapseInstance.show();
-            circle.classList.add('circle-active');
-            activePanel = panel;
-            activeCircle = circle;
-        }
-
-        // Add click event listeners to the circles
-        circles.forEach(circle => {
-            circle.addEventListener('click', function () {
-                const target = circle.getAttribute('data-bs-target');
-                const panel = document.querySelector(target);
-
-                // If the clicked circle is already active, close it and remove the active class
-                if (circle === activeCircle) {
-                    closeActivePanel();
-                } else {
-                    // Close the active panel, then open the new one
-                    closeActivePanel();
-                    openPanel(panel, circle);
-                }
-            });
-        });
-
-        // Add click event listeners to the accordion buttons
-        accordionButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const target = button.getAttribute('data-bs-target');
-                const panel = document.querySelector(target);
-
-                // If the clicked accordion is already active, close it and remove the active class
-                if (panel === activePanel) {
-                    closeActivePanel();
-                } else {
-                    // Close the active panel, then open the new one
-                    closeActivePanel();
-
-                    // Find the corresponding circle and activate it
-                    const correspondingCircle = document.querySelector(`.circle[data-bs-target="${target}"]`);
-                    if (correspondingCircle) {
-                        openPanel(panel, correspondingCircle);
-                    }
-                }
-            });
-        });
-
-    </script>
+    <script src="/assets/js/pages/faq.js"></script>
+    <script src="/assets/js/pages/dropdown.js"></script>
 
 
 
@@ -1813,194 +929,7 @@
             });
         })();
     </script>
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesLink = document.getElementById('servicesLink');
-            var servicesDropdown = document.getElementById('servicesDropdown');
-            var dropdownMenu = servicesDropdown.nextElementSibling;
-            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
-
-            function toggleDropdown(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (dropdownMenu.style.display === 'block') {
-                    dropdownMenu.style.display = 'none';
-                } else {
-                    dropdownMenu.style.display = 'block';
-                }
-            }
-
-            servicesDropdown.addEventListener('click', toggleDropdown);
-
-            // For mobile view, prevent the link from navigating when the dropdown is open
-            servicesLink.addEventListener('click', function (event) {
-                if (!isXlScreen && dropdownMenu.style.display === 'block') {
-                    event.preventDefault();
-                }
-            });
-
-            // Update isXlScreen on window resize
-            window.addEventListener('resize', function () {
-                isXlScreen = window.innerWidth >= 1200;
-                if (isXlScreen) {
-                    dropdownMenu.style.display = '';
-                }
-            });
-        });
-
-
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-            // Get the send button
-            var sendButton = document.getElementById("send-email");
-
-            // Change button text and disable it
-            sendButton.textContent = "Sending...";
-            sendButton.disabled = true;
-            // Collect form data
-            var formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                number: document.getElementById('number').value,
-                message: document.getElementById('message').value
-            };
-            console.log("formdata is ", formData)
-
-            // Send email using EmailJS
-            emailjs.send("service_wbtwbed", "template_titopjh", formData)
-                .then(function (response) {
-                    alert("Message sent successfully!");
-                    // Reset button text and re-enable it
-                    sendButton.textContent = "Send message";
-                    sendButton.disabled = false;
-                }, function (error) {
-                    alert("Failed to send message. Please try again.");
-                    // Reset button text and re-enable it
-                    sendButton.textContent = "Send message";
-                    sendButton.disabled = false;
-                    console.log("Error in sending email", error)
-                });
-        });
-
-
-
-    </script>
-
-    <script>
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesLink = document.getElementById('servicesLink');
-            var servicesDropdown = document.getElementById('servicesDropdown');
-            var dropdownMenu = servicesDropdown.nextElementSibling;
-            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
-
-            function toggleDropdown(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (dropdownMenu.style.display === 'block') {
-                    dropdownMenu.style.display = 'none';
-                } else {
-                    dropdownMenu.style.display = 'block';
-                }
-            }
-
-            servicesDropdown.addEventListener('click', toggleDropdown);
-
-            // For mobile view, prevent the link from navigating when the dropdown is open
-            servicesLink.addEventListener('click', function (event) {
-                if (!isXlScreen && dropdownMenu.style.display === 'block') {
-                    event.preventDefault();
-                }
-            });
-
-            // Update isXlScreen on window resize
-            window.addEventListener('resize', function () {
-                isXlScreen = window.innerWidth >= 1200;
-                if (isXlScreen) {
-                    dropdownMenu.style.display = '';
-                }
-            });
-        });
-
-
-
-        let mic = document.querySelector(".mic");
-        let visualizer = document.querySelector(".visualizer");
-        let micIcon = document.querySelector(".mic i");
-        const micText = document.querySelector('.mic_text')
-
-        let audioContext, analyser, dataArray, source;
-        let isRecording = false;
-
-        mic.addEventListener("click", function () {
-            if (!isRecording) {
-                startRecording();
-            } else {
-                stopRecording();
-            }
-        });
-
-        function startRecording() {
-            micText.textContent = 'Listening!'
-            navigator.mediaDevices.getUserMedia({ audio: true })
-                .then(function (stream) {
-                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    analyser = audioContext.createAnalyser();
-                    source = audioContext.createMediaStreamSource(stream);
-                    source.connect(analyser);
-                    analyser.fftSize = 256;
-                    dataArray = new Uint8Array(analyser.frequencyBinCount);
-
-                    visualizer.style.display = 'block';
-                    micIcon.style.display = 'none';
-                    isRecording = true;
-
-                    draw();
-                })
-                .catch(function (err) {
-                    console.error('Error accessing microphone:', err);
-                });
-        }
-
-        function stopRecording() {
-            if (audioContext) {
-                audioContext.close();
-                micText.textContent = 'Give it a try!'
-            }
-            visualizer.style.display = 'none';
-            micIcon.style.display = 'block';
-            isRecording = false;
-        }
-        function draw() {
-            if (!isRecording) return;
-
-            requestAnimationFrame(draw);
-
-            analyser.getByteFrequencyData(dataArray);
-
-            let ctx = visualizer.getContext('2d');
-            ctx.clearRect(0, 0, visualizer.width, visualizer.height);
-            ctx.strokeStyle = '#fff';
-            ctx.lineWidth = 2;
-
-            let barWidth = visualizer.width / dataArray.length;
-            let x = 0;
-
-            for (let i = 0; i < dataArray.length; i++) {
-                let barHeight = (dataArray[i] / 255) * (visualizer.height / 2);
-
-                ctx.beginPath();
-                ctx.moveTo(x, visualizer.height / 2 - barHeight);
-                ctx.lineTo(x, visualizer.height / 2 + barHeight);
-                ctx.stroke();
-
-                x += barWidth;
-            }
-        }
-
-    </script>
+    
 
 
     <!-- Bootstrap js-->
@@ -2025,7 +954,23 @@
     <script src="../assets/js/home-animation.js"></script>
 
     <!-- header sticky js -->
-    <script src="../assets/js/header_sticky.js"></script>
+     <script>
+        window.addEventListener('scroll', function () {
+    var header = document.querySelector('header');
+
+    if (window.pageYOffset >= 500) {
+        header.classList.add('sticky');
+        header.style.backgroundImage = 'url("/assets/images/landing/ai_talk_assist/4IR-Home-banner.png")';  
+        header.style.backgroundPosition = 'center';  
+        header.style.backgroundSize = 'cover';  
+        
+    } else {
+        header.classList.remove('sticky');
+        header.style.backgroundImage = 'none';
+    }
+    
+});
+     </script>
 
     <!-- pricing js -->
     <script src="../assets/js/pricing-table.js"></script>

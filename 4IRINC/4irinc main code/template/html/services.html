@@ -38,474 +38,8 @@
     <link rel="stylesheet" href="../assets/css/landing.css">
 
     <link rel="stylesheet" href="/assets/scss/components/">
-    <style>
-        .feature_container {
-            margin-left: -7rem;
-        }
 
-        @media screen and (max-width:900px) {
-            .feature_container {
-                margin-left: -20px;
-            }
-        }
-
-        .info-btn:hover {
-            color: #00BDFF;
-        }
-
-        .services_section {
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .boxs_container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            transition: .5s all ease;
-        }
-
-        .boxs_container .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            /* Ensure content is spaced evenly */
-            border: 1px solid #00BDFF;
-            box-shadow: 0 0 10px 0 #00BDFF;
-            padding: 2rem;
-            width: 350px;
-            height: 100%;
-            color: #fff;
-            border-radius: 0.4rem;
-            position: relative;
-            cursor: pointer;
-            transition: .4s all ease;
-        }
-
-        .boxs_container .box_content {
-            flex: 1 0 auto;
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .btn-hover {
-            margin-top: auto;
-            /* Push the button to the bottom */
-            border: 1px solid #00BDFF;
-            padding: 0.6rem 1.1rem;
-            border-radius: 0.6rem;
-            box-shadow: 0 0 10px 0 #087faa;
-            font-size: 1.4rem;
-            position: relative;
-            overflow: hidden;
-            background-color: transparent;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .btn-hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: #00BDFF;
-            transition: .4s all ease;
-            z-index: -1;
-        }
-
-        .btn-hover:hover::before {
-            width: 100%;
-        }
-
-        .btn-hover:hover {
-            color: #fff;
-            box-shadow: 0 0 10px 3px #068ec0;
-        }
-
-
-        .boxs_container .box:hover {
-            box-shadow: 0 0 10px 5px #00BDFF;
-        }
-
-        .box .box_img {
-            flex: 0 0 auto;
-        }
-
-        .box .box_img img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: .5s all ease;
-        }
-
-        .box .box_img img:hover {
-            transform: scale(1.09);
-        }
-
-        .boxs_container .box_content h4 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .boxs_container .box_content ul {
-            margin-top: 1rem;
-            padding-left: 1rem;
-        }
-
-        .boxs_container .box_content ul li {
-            list-style: disc !important;
-            list-style-type: disc !important;
-            display: list-item !important;
-            margin: 1rem 0;
-        }
-
-        .boxs_container .box_content img {
-            width: 15%;
-        }
-
-        .boxs_container .box .box_text {
-            font-size: 1.4rem;
-            position: relative;
-            margin-left: 1rem;
-        }
-
-        .boxs_container .box .box_text::before {
-            content: "";
-            width: 2px;
-            height: 100%;
-            position: absolute;
-            background-color: #00BDFF;
-            top: 0%;
-            left: -6%;
-        }
-
-
-
-        .service_container {
-            position: relative;
-            left: 16%;
-            margin-top: -20%;
-            width: 100%;
-            display: flex;
-            gap: 3rem;
-            justify-content: space-evenly;
-        }
-
-        .service_img {
-            width: 90%;
-            height: 70%;
-            border: none;
-            border-radius: 2rem;
-        }
-
-        .service_row {
-            margin-top: -8rem;
-        }
-
-        .feature-section {
-            position: relative;
-        }
-
-        .swiper-slide .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
-            margin: 1rem;
-        }
-
-        .col-xl-3,
-        .col-lg-4,
-        .col-sm-6 {
-            flex: 1 1 calc(30% - 2rem);
-            box-sizing: border-box;
-        }
-
-        /* .expertise_container {
-            display: flex;
-            justify-content: center;
-        } */
-
-        .feature-section {
-            position: relative;
-        }
-
-        .swiper-slide .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0;
-        }
-
-        .swiper-slide .col-xl-3 {
-            display: flex;
-            justify-content: center;
-        }
-
-        .expertise_box {
-            border: 1px solid #00BDFF;
-            /* border: none; */
-            box-shadow: 0 0 10px 0 #00BDFF;
-            padding: 2rem;
-            width: 500px;
-            gap: 3rem;
-            /* Ensure consistent width */
-            height: 150px;
-            /* Ensure consistent height */
-            color: #fff;
-            display: flex;
-            /* Ensure vertical stacking */
-            justify-content: space-evenly;
-            /* Center content vertically */
-            align-items: center;
-            /* Center content horizontally */
-            border-radius: 0.4rem;
-            position: relative;
-            cursor: pointer;
-            transition: .5s all ease;
-            clip-path: polygon(0 0, 75% 0, 100% 35%, 100% 100%, 0% 100%);
-            /* background-color: #087faa; */
-        }
-
-        .expertise_box::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            color: #fff;
-        }
-
-        .expertise_box:hover {
-            box-shadow: 0 0 10px 5px #00BDFF;
-        }
-
-        .expertise_box img {
-            width: 30%;
-            margin-bottom: 1rem;
-            /* Add spacing between image and text */
-        }
-
-        .expertise_box .expertise_text {
-            font-size: 1.4rem;
-            text-align: center;
-            /* Center text */
-            position: relative;
-        }
-
-        .expertise_box .expertise_text::before {
-            content: "";
-            position: absolute;
-            background-color: #00BDFF;
-            width: 2px;
-            height: 120%;
-            top: 0;
-            left: -30%;
-        }
-
-
-
-        .swiper-scrollbar {
-            background-color: #00BDFF;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #00BDFF;
-            font-weight: 800;
-        }
-
-        @media screen and (max-width:600px) {
-            .service_container {
-                left: 0;
-                margin-top: 0;
-                margin: auto;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .boxs_container {
-                grid-template-columns: 1fr;
-                margin: auto;
-            }
-
-            .box {
-                display: block;
-                margin: auto;
-            }
-
-            .services_section {
-                margin: 2rem auto;
-                left: 0%;
-            }
-
-            .service_row {
-                margin-top: 0;
-            }
-
-            .service_img {
-                width: 100%;
-                height: 100%;
-            }
-
-            .expertise_container {
-                grid-template-columns: 1fr;
-                margin-left: 4.5%;
-            }
-
-            .expertise_box {
-                width: 80vw;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                display: none;
-            }
-        }
-
-        @media screen and (min-width:1500px) {
-            .service_container {
-                margin-top: -15%;
-            }
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        #servicesLink {
-            margin-right: 0.5rem;
-        }
-
-        #dropdownToggle {
-            background-color: transparent;
-            border: none;
-            color: #fff;
-            padding: 0;
-            margin: 0;
-            font-size: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
-        #dropdownToggle:focus {
-            outline: none;
-        }
-
-        @media (min-width: 992px) {
-            #dropdownToggle {
-                display: none;
-            }
-        }
-
-        .nav-item.dropdown .nav-link::after {
-            display: none;
-        }
-
-        .offcanvas-body .nav-item {
-            display: block;
-        }
-
-        .dropdown-arrow {
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 5px;
-        }
-
-        .dropdown-arrow::after {
-            display: inline-block;
-            margin-left: .255em;
-            vertical-align: .255em;
-            content: "";
-            color: rgba(0, 189, 255, 1);
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            border-left: .3em solid transparent;
-        }
-
-        @media (max-width: 1199px) {
-            .nav-item.dropdown {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .nav-item.dropdown .nav-link {
-                flex: 1;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: 100%;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-        }
-
-        .navbar-nav .nav-item {
-            position: relative;
-        }
-
-        header #logo-img {
-            position: relative;
-            margin-top: -1.4rem;
-        }
-
-        @media screen and (max-width:600px) {
-            header #logo-img {
-                margin-top: 0;
-            }
-        }
-        
-        .modal-content {
-            height: 90vh;
-            max-height: 90vh;
-            background-color: #0a0e17;
-            animation: shadow 2s infinite ease-in-out;
-        }
-
-        @keyframes shadow {
-            0% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-
-            50% {
-                box-shadow: 0 0 20px 10px #00BDFF;
-            }
-
-            100% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-        }
-
-        .modal-dialog {
-            width: 80vw;
-            max-width: 90vw;
-        }
-
-        @media screen and (max-width:580px) {
-            .modal-content {
-                position: relative !important;
-                left: 10% !important;
-                overflow: scroll;
-            }
-        }
-    </style>
-
+    <link rel="stylesheet" href="/assets/css/pages/services.css">
 
 
 </head>
@@ -519,116 +53,119 @@
     <!--custom cursor start  -->
 
     <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel"
-     aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
-                     id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
-                 <div class="calendly-inline-widget"
-                     data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
-                     style="min-width:320px;height:100%;"></div>
-             </div>
-             <div class="modal-footer">
-                 <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
-             </div>
-         </div>
-     </div>
- </div>
-
-
-
-    <!-- header start -->
-    <header>
-        <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#primaryMenu">
-            <span class="navbar-toggler-icon">
-                <i class="iconsax" data-icon="text-align-justify"></i>
-            </span>
-        </button>
-        <a href="/home.html">
-            <img src="../assets/images/4IR Logo main.png" class="img-fluid" id="logo-img" alt="logo">
-        </a>
-        <nav class="header-nav-middle">
-            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
-                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
-                    <div class="offcanvas-header navbar-shadow">
-                        <h5 class="mb-0">Back</h5>
-                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../home.html">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">About Us</a>
-                            </li>
-
-                            <li class="nav-item dropdown active">
-                                <a class="nav-link" href="./services.html" id="servicesLink">
-                                    Services
-                                </a>
-                                <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="visually-hidden">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                    <li>
-                                        <a class="dropdown-item" href="./strategic_counselling.html">Strategic
-                                            Counseling</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/html/training_and_education.html">Training &
-                                            Education</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="./blog-grid.html">Blog</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact-us.html">Contact us</a>
-                            </li>
-                        </ul>
-                    </div>
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </nav>
-        <div data-cursor="pointer" style="position: relative; margin-top: -1.4rem;"
-            class="btn btn-theme d-sm-inline-block d-none"  data-bs-toggle="modal"
-            data-bs-target="#demo-modal"><span>Book a Demo</span></div>
-    </header>
-    <!-- header end -->
-
-
-    <!-- home section start -->
-    <section id="home" class="section-b-space home-section">
-        <div class="container-fluid">
-            <div class="home-sec" style="text-align: center;
-            justify-content: center; display: flex;">
-                <div class="home-content" style="margin-top: 5rem; text-align: center;">
-                    <div>
-                        <!-- <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
-                        </h2> -->
-                        <h1>OUR SERVICES</h1>
-                        <p>AI Products and Solutions by Fourth Industrial Revolution Inc.</p>
-                    </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- home section end -->
+    </div>
+
+
+    <div id="home-header">
+
+        <!-- header start -->
+        <header>
+            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                <span class="navbar-toggler-icon">
+                    <i class="iconsax" data-icon="text-align-justify"></i>
+                </span>
+            </button>
+            <a href="/home.html">
+                <img src="../assets/images/4IR Logo main.png" class="img-fluid" id="logo-img" alt="logo">
+            </a>
+            <nav class="header-nav-middle">
+                <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                    <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <h5 class="mb-0">Back</h5>
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">About Us</a>
+                                </li>
+
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link" href="./services.html" id="servicesLink">
+                                        Services
+                                    </a>
+                                    <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                                Counseling</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://aitalkassist.com/">AITalkAssist</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="/html/training_and_education.html">Training &
+                                                Education</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./blog-grid.html">Blog</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact-us.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div data-cursor="pointer" style="position: relative; margin-top: -1.4rem;"
+                class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal" data-bs-target="#demo-modal">
+                <span>Book a Demo</span></div>
+        </header>
+        <!-- header end -->
+
+
+        <!-- home section start -->
+        <section id="home" class="section-b-space home-section">
+            <div class="container-fluid">
+                <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                    <div class="home-content" style="margin-top: 5rem; text-align: center;">
+                        <div>
+                            <!-- <h2 style="font-size: 20px; font-family: 'Play', sans-serif;">FOURTH INDUSTRIAL REVOLUTION INC
+                        </h2> -->
+                            <h1>OUR SERVICES</h1>
+                            <p>AI Products and Solutions by Fourth Industrial Revolution Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- home section end -->
+
+    </div>
 
     <section class="section-b-space">
         <div class="container">
@@ -680,7 +217,7 @@
                 </a>
 
 
-                <a href="/html/ai-talk-assist.html">
+                <a href="https://aitalkassist.com/">
                     <article class="box">
                         <div class="box_img">
                             <img src="/assets/images/services/AI solutions .png" alt="">
@@ -819,41 +356,6 @@
     </div> -->
     <!-- service section end -->
 
-
-    <!-- <div class="service-section section-b-space mt-2">
-        <div class="container">
-            <div class="row g-5 service_row">
-
-
-                <div class="col-lg-6">
-                    <div class="service-info">
-                        <div>
-                            <p style="position: relative; bottom: 2rem;">AI Products And Solutions By Fourth Industrial
-                                Revolution Inc.</p>
-                            <div class="title">
-                                <h2>Different Industries We Served</h2>
-                            </div>
-                            <p style="text-align: justify;">At Industrial Revolution Inc., we are committed to building
-                                long-term partnerships with
-                                our clients, based on trust, transparency, and a shared vision for success. We believe
-                                that digital transformation is not just about technology, but about people, processes,
-                                and culture. That's why we take a holistic approach to our engagements, working closely
-                                with stakeholders at all levels of the organization to drive change and foster a culture
-                                of innovation and continuous improvement.
-                                <br><br>
-                                Whether you are just starting your digital transformation journey or looking to take
-                                your efforts to the next level, Industrial Revolution Inc. is here to help. Contact us
-                                today to learn more about how we can help your business harness the power of technology
-                                and thrive in the Fourth Industrial Revolution.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
     <!-- feature section start -->
     <section class="feature-section section-b-space">
         <div class="container">
@@ -944,26 +446,6 @@
 
     <!-- feature section end -->
 
-    <!-- <section class="section-b-space expertise_section">
-        <div class="container">
-            <h2 class="text-center text-white" style="margin-bottom: 5rem;">Our Expertise - Industries</h2>
-            <div class="expertise_container">
-                <article class="expertise_box">
-                    <img src="/assets/images/services icon/house.png" alt="">
-                    <h4 class="expertise_text">Real Estate</h4>
-                </article>
-                <article class="expertise_box">
-                    <img src="/assets/images/services icon/globe.png" alt="">
-                    <h4 class="expertise_text">Finance & Insurance Market</h4>
-                </article>
-                <article class="expertise_box">
-                    <img src="/assets/images/services icon/credit card.png" alt="">
-                    <h4 class="expertise_text">Mortgage</h4>
-                </article>
-            </div>
-        </div>
-    </section> -->
-
 
     <!-- footer section start-->
     <footer>
@@ -1013,7 +495,7 @@
                         <ul>
                             <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
                             </li>
-                            <!-- <li><a data-cursor="pointer" href="./ai-talk-assist.html">AI Talk Assist</a></li> -->
+                            <!-- <li><a data-cursor="pointer" href="https://aitalkassist.com/">AI Talk Assist</a></li> -->
                             <li><a data-cursor="pointer" target="_blank"
                                     href="/html/training_and_education.html">Training &
                                     Education</a></li>
@@ -1046,99 +528,12 @@
     </footer>
     <!-- footer section end-->
 
+    <script src="/assets/js/pages/services.js"></script>
+    <script src="/assets/js/pages/dropdown.js"></script>
+
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
 
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesLink = document.getElementById('servicesLink');
-            var servicesDropdown = document.getElementById('servicesDropdown');
-            var dropdownMenu = servicesDropdown.nextElementSibling;
-            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
-
-            function toggleDropdown(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (dropdownMenu.style.display === 'block') {
-                    dropdownMenu.style.display = 'none';
-                } else {
-                    dropdownMenu.style.display = 'block';
-                }
-            }
-
-            servicesDropdown.addEventListener('click', toggleDropdown);
-
-            // For mobile view, prevent the link from navigating when the dropdown is open
-            servicesLink.addEventListener('click', function (event) {
-                if (!isXlScreen && dropdownMenu.style.display === 'block') {
-                    event.preventDefault();
-                }
-            });
-
-            // Update isXlScreen on window resize
-            window.addEventListener('resize', function () {
-                isXlScreen = window.innerWidth >= 1200;
-                if (isXlScreen) {
-                    dropdownMenu.style.display = '';
-                }
-            });
-        });
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // const swiper = document.querySelector('.swiper').swiper;
-            const swiper = new Swiper('.swiper', {
-                autoplay: {
-                    delay: 3500,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                // pagination: {
-                //     el: '.swiper-pagination',
-                //     type: 'bullets',
-                // },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true,
-                },
-            });
-            // console.log("swiper is ", swiper)
-
-            // Now you can use all slider methods like
-            // swiper.slideNext();
-            // var swiper = new Swiper('.swiper-container', {
-            //     slidesPerView: 1,
-            //     pagination: {
-            //         el: '.swiper-pagination',
-            //         type: 'bullets',
-            //         clickable: true
-            //     },
-            //     on: {
-            //         slideChange: updateProgressBar
-            //     }
-            // });
-
-            // function updateProgressBar() {
-            //     var progressBar = document.querySelector('.progress-bar');
-            //     console.log("swiper is ", swiper)
-            //     console.log("swiper is ", swiper.slides)
-            //     var totalSlides = swiper.slides.length;
-            //     var currentSlide = swiper.realIndex + 1;
-            //     var progress = (currentSlide / totalSlides) * 100;
-
-            //     console.log('Updating progress bar:', progress); // Debugging line
-            //     progressBar.style.width = progress + '%';
-            // }
-
-            // // Initialize progress bar on load
-            // updateProgressBar();
-        });
-
-    </script>
 
     <!-- Bootstrap js-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>

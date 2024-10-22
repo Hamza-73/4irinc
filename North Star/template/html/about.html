@@ -48,7 +48,10 @@
 
         <!-- Logo -->
         <div class="flex justify-center">
+          
+          <a href="/home.html">
           <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" class="nav-logo">
+        </a>
           <!-- <h1 class="text-3xl text-slate-700 font-semibold">North Star</h1> -->
         </div>
 
@@ -68,7 +71,9 @@
     <div id="mobile-menu"
       class="fixed  flex flex-col items-center   left-0 top-0 w-64 h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
       <div class="flex items-center justify-between p-4">
-        <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 110px;">
+        <a href="/home.html">
+          <img src="/assets/images/main logo.png" alt="Northstar Systems LLC" style="width: 110px;">
+        </a>
       </div>
       <div class="flex flex-col space-y-6">
         <a href="/home.html" class="nav-item font-semibold">Home</a>
@@ -105,17 +110,17 @@
 
   <!-- expertise section start -->
 
-  <section class="container mx-auto px-4 py-8 who-we-are-section">
+  <section class="container min-w-full px-4 py-8 who-we-are-section">
     <!-- Flex Container for Responsive Design -->
     <div class="flex flex-col gap-8 lg:space-x-8 md:flex-row" style="padding: 6rem .9rem;">
       <!-- Image Container with Overlapping Images -->
       <div class="w-full md:w-1/2 relative mb-8 md:mb-0 image-container">
         <!-- First (Background) Image -->
-        <img src="/assets/images/home/NorthStar  Home.png" alt="First Image" class="w-full h-full object-cover">
+        <img src="/assets/images/fire/FIRE AND CAMERA.png" alt="First Image" class="w-full h-[300px] lg:h-[400px] object-cover">
 
         <!-- Second (Overlapping) Image -->
-        <img src="/assets/images/home/FIRE 4.JPG" alt="Second Image"
-          class="absolute -bottom-4 -right-6 w-6/12 h-auto object-cover border-white border-8 shadow-lg">
+        <img src="/assets/images/fire/FIRE 5.png" alt="Second Image"
+          class="absolute -bottom-4 -right-6 w-6/12 h-auto object-cover shadow-lg" style="border: 16px solid white;">
       </div>
 
       <!-- Text Content Container -->
@@ -229,7 +234,7 @@
       <!-- Left Section (Image with overlay text) -->
       <div class="lg:w-5/12 relative image-container">
         <div class="relative">
-          <img class="w-full h-full lg:h-[500px] rounded-lg img-animate" src="/assets/images/home/FIRE 2.jpg"
+          <img class="w-full h-full rounded-lg img-animate" src="/assets/images/user/7.jpg"
             alt="Building a Safer Future Together">
           <!-- Overlay text on image -->
           <div class="absolute bottom-0 left-0 p-4">
@@ -245,18 +250,26 @@
     </div>
   </section>
 
-  <section class="container min-w-full common-why-us-sec" style="background: url('/assets/images/paper.avif'); background-position: center; background-size: cover;">
+  <section class="container min-w-full common-why-us-sec">
     <div class="flex flex-col lg:flex-row gap-3 lg:space-x-20 lg:gap-10 items-center lg:items-start p-10 lg:py-20">
 
       
       <!-- Right Section (Image and Badge) -->
-      <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image">
-        <!-- Image -->
-        <img class="w-full shadow-lg rounded-lg" src="/assets/images/map.JPG" alt="Fire Alarm System Image">
+      <!-- <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image flex flex-col">
+        <img class="w-full shadow-lg rounded-lg" src="/assets/images/user/4.jpg" alt="Fire Alarm System Image">
+
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="tobyw-ns" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/tobyw-ns?trk=profile-badge"></a></div>
+      </div> -->
+
+      <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image flex flex-col lg:mb-0 mb-8 sm:mb-[50px]">
+        <!-- First (Background) Image -->
+        <img class="w-full shadow-lg rounded-lg" src="/assets/images/user/4.jpg" alt="Fire Alarm System Image">
+
+          <div class="badge-base LI-profile-badge absolute -bottom-4 sm:right-[150px] lg:-right-6 sm:w-3/12 w-full lg:w-5/12 h-auto sm:h-5/12" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="tobyw-ns" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/tobyw-ns?trk=profile-badge"></a></div>
       </div>
 
       <!-- Left Section (Text Content) -->
-      <div class="w-10/12 lg:w-7/12 space-y-6 section-content">
+      <div class="w-10/12 lg:w-7/12 space-y-6 lg:mt-[100px] section-content">
         <h4 class="blue-heading text-xl font-bold uppercase mb-4">MEET TOBY WOODS
         </h4>
         <h2 class="font-bold text-4xl text-gray-700">Leadership You Can Trust
@@ -270,7 +283,6 @@
           commitment to quality drives NorthStar's mission to be a leader in
           the fire alarm industry.</p>
       </div>
-
 
     </div>
   </section>
@@ -302,23 +314,22 @@
 
   <!-- why us section start -->
 
-  <section class="container min-w-full common-why-us-sec" style="background: url('/assets/images/paper.avif'); background-position: center; background-size: cover;">
-    <div class="flex flex-col lg:flex-row gap-3 lg:gap-8 items-center lg:items-start p-10 lg:py-20">
+  <section class="container min-w-full common-why-us-sec">
+    <div class="flex flex-col lg:flex-row gap-3  items-center lg:items-start p-10 lg:py-20">
 
       <!-- Left Section (Text Content) -->
-      <div class="w-10/12 lg:w-7/12 space-y-6 section-content">
-        <h4 class="blue-heading text-xl font-bold uppercase">our commitment to excellence</h4>
-        <h2 class="font-bold text-4xl text-gray-700">What Makes Us Unique</h2>
-        <p class="text-lg  lg:w-10/12 text-justify">NorthStar Systems distinguishes itself through its personalized
-          approach and unparalleled technical expertise. We provide solutions that comply with regulatory standards,
-          ensuring that your projects recieve the approvals they deserve. Our commitment to quality and accuracy makes
+      <div class="w-10/12 lg:w-7/12 space-y-3 lg:mt-[70px] section-content">
+        <h4 class="blue-heading text-lg font-bold uppercase">our commitment to excellence</h4>
+        <h2 class="font-bold text-4xl">What Makes Us Unique</h2>
+        <p class="text-md  lg:w-10/12 text-justify">NorthStar Systems distinguishes itself through its personalized
+          approach and unparalleled technical expertise. We provide solutions that comply with regulatory standards, ensuring that your projects receive on time approvals. Our commitment to quality and accuracy makes
           us a valuable partner in your journey to building safer spaces.</p>
       </div>
 
       <!-- Right Section (Image and Badge) -->
       <div class="lg:w-5/12 mt-10 lg:mt-0 relative section-image">
         <!-- Image -->
-        <img class="w-full shadow-lg" src="/assets/images/map.JPG" alt="Fire Alarm System Image">
+        <img class="w-full shadow-lg" src="/assets/images/fire/FIRE 2.png" alt="Fire Alarm System Image">
 
         <!-- Badge -->
         <div class="absolute top-0 right-0 bg-[#aa0000] text-white px-6 py-3  shadow-lg badge">
@@ -333,12 +344,12 @@
   <!-- why us section end -->
    
   
-  <footer class="footer-section p-10">
+  <footer class="footer-section py-4 px-10">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
       
       <!-- Left side: Logo -->
       <div class="mb-4 md:mb-0">
-        <img src="/assets/images/main logo.png" alt="NorthStar Systems Logo" class="h-[130px]">
+        <img src="/assets/images/NorthStartLogo-White.png" alt="NorthStar Systems Logo" class="h-[80px]">
       </div>
   
       <!-- Center: Text and Links -->
@@ -350,7 +361,7 @@
   
       <!-- Right side: NICET certification logo and text -->
       <div class="text-center flex flex-col items-center text-white">
-        <img src="/assets/images/nicet_logo.2f1e347e.png" alt="NICET Certification" class="h-[100px]">
+        <img src="/assets/images/nicet_logo.2f1e347e.png" alt="NICET Certification" class="h-[40px]">
         <p class="text-sm mt-2 leading-tight text-center">We support and encourage <br> NICET certification</p>
       </div>
   
@@ -360,6 +371,7 @@
   
 </body>
 
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
 <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
 <script src="/assets/js/animations/common-animation.js"></script>
@@ -367,46 +379,7 @@
 
 
 <!-- Script -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenuBtn = document.getElementById('close-menu-btn');
-  const navItems = document.querySelectorAll('#mobile-menu .nav-item');  // Select all nav items
-  const body = document.body;
-
-  // Open the sidebar
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('-translate-x-full');
-    body.classList.add('overflow-hidden');  // Prevent scrolling when sidebar is open
-  });
-
-  // Close the sidebar
-  closeMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('-translate-x-full');
-    body.classList.remove('overflow-hidden');
-  });
-
-  // Close sidebar when clicking outside of it
-  document.addEventListener('click', (event) => {
-    if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
-      mobileMenu.classList.add('-translate-x-full');
-      body.classList.remove('overflow-hidden');
-    }
-  });
-
-  // Prevent sidebar from closing when clicking inside of it
-  mobileMenu.addEventListener('click', (event) => {
-    event.stopPropagation();
-  });
-
-  // Close sidebar when clicking on any nav-item
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      mobileMenu.classList.add('-translate-x-full');
-      body.classList.remove('overflow-hidden');
-    });
-  });
-</script>
+<script src="/assets/js/script.js"></script>
 
 </body>
 

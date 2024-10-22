@@ -37,119 +37,7 @@
 
     <link rel="stylesheet" href="/assets/css/landing.css">
 
-    <style>
-        .info-btn:hover {
-            color: #00BDFF;
-        }
-
-        .dropdown-arrow {
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 5px;
-        }
-
-        .dropdown-arrow::after {
-            display: inline-block;
-            margin-left: .255em;
-            vertical-align: .255em;
-            content: "";
-            color: rgba(0, 189, 255, 1);
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            border-left: .3em solid transparent;
-        }
-
-        @media (max-width: 1199px) {
-            .nav-item.dropdown {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .nav-item.dropdown .nav-link {
-                flex: 1;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: 100%;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-        }
-
-        .navbar-nav .nav-item {
-            position: relative;
-        }
-
-        /* .navbar-nav .nav-item::before {
-            content: '•';
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .navbar-nav .nav-item:hover::before {
-            opacity: 1;
-        } */
-
-        /* Ensure the nav-link text doesn't shift when the bullet appears */
-        /* .navbar-nav .nav-link {
-            padding-left: 15px;
-        } */
-
-        /* For mobile view, you might want to adjust the positioning
-        @media (max-width: 1199px) {
-            .navbar-nav .nav-item::before {
-                left: 0;
-            }
-
-            .navbar-nav .nav-link {
-                padding-left: 20px;
-            }
-        } */
-
-        .modal-content {
-            height: 90vh;
-            max-height: 90vh;
-            background-color: #0a0e17;
-            animation: shadow 2s infinite ease-in-out;
-        }
-
-        @keyframes shadow {
-            0% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-
-            50% {
-                box-shadow: 0 0 20px 10px #00BDFF;
-            }
-
-            100% {
-                box-shadow: 0 0 10px 5px #00BDFF;
-            }
-        }
-
-        .modal-dialog {
-            width: 80vw;
-            max-width: 90vw;
-        }
-
-        @media screen and (max-width:580px) {
-            .modal-content {
-                position: relative !important;
-                left: 10% !important;
-                overflow: scroll;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/pages/blog-grid.css">
 
 </head>
 
@@ -221,7 +109,7 @@
                                             Counseling</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./ai-talk-assist.html">AITalkAssist</a>
+                                        <a class="dropdown-item" href="https://aitalkassist.com/">AITalkAssist</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/html/training_and_education.html">Training &
@@ -496,7 +384,7 @@
                         <ul>
                             <li><a data-cursor="pointer" href="./strategic_counselling.html">Strategic Counselling</a>
                             </li>
-                            <li><a data-cursor="pointer" href="./ai-talk-assist.html">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" href="https://aitalkassist.com/">AI Talk Assist</a></li>
                             <li><a data-cursor="pointer" target="_blank" href="/html/training_and_education.html">Training &
                                     Education</a></li>
                         </ul>
@@ -544,45 +432,9 @@
 
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-    <script>
+    <script src="/assets/js/pages/dropdown.js"></script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesLink = document.getElementById('servicesLink');
-            var servicesDropdown = document.getElementById('servicesDropdown');
-            var dropdownMenu = servicesDropdown.nextElementSibling;
-            var isXlScreen = window.innerWidth >= 1200; // Define XL breakpoint
-
-            function toggleDropdown(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (dropdownMenu.style.display === 'block') {
-                    dropdownMenu.style.display = 'none';
-                } else {
-                    dropdownMenu.style.display = 'block';
-                }
-            }
-
-            servicesDropdown.addEventListener('click', toggleDropdown);
-
-            // For mobile view, prevent the link from navigating when the dropdown is open
-            servicesLink.addEventListener('click', function (event) {
-                if (!isXlScreen && dropdownMenu.style.display === 'block') {
-                    event.preventDefault();
-                }
-            });
-
-            // Update isXlScreen on window resize
-            window.addEventListener('resize', function () {
-                isXlScreen = window.innerWidth >= 1200;
-                if (isXlScreen) {
-                    dropdownMenu.style.display = '';
-                }
-            });
-        });
-
-
-    </script>
-
+    
     <script  src="/assets/js/blogjs/blog.js"></script>
 
     <!-- Bootstrap js-->

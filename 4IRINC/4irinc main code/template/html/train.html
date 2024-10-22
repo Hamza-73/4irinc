@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="megabot">
+    <meta name="keywords" content="megabot">
+    <meta name="author" content="megabot">
+    <link rel="icon" href="/assets/images/4IR Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/images/4IR Logo.png" type="image/x-icon" />
+    <title>Fourth Industrial Revolution Inc.</title>
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/remixicon.css">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/iconsax.css" />
+
+    <!-- animation css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/aos.css">
+
+    <!-- swiper slider css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <link rel="stylesheet" href="/assets/css/landing.css">
+
+    <link rel="stylesheet" href="/assets/css/pages/training-and-education.css">
+
+</head>
+
+<body>
+
+
+    <!--custom cursor start  -->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+    <!--custom cursor start  -->
+
+    <!-- Modal -->
+    <div class="modal fade text-center" id="demo-modal" tabindex="-1" aria-labelledby="demo-modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 text-white text-center" style="text-align: center;"
+                        id="demo-modalLabel">Book a <span style="color: #ffce00;">Demo</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/bkrevoy/60-minute-meeting-for-4ir-consulting?background_color=1a1a1a&text_color=ffffff"
+                        style="min-width:320px;height:100%;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home-header">
+
+        <!-- header start -->
+        <header>
+            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                <span class="navbar-toggler-icon">
+                    <i class="iconsax" data-icon="text-align-justify"></i>
+                </span>
+            </button>
+            <a href="../home.html">
+                <img src="../assets/images/4IR Logo main.png" id="logo-img" class="img-fluid" alt="logo">
+            </a>
+            <nav class="header-nav-middle">
+                <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                    <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <h5 class="mb-0">Back</h5>
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">About Us</a>
+                                </li>
+
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link" href="./services.html" id="servicesLink">
+                                        Services
+                                    </a>
+                                    <button class="dropdown-toggle dropdown-arrow" id="servicesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="z-index: 100;">
+                                        <li>
+                                            <a class="dropdown-item" href="./strategic_counselling.html">Strategic
+                                                Counseling</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://aitalkassist.com/">AITalkAssist</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="/html/training_and_education.html">Training &
+                                                Education</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./blog-grid.html">Blog</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact-us.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div data-cursor="pointer" style="position: relative; margin-top: -1.4rem;"
+                class="btn btn-theme d-sm-inline-block d-none" data-bs-toggle="modal" data-bs-target="#demo-modal">
+                <span>Book a Demo</span>
+            </div>
+        </header>
+        <!-- header end -->
+
+
+        <!-- home section start -->
+        <section id="home" class="section-b-space home-section">
+            <div class="container-fluid">
+                <div class="home-sec" style="text-align: center;
+            justify-content: center; display: flex;">
+                    <div class="home-content"
+                        style="margin-top: 5rem; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                        <div>
+                            <!-- <h3 style="color: #fff;">Harness Your Massive Transformative Purpose (MTP)</h3> -->
+                            <h1>AI TRAINING & EMPOWERMENT</h1>
+                            <h3 style="color: #ffff; margin-top: 1rem;">Unlock the Full Potential of Your Team with
+                                Tailored
+                                AI <br>
+                                Education and Skills Development
+                            </h3>
+                        </div>
+                        <!-- <p style="width: 100%; font-size: 1rem; line-height: 1.5; margin-top: 1.5rem;">
+                        The concept of a Massive Transformative Purpose is all about setting a grand, aspirational mission that goes beyond conventional goals. It’s a clarion call for innovation, learning, and growth. In this section, we delve into how an MTP can be a powerful catalyst in your educational journey, inspiring you to not just learn, but to transform.
+                    </p> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- home section end -->
+
+    </div>
+
+
+    <section class="service-section section-b-space mt-2">
+        <div class="container">
+            <div class="row g-5 expertise_div">
+                <div class="col-lg-6">
+                    <div class="service-info">
+                        <div>
+                            <h4 style="color: #00BDFF; margin-bottom: 2rem;">AI Mastery for Business Growth</h4>
+                            <div class="title">
+                                <h2>Accelerate Your AI Expertise and <span style="color: #ffce00;">Drive Impact</span>
+                                </h2>
+                            </div>
+                            <p>In today’s fast-evolving world, staying ahead means continuously learning
+                                and adapting. Our AI training and education programs are designed to
+                                equip your team with the skills needed to harness the power of AI
+                                products and apps to optimize their work and drive your business
+                                forward. Whether you’re looking to upskill your employees or foster a
+                                culture of innovation, our comprehensive courses have you covered.
+                            </p>
+                            <!-- <a data-cursor="pointer" class="btn-arrow" href="">
+                                <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>More About us
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <img style="width: 100%; height: 100%; border:none; border-radius: 1rem;"
+                        src="/assets/images/services/training and education.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-b-space barry_expertise_section">
+        <div class="container">
+
+            <div class="service-info" style="position: relative; margin: 6rem 0;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Purpose-Driven Learning</h4>
+                        <h2 class="text-white">Why Choose Our <span style="color: #ffce00;">AI Training Programs?</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Your learning journey should be
+                        more than just about gaining knowledge—it’s about making an impact. Our programs are
+                        tailored to help your team connect their personal goals to the broader mission of your
+                        organization, ensuring each course is
+                        aligned with real-world outcomes.</p>
+                </div>
+            </div>
+
+            <div class="barry_expertise_container">
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">01</p>
+                        <h3>Identify Your Passion</h3>
+                        <p>Uncover what drives you at your core. Align your learning objectives with your deepest values
+                            and aspirations, setting the stage for purpose-driven education.</p>
+                    </div>
+                </article>
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">02</p>
+                        <h3>Dream Big, Start Bold</h3>
+                        <p>Learn how to scaffold your educational goals within the context of your MTP, ensuring every
+                            step you take is a stride towards a larger vision.</p>
+                    </div>
+                </article>
+                <article class="barry_exp_box">
+                    <div class="exp_content">
+                        <p class="heading">03</p>
+                        <h3>Become an Agent of Change</h3>
+                        <p>Equip yourself with the knowledge to not only succeed in your career but to also drive
+                            meaningful change in your industry or community.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-features-section section-b-space service-section" id="how-it-work">
+        <div class="container">
+            <div class="service-info" style="position: relative; margin-bottom: 6rem;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Maximize AI Skills with Flexible, Practical Training</h4>
+                        <h2 class="text-white"><span style="color: #ffce00;">Course Benefits</span> at a Glance</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Our courses are designed to meet
+                        the diverse needs of your team, no matter their experience level. With flexible, self-paced
+                        learning options, employees can master AI skills at their own convenience. Expert mentors and a
+                        supportive community ensure
+                        guidance is available every step of the way, while hands-on projects provide practical,
+                        real-world experience to immediately
+                        apply AI solutions in the workplace.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ai-features-container">
+                <!-- Vertical line -->
+                <div class="ai-vertical-line"></div>
+
+                <!-- Alternating boxes -->
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box  service-box">
+                        <h3>Tailored for All Skill Levels</h3>
+                        <p>Whether beginner or advanced, we offer
+                            courses that fit your team’s needs.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Flexible, Self-Paced Learning</h3>
+                        <p>Learn at your own speed, anytime and
+                            anywhere, with easy-to-follow content
+                            designed for real-world application.</p>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-left-box">
+                    <div class="ai-feature-box   service-box">
+                        <h3>Expert Mentorship and Support</h3>
+                        <p>Gain access to a community of AI experts
+                            and dedicated mentors to guide you
+                            through every step of the way.</p>
+                    </div>
+                    <div class="ai-horizontal-line-left">
+                        <div class="line-dot"></div>
+                    </div>
+                </div>
+
+                <div class="ai-feature-box-wrapper ai-right-box">
+                    <div class="ai-horizontal-line-right">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="ai-feature-box   service-box">
+                        <h3>Real-World Projects</h3>
+                        <p> Work on industry-relevant projects that
+                            allow you to apply AI concepts directly to
+                            your work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+
+            <div class="service-info" style="position: relative; margin-bottom: 6rem;">
+                <div>
+                    <div class="title">
+                        <h4 style="color: #00BDFF;">Your Questions, Answered</h4>
+                        <h2 class="text-white">Frequently Asked <span style="color: #ffce00;">Questions</span>
+                        </h2>
+                    </div>
+                    <p class="service_paragraph text-white" style="font-size: 1.2rem;">Find quick answers to common
+                        questions about our AI training, course duration, certification, and support. We're here to
+                        ensure
+                        a seamless learning experience for you and your team.
+                    </p>
+                </div>
+            </div>
+            <div class="row ">
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button data-cursor="pointer" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Do I need a specific background to start learning about AI?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <p>Our AI courses are designed with a diverse audience in mind. Whether you’re new
+                                        to tech
+                                        or looking to enhance your expertise, our structured curriculum will guide you
+                                        from the
+                                        basics to advanced concepts without any prior specialized knowledge required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    What is the typical duration of an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    The length of our AI courses varies, but typically you can expect to complete each
+                                    course
+                                    within 4 to 6 weeks if you dedicate a few hours per week. Our courses are
+                                    self-paced, so
+                                    you have the flexibility to learn on a schedule that fits your life.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    What kind of practical skills will I gain?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    Upon completion, you’ll be proficient in AI fundamentals, data analysis, machine
+                                    learning
+                                    algorithms, and you’ll have hands-on experience with real-world projects. This will
+                                    prepare you for applying AI solutions to challenges in various industries.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                    Will I earn a certification after completing an AI course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFour">
+                                <div class="accordion-body">
+                                    Yes, after successfully completing a course, you will receive a digital certificate
+                                    that
+                                    you can add to your resume and LinkedIn profile to showcase your newfound AI
+                                    expertise
+                                    to potential employers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                <button data-cursor="pointer" class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                    Is there support available during the course?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingFive">
+                                <div class="accordion-body">
+                                    Absolutely! We offer comprehensive support throughout your learning journey. This
+                                    includes access to mentorship from experts, a community forum for peer discussion,
+                                    and
+                                    dedicated technical assistance when needed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-g-6 circles">
+                    <div class="circle circle-active" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne"> <span>Background</span></div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"> <span>Duration</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree">
+                        <span>Skills</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour">
+                        <span>Certification</span>
+                    </div>
+                    <div class="circle" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive">
+                        <span>Support</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section section-b-space">
+        <div class="container">
+            <div class="info-box" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+                <h2 class="text-white">Get Your Free Demo of AI TALK ASSIST Today!</h2>
+
+                <a href="#">
+                    <button class="info-btn btn d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#demo-modal">Book a Demo</button></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section start-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo"><img src="/assets/images/4IR Logo main.png" id="logo-img"
+                            class="img-fluid" alt=""></a>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your mail">
+                            <a href="" data-cursor="pointer" class="btn-basic">Subscribe</a>
+                        </div>
+                    </form>
+                    <ul class="social-links">
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.facebook.com/4IRinc"><img
+                                    src="/assets/svg/social/fb.svg" class="img-fluid" alt="facebook"></a></li>
+                        <li><a data-cursor="pointer" target="_blank"
+                                href="https://www.linkedin.com/company/fourth-industrial-revolution-inc/"><img
+                                    src="/assets/svg/social/linkedin.svg" class="img-fluid" alt="linkedin"></a></li>
+                        <li><a data-cursor="pointer" target="_blank" href="https://www.youtube.com/@BarryKrevoy"><img
+                                    src="/assets/svg/youtube.svg" class="img-fluid" alt="youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="/assets/svg/star.svg" class="img-fluid" alt="star">
+                        Quick Link
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/home.html">Home</a></li>
+                            <li><a data-cursor="pointer" href="/html/blog-grid.html">Blog</a></li>
+                            <li><a data-cursor="pointer" href="/html/services.html">Services</a></li>
+                            <li><a data-cursor="pointer" href="/html/contact-us.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="footer-title">
+                        <img src="/assets/svg/star.svg" class="img-fluid" alt="star">
+                        Our service
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a data-cursor="pointer" href="/html/strategic_counselling.html">Strategic
+                                    Counselling</a>
+                            </li>
+                            <li><a data-cursor="pointer" href="https://aitalkassist.com/">AI Talk Assist</a></li>
+                            <li><a data-cursor="pointer" target="_blank"
+                                    href="/html/training_and_education.html">Training &
+                                    Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <h4>@2024 All the Copyright Reserved.</h4>
+                <ul class="footer-links">
+                    <li><a href="/html/privacy.html">Privacy Policy </a></li>
+                    <li><a href="/html/terms.html">Terms & Condition </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script src="/assets/js/pages/training-and-education.js"></script>
+
+    <script src="/assets/js/pages/dropdown.js"></script>
+
+    <script src="/assets/js/pages/faq.js"></script>
+
+
+
+    <!-- Bootstrap js-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- slider js-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/custom-slider.js"></script>
+
+    <!-- custom cursor -->
+    <script src="/assets/js/custom-cursor.js"></script>
+
+    <!-- aos animation -->
+    <script src="/assets/js/aos.js"></script>
+    <script src="/assets/js/custom-aos.js"></script>
+
+    <!-- iconsax js -->
+    <script src="/assets/js/iconsax.js"></script>
+
+    <!-- laptop animation js -->
+    <script src="/assets/js/home-animation.js"></script>
+
+    <!-- header sticky js -->
+    <script src="/assets/js/header_sticky.js"></script>
+
+    <!-- pricing js -->
+    <script src="/assets/js/pricing-table.js"></script>
+
+    <!-- Theme js-->
+    <script src="/assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
